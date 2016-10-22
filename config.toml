@@ -1,0 +1,33 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+title = "Think-Release"
+subtitle = "Code snippets anotated"
+languageCode = "en-us"
+theme =  "beautifulhugo"
+PygmentsCodeFences = true
+pygmentsuseclasses = false
+pygmentsStyle = "manni"
+
+[Params]
+  subtitle = "Code snippets anotated"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "/page/enrique/"
+    weight = 2
+
+[[menu.main]]
+    name = "Talks"
+    url = "/page/talks/"
+    weight = 2
+
+[Author]
+  name = "Enrique Saez"
+  github = "esaezgil"
+  twitter = "eqirn"
+  linkedin = "in/enriquesaezgil/en"
+  stackoverflow = "4378118/enrique"
