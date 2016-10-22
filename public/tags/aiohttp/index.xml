@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://replace-this-with-your-hugo-site.com/tags/aiohttp/index.xml</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://replace-this-with-your-hugo-site.com/tags/aiohttp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Using namedtuples in aiohttp</title>
+      <link>http://replace-this-with-your-hugo-site.com/post/using-namedtuples-in-aiohttp/</link>
+      <pubDate>Sat, 03 Sep 2016 14:34:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/post/using-namedtuples-in-aiohttp/</guid>
+      <description>&lt;p&gt;Recently I had the opportunity to contribute to the &lt;a href=&#34;https://github.com/KeepSafe/aiohttp/&#34;&gt;&lt;strong&gt;aiohttp&lt;/strong&gt; library&lt;/a&gt;. This is one of the libraries that we, the &lt;a href=&#34;https://www.skyscanner.net/hotels&#34;&gt;Hotels&lt;/a&gt; backend team at &lt;a href=&#34;https://www.skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;, make use of on a daily basis to create a new backend service. In this post I will briefly explain the main learnings from this contribution.&lt;/p&gt;
+
+&lt;p&gt;The pull request can be found here:
+&lt;a href=&#34;https://github.com/KeepSafe/aiohttp/pull/1020/files&#34;&gt;https://github.com/KeepSafe/aiohttp/pull/1020/files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Key learnings:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Living on the edge:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Working in the &lt;em&gt;master&lt;/em&gt; branch of a project means that sometimes it may be unhealthy.
+It is always good advice to check whether _master_ is healthy or not when you submit your MR to the CI system (&lt;a href=&#34;https://travis-ci.org/KeepSafe/aiohttp&#34;&gt;Travis CI&lt;/a&gt; in this case) before pulling your hair searching for a non existing bug in your code.
+
+
+
+
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Namedtuples can be used to define a class through inheritance and by implementing the &lt;strong&gt;bool&lt;/strong&gt; method,
+[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
+class WebSocketReady(namedtuple(&amp;lsquo;WebSocketReady&amp;rsquo;, &amp;lsquo;ok protocol&amp;rsquo;)):
+def &lt;strong&gt;bool&lt;/strong&gt;(self):
+    return self.ok[/sourcecode]&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;it is really easy to check for a condition:&lt;/p&gt;
+
+&lt;p&gt;[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
+if WebSocketReady:
+&amp;hellip; [/sourcecode]&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Write Unit Tests:
+This might be obvious, but the point is not just to write them but to write them for every piece of code created.
+In this case I had written tests that checked the actual functionality on a high level like:[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
+def test_websocket_not_ready():
+websocket_ready = WebSocketReady(False, None)
+assert websocket_ready.ok is False
+assert websocket_ready.protocol is None [/sourcecode]&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;But not the tests that checked the low level functionality like:&lt;/p&gt;
+
+&lt;p&gt;[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]def test_bool_websocket_not_ready():
+    websocket_ready = WebSocketReady(False, None)
+    assert bool(websocket_ready) is False
+[/sourcecode]&lt;/p&gt;
+
+&lt;p&gt;Always good to bear in mind.
+&lt;img src=&#34;https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png&#34; alt=&#34;Screen Shot 2016-09-02 at 21.31.12&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

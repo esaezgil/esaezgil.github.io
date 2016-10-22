@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://replace-this-with-your-hugo-site.com/tags/django/index.xml</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://replace-this-with-your-hugo-site.com/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Contributing to Pretix</title>
+      <link>http://replace-this-with-your-hugo-site.com/post/contributing-to-pretix/</link>
+      <pubDate>Sun, 04 Sep 2016 13:24:25 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/post/contributing-to-pretix/</guid>
+      <description>&lt;p&gt;Recently I had the chance to contribute to Pretix (&lt;a href=&#34;https://pretix.eu/about/en/&#34;&gt;https://pretix.eu/about/en/&lt;/a&gt;) a Django-based event ticketing platform.
+The Merge Request is here: &lt;a href=&#34;https://github.com/pretix/pretix/pull/204/files&#34;&gt;https://github.com/pretix/pretix/pull/204/files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Key learnings:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Django models&lt;/strong&gt;: Being absolutely new to Django, I had the opportunity to learn along the way about one of its key features, the Models.
+Models are objects that the ORM will store in the database, a quick intro here: &lt;a href=&#34;http://tutorial.djangogirls.org/en/django_orm/&#34;&gt;http://tutorial.djangogirls.org/en/django_orm/&lt;/a&gt;
+It was quite surprising as well the ease of the development thanks to the automatic migrations in the database schema.
+More detailed info on Models here:
+&lt;a href=&#34;http://www.djangobook.com/en/2.0/chapter05.html&#34;&gt;http://www.djangobook.com/en/2.0/chapter05.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;all keyword in Python&lt;/strong&gt;:
+In order to check whether a condition was True for all the elements of a list I simply iterated over them and checked for the condition:
+[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
+for i, op in enumerate(positions):
+cancelable_products.append(op.item.allow_cancel)
+if False in cancelable_products:
+cancelable = False
+[/sourcecode]&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;However a much simpler solution making use of list comprehensions and the all() keyword in Python is possible:&lt;/p&gt;
+
+&lt;p&gt;[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
+cancelable = all([op.item.allow_cancel for op in positions])
+[/sourcecode]&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Metaclasses in Python&lt;/strong&gt;:
+Although I had read about Python Metaclasses in this excellent post (&lt;a href=&#34;https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/&#34;&gt;https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/&lt;/a&gt;), Django Models are a really good practical example of their value and use.
+The Metaclasses are used in the Django Models to dynamically create classes.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Difference between select_related and prefetch_related in Django:&lt;/strong&gt;
+_prefetch_related:_  does a separate lookup for each relationship, and does the ‘joining’ in Python. This allows it to prefetch many-to-many and many-to-one objects
+_select_related:_  limited to single-valued relationships - foreign key and one-to-one. Creating an SQL join including the fields of the related object in the &lt;code&gt;SELECT&lt;/code&gt;statement retrieving the related objects in the same (but more complex) database query.By using select_related instead of prefetch_related, one query to the DB is saved. More info on Django QuerySet:
+&lt;a href=&#34;https://docs.djangoproject.com/en/1.10/ref/models/querysets/&#34;&gt;https://docs.djangoproject.com/en/1.10/ref/models/querysets/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Head over to this post for more details on Metaclasses in Django: &lt;a href=&#34;http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html&#34;&gt;http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html&lt;/a&gt;&lt;img src=&#34;https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png&#34; alt=&#34;Screen Shot 2016-09-02 at 21.31.12&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
