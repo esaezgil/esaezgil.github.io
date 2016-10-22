@@ -1,49 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Post-rsses on My New Hugo Site</title>
-    <link>http://replace-this-with-your-hugo-site.com/post/index.xml</link>
-    <description>Recent content in Post-rsses on My New Hugo Site</description>
+    <title>Post-rsses on Think-Release</title>
+    <link>https://esaezgil.github.io/post/index.xml</link>
+    <description>Recent content in Post-rsses on Think-Release</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Sep 2016 13:24:25 +0000</lastBuildDate>
-    <atom:link href="http://replace-this-with-your-hugo-site.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Oct 2016 19:37:32 +0200</lastBuildDate>
+    <atom:link href="https://esaezgil.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Talk: Python Best Practices</title>
+      <link>https://esaezgil.github.io/post/python_best_practices/</link>
+      <pubDate>Sat, 22 Oct 2016 19:37:32 +0200</pubDate>
+      
+      <guid>https://esaezgil.github.io/post/python_best_practices/</guid>
+      <description>&lt;p&gt;Over the last year I have attended the &lt;a href=&#34;https://www.meetup.com/python-185/&#34;&gt;Barcelona Python meetup&lt;/a&gt; hosted at &lt;a href=&#34;http://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;&amp;rsquo;s office.
+The meetups were a really positive experience and being a super welcoming community I decided to deliver a talk.
+&lt;/p&gt;
+
+&lt;p&gt;During the talk I covered the most common Python project&amp;rsquo;s structure and the resasoning behind it. I also went over the usual ways for distributing a Python Project and the popular testing tools available. Finally I also mentioned some of the widely regarded best practices for Python like PEP8.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Slides:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script async class=&#39;speakerdeck-embed&#39; data-id=&#39;8f81a38bc7e0433ba33243306195b516&#39; data-ratio=&#39;1.33333333333333&#39; src=&#39;//speakerdeck.com/assets/embed.js&#39;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>Contributing to Pretix</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/contributing-to-pretix/</link>
+      <link>https://esaezgil.github.io/post/contributing-to-pretix/</link>
       <pubDate>Sun, 04 Sep 2016 13:24:25 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/contributing-to-pretix/</guid>
-      <description>&lt;p&gt;Recently I had the chance to contribute to Pretix (&lt;a href=&#34;https://pretix.eu/about/en/&#34;&gt;https://pretix.eu/about/en/&lt;/a&gt;) a Django-based event ticketing platform.
-The Merge Request is here: &lt;a href=&#34;https://github.com/pretix/pretix/pull/204/files&#34;&gt;https://github.com/pretix/pretix/pull/204/files&lt;/a&gt;&lt;/p&gt;
+      <guid>https://esaezgil.github.io/post/contributing-to-pretix/</guid>
+      <description>&lt;p&gt;Recently I had the chance to contribute to Pretix (&lt;a href=&#34;https://pretix.eu/about/en/&#34;&gt;https://pretix.eu/about/en/&lt;/a&gt;) a Django-based event ticketing platform.&lt;/p&gt;
+
+&lt;p&gt;The Merge Request is here: &lt;a href=&#34;https://github.com/pretix/pretix/pull/204/files&#34;&gt;https://github.com/pretix/pretix/pull/204/files&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Key learnings:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Django models&lt;/strong&gt;: Being absolutely new to Django, I had the opportunity to learn along the way about one of its key features, the Models.
-Models are objects that the ORM will store in the database, a quick intro here: &lt;a href=&#34;http://tutorial.djangogirls.org/en/django_orm/&#34;&gt;http://tutorial.djangogirls.org/en/django_orm/&lt;/a&gt;
+Models are objects that the ORM will store in the database, a quick intro here: 
+&lt;a href=&#34;http://tutorial.djangogirls.org/en/django_orm/&#34;&gt;http://tutorial.djangogirls.org/en/django_orm/&lt;/a&gt;
 It was quite surprising as well the ease of the development thanks to the automatic migrations in the database schema.
 More detailed info on Models here:
 &lt;a href=&#34;http://www.djangobook.com/en/2.0/chapter05.html&#34;&gt;http://www.djangobook.com/en/2.0/chapter05.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;all keyword in Python&lt;/strong&gt;:
-In order to check whether a condition was True for all the elements of a list I simply iterated over them and checked for the condition:
-[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
-for i, op in enumerate(positions):
-cancelable_products.append(op.item.allow_cancel)
-if False in cancelable_products:
-cancelable = False
-[/sourcecode]&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+In order to check whether a condition was True for all the elements of a list I simply iterated over them and checked for the condition:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;for&lt;/span&gt; i, op &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color: #336666&#34;&gt;enumerate&lt;/span&gt;(positions):
+    cancelable_products&lt;span style=&#34;color: #555555&#34;&gt;.&lt;/span&gt;append(op&lt;span style=&#34;color: #555555&#34;&gt;.&lt;/span&gt;item&lt;span style=&#34;color: #555555&#34;&gt;.&lt;/span&gt;allow_cancel)
+&lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #336666&#34;&gt;False&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;in&lt;/span&gt; cancelable_products:
+    cancelable &lt;span style=&#34;color: #555555&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #336666&#34;&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;However a much simpler solution making use of list comprehensions and the all() keyword in Python is possible:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;cancelable &lt;span style=&#34;color: #555555&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #336666&#34;&gt;all&lt;/span&gt;([op&lt;span style=&#34;color: #555555&#34;&gt;.&lt;/span&gt;item&lt;span style=&#34;color: #555555&#34;&gt;.&lt;/span&gt;allow_cancel &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;for&lt;/span&gt; op &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;in&lt;/span&gt; positions])
+&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 
-&lt;p&gt;[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
-cancelable = all([op.item.allow_cancel for op in positions])
-[/sourcecode]&lt;/p&gt;
-
-&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Metaclasses in Python&lt;/strong&gt;:
 Although I had read about Python Metaclasses in this excellent post (&lt;a href=&#34;https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/&#34;&gt;https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/&lt;/a&gt;), Django Models are a really good practical example of their value and use.
 The Metaclasses are used in the Django Models to dynamically create classes.&lt;/p&gt;&lt;/li&gt;
@@ -54,17 +68,17 @@ _select_related:_  limited to single-valued relationships - foreign key and on
 &lt;a href=&#34;https://docs.djangoproject.com/en/1.10/ref/models/querysets/&#34;&gt;https://docs.djangoproject.com/en/1.10/ref/models/querysets/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Head over to this post for more details on Metaclasses in Django: &lt;a href=&#34;http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html&#34;&gt;http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html&lt;/a&gt;&lt;img src=&#34;https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png&#34; alt=&#34;Screen Shot 2016-09-02 at 21.31.12&#34; /&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;Head over to this post for more details on Metaclasses in Django: &lt;a href=&#34;http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html&#34;&gt;http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html&lt;/a&gt;&lt;img src=&#34;https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png&#34; alt=&#34;Screen Shot 2016-09-02 at 21.31.12&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Using namedtuples in aiohttp</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/using-namedtuples-in-aiohttp/</link>
+      <link>https://esaezgil.github.io/post/using-namedtuples-in-aiohttp/</link>
       <pubDate>Sat, 03 Sep 2016 14:34:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/using-namedtuples-in-aiohttp/</guid>
-      <description>&lt;p&gt;Recently I had the opportunity to contribute to the &lt;a href=&#34;https://github.com/KeepSafe/aiohttp/&#34;&gt;&lt;strong&gt;aiohttp&lt;/strong&gt; library&lt;/a&gt;. This is one of the libraries that we, the &lt;a href=&#34;https://www.skyscanner.net/hotels&#34;&gt;Hotels&lt;/a&gt; backend team at &lt;a href=&#34;https://www.skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;, make use of on a daily basis to create a new backend service. In this post I will briefly explain the main learnings from this contribution.&lt;/p&gt;
+      <guid>https://esaezgil.github.io/post/using-namedtuples-in-aiohttp/</guid>
+      <description>&lt;p&gt;Recently I had the opportunity to contribute to the &lt;a href=&#34;https://github.com/KeepSafe/aiohttp/&#34;&gt;&lt;strong&gt;aiohttp&lt;/strong&gt; library&lt;/a&gt;. This is one of the libraries that we, the &lt;a href=&#34;https://www.skyscanner.net/hotels&#34;&gt;Hotels&lt;/a&gt; backend team at &lt;a href=&#34;https://www.skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;, make use of on a daily basis to create a new backend service. 
+In this post I will briefly explain the main learnings from this contribution.&lt;/p&gt;
 
 &lt;p&gt;The pull request can be found here:
 &lt;a href=&#34;https://github.com/KeepSafe/aiohttp/pull/1020/files&#34;&gt;https://github.com/KeepSafe/aiohttp/pull/1020/files&lt;/a&gt;&lt;/p&gt;
@@ -74,49 +88,39 @@ _select_related:_  limited to single-valued relationships - foreign key and on
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Living on the edge:&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Working in the &lt;em&gt;master&lt;/em&gt; branch of a project means that sometimes it may be unhealthy.
-It is always good advice to check whether _master_ is healthy or not when you submit your MR to the CI system (&lt;a href=&#34;https://travis-ci.org/KeepSafe/aiohttp&#34;&gt;Travis CI&lt;/a&gt; in this case) before pulling your hair searching for a non existing bug in your code.
+&lt;p&gt;Working in the &lt;em&gt;master&lt;/em&gt; branch of a project means that sometimes it may be unhealthy.
+It is always good advice to check whether _master_ is healthy or not when you submit your MR to the CI system (&lt;a href=&#34;https://travis-ci.org/KeepSafe/aiohttp&#34;&gt;Travis CI&lt;/a&gt; in this case) before pulling your hair searching for a non existing bug in your code.&lt;/p&gt;&lt;/li&gt;
 
-
-
-
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Namedtuples can be used to define a class through inheritance and by implementing the &lt;strong&gt;bool&lt;/strong&gt; method,
-[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
-class WebSocketReady(namedtuple(&amp;lsquo;WebSocketReady&amp;rsquo;, &amp;lsquo;ok protocol&amp;rsquo;)):
-def &lt;strong&gt;bool&lt;/strong&gt;(self):
-    return self.ok[/sourcecode]&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;Namedtuples can be used to define a class through inheritance and by implementing the &lt;strong&gt;bool&lt;/strong&gt; method,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #00AA88; font-weight: bold&#34;&gt;WebSocketReady&lt;/span&gt;(namedtuple(&lt;span style=&#34;color: #CC3300&#34;&gt;&amp;#39;WebSocketReady&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #CC3300&#34;&gt;&amp;#39;ok protocol&amp;#39;&lt;/span&gt;)):
+    &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #CC00FF&#34;&gt;__bool__&lt;/span&gt;(&lt;span style=&#34;color: #336666&#34;&gt;self&lt;/span&gt;):
+        &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #336666&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #555555&#34;&gt;.&lt;/span&gt;ok
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;it is really easy to check for a condition:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;if&lt;/span&gt; WebSocketReady:
+&lt;span style=&#34;color: #555555&#34;&gt;...&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 
-&lt;p&gt;[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
-if WebSocketReady:
-&amp;hellip; [/sourcecode]&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Write Unit Tests:
+&lt;li&gt;&lt;p&gt;Write Unit Tests:
 This might be obvious, but the point is not just to write them but to write them for every piece of code created.
-In this case I had written tests that checked the actual functionality on a high level like:[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]
-def test_websocket_not_ready():
-websocket_ready = WebSocketReady(False, None)
-assert websocket_ready.ok is False
-assert websocket_ready.protocol is None [/sourcecode]&lt;/li&gt;
-&lt;/ol&gt;
+In this case I had written tests that checked the actual functionality on a high level like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #CC00FF&#34;&gt;test_websocket_not_ready&lt;/span&gt;():
+    websocket_ready &lt;span style=&#34;color: #555555&#34;&gt;=&lt;/span&gt; WebSocketReady(&lt;span style=&#34;color: #336666&#34;&gt;False&lt;/span&gt;, &lt;span style=&#34;color: #336666&#34;&gt;None&lt;/span&gt;)
+    &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;assert&lt;/span&gt; websocket_ready&lt;span style=&#34;color: #555555&#34;&gt;.&lt;/span&gt;ok &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color: #336666&#34;&gt;False&lt;/span&gt;
+    &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;assert&lt;/span&gt; websocket_ready&lt;span style=&#34;color: #555555&#34;&gt;.&lt;/span&gt;protocol &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color: #336666&#34;&gt;None&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;But not the tests that checked the low level functionality like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f3f3&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #CC00FF&#34;&gt;test_bool_websocket_not_ready&lt;/span&gt;():
+    websocket_ready &lt;span style=&#34;color: #555555&#34;&gt;=&lt;/span&gt; WebSocketReady(&lt;span style=&#34;color: #336666&#34;&gt;False&lt;/span&gt;, &lt;span style=&#34;color: #336666&#34;&gt;None&lt;/span&gt;)
+    &lt;span style=&#34;color: #006699; font-weight: bold&#34;&gt;assert&lt;/span&gt; &lt;span style=&#34;color: #336666&#34;&gt;bool&lt;/span&gt;(websocket_ready) &lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color: #336666&#34;&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;[sourcecode language=&amp;ldquo;python&amp;rdquo; wraplines=&amp;ldquo;false&amp;rdquo; collapse=&amp;ldquo;false&amp;rdquo;]def test_bool_websocket_not_ready():
-    websocket_ready = WebSocketReady(False, None)
-    assert bool(websocket_ready) is False
-[/sourcecode]&lt;/p&gt;
+&lt;p&gt;Always good to bear in mind.&lt;/p&gt;
 
-&lt;p&gt;Always good to bear in mind.
-&lt;img src=&#34;https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png&#34; alt=&#34;Screen Shot 2016-09-02 at 21.31.12&#34; /&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;img src=&#34;https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png&#34; alt=&#34;Screen Shot 2016-09-02 at 21.31.12&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

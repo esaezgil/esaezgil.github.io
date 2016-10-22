@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Contributing to Pretix</title>
+
+  <meta name="author" content="Enrique Saez" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.17" />
+
+  <link rel="alternate" href="https://esaezgil.github.io/index.xml" type="application/rss+xml" title="Think-Release">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://esaezgil.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://esaezgil.github.io/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://esaezgil.github.io/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="Contributing to Pretix" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/post/contributing-to-pretix//" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://esaezgil.github.io/">Think-Release</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+          <a title="Blog" href="https://esaezgil.github.io/">Blog</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="About" href="https://esaezgil.github.io/page/enrique/">About</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="Talks" href="https://esaezgil.github.io/page/talks/">Talks</a>
+  	      </li>
+  	    
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Contributing to Pretix</h1>
+      
+      
+      
+      <span class="post-meta">Posted on September 4, 2016</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+          <p>Recently I had the chance to contribute to Pretix (<a href="https://pretix.eu/about/en/">https://pretix.eu/about/en/</a>) a Django-based event ticketing platform.</p>
+
+<p>The Merge Request is here: <a href="https://github.com/pretix/pretix/pull/204/files">https://github.com/pretix/pretix/pull/204/files</a></p>
+
+<p>Key learnings:</p>
+
+<ol>
+<li><p><strong>Django models</strong>: Being absolutely new to Django, I had the opportunity to learn along the way about one of its key features, the Models.
+Models are objects that the ORM will store in the database, a quick intro here: 
+<a href="http://tutorial.djangogirls.org/en/django_orm/">http://tutorial.djangogirls.org/en/django_orm/</a>
+It was quite surprising as well the ease of the development thanks to the automatic migrations in the database schema.
+More detailed info on Models here:
+<a href="http://www.djangobook.com/en/2.0/chapter05.html">http://www.djangobook.com/en/2.0/chapter05.html</a></p></li>
+
+<li><p><strong>all keyword in Python</strong>:
+In order to check whether a condition was True for all the elements of a list I simply iterated over them and checked for the condition:</p>
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> i, op <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">enumerate</span>(positions):
+    cancelable_products<span style="color: #555555">.</span>append(op<span style="color: #555555">.</span>item<span style="color: #555555">.</span>allow_cancel)
+<span style="color: #006699; font-weight: bold">if</span> <span style="color: #336666">False</span> <span style="color: #000000; font-weight: bold">in</span> cancelable_products:
+    cancelable <span style="color: #555555">=</span> <span style="color: #336666">False</span>
+</pre></div>
+
+<p>However a much simpler solution making use of list comprehensions and the all() keyword in Python is possible:</p>
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>cancelable <span style="color: #555555">=</span> <span style="color: #336666">all</span>([op<span style="color: #555555">.</span>item<span style="color: #555555">.</span>allow_cancel <span style="color: #006699; font-weight: bold">for</span> op <span style="color: #000000; font-weight: bold">in</span> positions])
+</pre></div></li>
+
+<li><p><strong>Metaclasses in Python</strong>:
+Although I had read about Python Metaclasses in this excellent post (<a href="https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/">https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/</a>), Django Models are a really good practical example of their value and use.
+The Metaclasses are used in the Django Models to dynamically create classes.</p></li>
+
+<li><p><strong>Difference between select_related and prefetch_related in Django:</strong>
+_prefetch_related:_  does a separate lookup for each relationship, and does the ‘joining’ in Python. This allows it to prefetch many-to-many and many-to-one objects
+_select_related:_  limited to single-valued relationships - foreign key and one-to-one. Creating an SQL join including the fields of the related object in the <code>SELECT</code>statement retrieving the related objects in the same (but more complex) database query.By using select_related instead of prefetch_related, one query to the DB is saved. More info on Django QuerySet:
+<a href="https://docs.djangoproject.com/en/1.10/ref/models/querysets/">https://docs.djangoproject.com/en/1.10/ref/models/querysets/</a></p></li>
+</ol>
+
+<p>Head over to this post for more details on Metaclasses in Django: <a href="http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html">http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html</a><img src="https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png" alt="Screen Shot 2016-09-02 at 21.31.12" /></p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="https://esaezgil.github.io/post/using-namedtuples-in-aiohttp/" data-toggle="tooltip" data-placement="top" title="Using namedtuples in aiohttp">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="https://esaezgil.github.io/post/python_best_practices/" data-toggle="tooltip" data-placement="top" title="Talk: Python Best Practices">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/esaezgil" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://twitter.com/eqirn" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+		      
+          <li>
+            <a href="https://linkedin.com/in/enriquesaezgil/en" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          <li>
+            <a href="https://stackoverflow.com/users/4378118/enrique" title="StackOverflow">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+
+    		  <li>
+      			<a href="https://esaezgil.github.io/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  Enrique Saez
+    		  &nbsp;&bull;&nbsp;
+    		  2016
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="https://esaezgil.github.io/">Think-Release</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://esaezgil.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="https://esaezgil.github.io/js/bootstrap.min.js"></script>
+<script src="https://esaezgil.github.io/js/main.js"></script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Using namedtuples in aiohttp</title>
+
+  <meta name="author" content="Enrique Saez" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.17" />
+
+  <link rel="alternate" href="https://esaezgil.github.io/index.xml" type="application/rss+xml" title="Think-Release">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://esaezgil.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://esaezgil.github.io/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://esaezgil.github.io/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="Using namedtuples in aiohttp" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/post/using-namedtuples-in-aiohttp//" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://esaezgil.github.io/">Think-Release</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+          <a title="Blog" href="https://esaezgil.github.io/">Blog</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="About" href="https://esaezgil.github.io/page/enrique/">About</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="Talks" href="https://esaezgil.github.io/page/talks/">Talks</a>
+  	      </li>
+  	    
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Using namedtuples in aiohttp</h1>
+      
+      
+      
+      <span class="post-meta">Posted on September 3, 2016</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+          <p>Recently I had the opportunity to contribute to the <a href="https://github.com/KeepSafe/aiohttp/"><strong>aiohttp</strong> library</a>. This is one of the libraries that we, the <a href="https://www.skyscanner.net/hotels">Hotels</a> backend team at <a href="https://www.skyscanner.net">Skyscanner</a>, make use of on a daily basis to create a new backend service. 
+In this post I will briefly explain the main learnings from this contribution.</p>
+
+<p>The pull request can be found here:
+<a href="https://github.com/KeepSafe/aiohttp/pull/1020/files">https://github.com/KeepSafe/aiohttp/pull/1020/files</a></p>
+
+<p>Key learnings:</p>
+
+<ol>
+<li><p>Living on the edge:</p>
+
+<p>Working in the <em>master</em> branch of a project means that sometimes it may be unhealthy.
+It is always good advice to check whether _master_ is healthy or not when you submit your MR to the CI system (<a href="https://travis-ci.org/KeepSafe/aiohttp">Travis CI</a> in this case) before pulling your hair searching for a non existing bug in your code.</p></li>
+
+<li><p>Namedtuples can be used to define a class through inheritance and by implementing the <strong>bool</strong> method,</p>
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">class</span> <span style="color: #00AA88; font-weight: bold">WebSocketReady</span>(namedtuple(<span style="color: #CC3300">&#39;WebSocketReady&#39;</span>, <span style="color: #CC3300">&#39;ok protocol&#39;</span>)):
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__bool__</span>(<span style="color: #336666">self</span>):
+        <span style="color: #006699; font-weight: bold">return</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>ok
+</pre></div>
+
+<p>it is really easy to check for a condition:</p>
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">if</span> WebSocketReady:
+<span style="color: #555555">...</span> 
+</pre></div></li>
+
+<li><p>Write Unit Tests:
+This might be obvious, but the point is not just to write them but to write them for every piece of code created.
+In this case I had written tests that checked the actual functionality on a high level like:</p>
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">test_websocket_not_ready</span>():
+    websocket_ready <span style="color: #555555">=</span> WebSocketReady(<span style="color: #336666">False</span>, <span style="color: #336666">None</span>)
+    <span style="color: #006699; font-weight: bold">assert</span> websocket_ready<span style="color: #555555">.</span>ok <span style="color: #000000; font-weight: bold">is</span> <span style="color: #336666">False</span>
+    <span style="color: #006699; font-weight: bold">assert</span> websocket_ready<span style="color: #555555">.</span>protocol <span style="color: #000000; font-weight: bold">is</span> <span style="color: #336666">None</span> 
+</pre></div>
+
+<p>But not the tests that checked the low level functionality like:</p>
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">test_bool_websocket_not_ready</span>():
+    websocket_ready <span style="color: #555555">=</span> WebSocketReady(<span style="color: #336666">False</span>, <span style="color: #336666">None</span>)
+    <span style="color: #006699; font-weight: bold">assert</span> <span style="color: #336666">bool</span>(websocket_ready) <span style="color: #000000; font-weight: bold">is</span> <span style="color: #336666">False</span>
+</pre></div></li>
+</ol>
+
+<p>Always good to bear in mind.</p>
+
+<p><img src="https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png" alt="Screen Shot 2016-09-02 at 21.31.12" /></p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        
+        <li class="next">
+          <a href="https://esaezgil.github.io/post/contributing-to-pretix/" data-toggle="tooltip" data-placement="top" title="Contributing to Pretix">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/esaezgil" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://twitter.com/eqirn" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+		      
+          <li>
+            <a href="https://linkedin.com/in/enriquesaezgil/en" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          <li>
+            <a href="https://stackoverflow.com/users/4378118/enrique" title="StackOverflow">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+
+    		  <li>
+      			<a href="https://esaezgil.github.io/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  Enrique Saez
+    		  &nbsp;&bull;&nbsp;
+    		  2016
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="https://esaezgil.github.io/">Think-Release</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://esaezgil.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="https://esaezgil.github.io/js/bootstrap.min.js"></script>
+<script src="https://esaezgil.github.io/js/main.js"></script>
+
+
+
+  </body>
+</html>

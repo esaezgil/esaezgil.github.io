@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Page-rsses on Think-Release</title>
+    <link>https://esaezgil.github.io/page/index.xml</link>
+    <description>Recent content in Page-rsses on Think-Release</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Oct 2016 20:17:14 +0200</lastBuildDate>
+    <atom:link href="https://esaezgil.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hi! I&#39;m Enrique</title>
+      <link>https://esaezgil.github.io/page/enrique/</link>
+      <pubDate>Sat, 22 Oct 2016 20:17:14 +0200</pubDate>
+      
+      <guid>https://esaezgil.github.io/page/enrique/</guid>
+      <description>&lt;p&gt;I am a telecom engineer working as a software engineer at &lt;a href=&#34;http://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;. This blog is just a quick reference for mainly technical stuff I find interesting. If you wanna get in touch, hit me up on &lt;a href=&#34;https://twitter.com/eqirn&#34;&gt;@equirn&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find more about me listening to this podcast: &lt;a href=&#34;https://soundcloud.com/code-voyagers/episode-4-a-graduates-journey&#34;&gt;Episode 4 – A graduates journey&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I am also part of the Skyscanner Barcelona Ambassador group in charge of organizing events at the &lt;a href=&#34;https://twitter.com/codevoyagers&#34;&gt;@CodeVoyagers&lt;/a&gt; office for the software developer community in Barcelona like the &lt;a href=&#34;http://www.meetup.com/es-ES/python-185/&#34;&gt;Python meetup&lt;/a&gt; or the &lt;a href=&#34;https://www.meetup.com/docker-barcelona-spain/&#34;&gt;Docker meetup&lt;/a&gt; among others. Feel free to get in touch if you are looking for a space to host your SW-related meetup in Barcelona&lt;/p&gt;
+
+&lt;div class=&#34;embed soundcloud&#34;&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;166&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; src=&#34;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/258981887&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Talks</title>
+      <link>https://esaezgil.github.io/page/talks/</link>
+      <pubDate>Sat, 22 Oct 2016 18:30:50 +0200</pubDate>
+      
+      <guid>https://esaezgil.github.io/page/talks/</guid>
+      <description>&lt;p&gt;I delivered a short closing talk at HackUPC&amp;rsquo;16: &lt;a href=&#34;https://www.youtube.com/watch?v=PD2KGBIVbI0&amp;amp;feature=youtu.be&amp;amp;t=3664&#34;&gt;Link to talk&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
