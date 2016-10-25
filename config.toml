@@ -20,12 +20,17 @@ CanonifyUrls = true
 [[menu.main]]
     name = "About"
     url = "/page/enrique/"
-    weight = 2
+    weight = 1
 
 [[menu.main]]
     name = "Talks"
     url = "/page/talks/"
     weight = 2
+
+[[menu.main]]
+    name = "Events"
+    url = "/events/"
+    weight = 1
 
 [Author]
   name = "Enrique Saez"
@@ -33,3 +38,5 @@ CanonifyUrls = true
   twitter = "eqirn"
   linkedin = "in/enriquesaezgil/en"
   stackoverflow = "4378118/enrique"
+
+googleAnalytics="UA-86132389-1"

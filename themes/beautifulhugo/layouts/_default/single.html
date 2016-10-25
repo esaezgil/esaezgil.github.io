@@ -13,6 +13,8 @@
         {{ partial "post.html" . }}
       {{ else if eq .Type "page" }}
         {{ partial "page.html" . }}
+      {{ else if eq .Type "events" }}
+        {{ partial "post.html" . }}
       {{ else }}
         NO MATCHING PARTIAL
       {{ end }}
