@@ -6,7 +6,7 @@ excerpt: 'Key learnings #python #oss #aiohttp'
 layout: post
 link: https://thinkreleaseblog.wordpress.com/2016/09/03/using-namedtuples-in-aiohttp/
 slug: using-namedtuples-in-aiohttp
-title: Using namedtuples in aiohttp
+title: Contributing to aiohttp
 wordpress_id: 24
 categories:
 - Python
@@ -16,18 +16,18 @@ tags:
 - Python
 ---
 
-Recently I had the opportunity to contribute to the [**aiohttp** library](https://github.com/KeepSafe/aiohttp/). This is one of the libraries that we, the [Hotels](https://www.skyscanner.net/hotels) backend team at [Skyscanner](https://www.skyscanner.net), make use of on a daily basis to create a new backend service. <!--more-->
-In this post I will briefly explain the main learnings from this contribution.
+Recently I had the opportunity to contribute to the [**aiohttp** library](https://github.com/KeepSafe/aiohttp/). This is one of the libraries that we, the [Hotels](https://www.skyscanner.net/hotels) backend team at [Skyscanner](https://www.skyscanner.net), make use of on a daily basis to create a new backend service. <!--more-->
+In this post I will briefly explain the main learnings from this contribution.
 
 The pull request can be found here:
 [https://github.com/KeepSafe/aiohttp/pull/1020/files](https://github.com/KeepSafe/aiohttp/pull/1020/files)
 
-Key learnings:
-	
+Key learnings:
+  
   1. Living on the edge:
 
-    Working in the _master_ branch of a project means that sometimes it may be unhealthy.
-    It is always good advice to check whether _master_ is healthy or not when you submit your MR to the CI system ([Travis CI](https://travis-ci.org/KeepSafe/aiohttp) in this case) before pulling your hair searching for a non existing bug in your code.
+    Working in the _master_ branch of a project means that sometimes it may be unhealthy.
+    It is always good advice to check whether _master_ is healthy or not when you submit your MR to the CI system ([Travis CI](https://travis-ci.org/KeepSafe/aiohttp) in this case) before pulling your hair searching for a non existing bug in your code.
 
   2. Namedtuples can be used to define a class through inheritance and by implementing the __bool__ method,
 
@@ -43,7 +43,7 @@ Key learnings:
     if WebSocketReady:
     ... 
     ```
-	
+  
   3. Write Unit Tests:
 This might be obvious, but the point is not just to write them but to write them for every piece of code created.
 In this case I had written tests that checked the actual functionality on a high level like:
@@ -66,5 +66,4 @@ In this case I had written tests that checked the actual functionality on a high
 Always good to bear in mind.
 
 ![Screen Shot 2016-09-02 at 21.31.12](https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png)
-
 
