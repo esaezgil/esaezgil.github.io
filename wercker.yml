@@ -1,0 +1,16 @@
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: "0.17"
+        theme: beautifulhugo
+        flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - uetchy/gh-pages:
+        token: $GIT_TOKEN
+        repo: esaezgil/esaezgil.github.io
+        path: public
+        domain: esaezgil.github.io
