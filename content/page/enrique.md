@@ -1,6 +1,6 @@
 +++
 bigimg = ""
-title = "Hi! I'm Enrique"
+title = "About me"
 subtitle = ""
 date = "2016-10-22T20:17:14+02:00"
 
