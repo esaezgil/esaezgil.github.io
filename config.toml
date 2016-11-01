@@ -1,6 +1,6 @@
 baseurl = "https://esaezgil.github.io/"
 title = "Think-Release"
-subtitle = "Code snippets anotated"
+subtitle = "Documenting my learning journey"
 languageCode = "en-us"
 theme =  "beautifulhugo"
 PygmentsCodeFences = true
@@ -10,7 +10,8 @@ pygmentsStyle = "manni"
 CanonifyUrls = true
 
 [Params]
-  subtitle = "Code snippets anotated"
+  subtitle = "Documenting my learning journey"
+  logo = "img/icon.jpg"
 
 [[menu.main]]
     name = "Blog"
@@ -38,4 +39,3 @@ CanonifyUrls = true
   twitter = "eqirn"
   linkedin = "in/enriquesaezgil/en"
   stackoverflow = "4378118/enrique"
-
