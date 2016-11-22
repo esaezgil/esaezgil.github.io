@@ -6,11 +6,11 @@ bigimg = ""
 
 +++
 
-This past weekend, 18th - 20th November, I attended [Lauzhack](http://lauzhack.com), a student-organized and student-oriented Hackathon in Lausanne, Switzerland, as a [Skyscanner](http://skyscanner.net) representative.
+This past weekend 18th - 20th November I attended [Lauzhack](http://lauzhack.com), a student-organized and student-oriented Hackathon in Lausanne, Switzerland, as a [Skyscanner](http://skyscanner.net) representative.
 
 <blockquote class="twitter-tweet tw-align-center">{{< tweet 799973200994140160 >}}</blockquote>
 
-The goal of the Hackathon, was to encourage students from all over the world to work in a project over the weekend with the aim of networking, learning as much as possible and have fun in the mean time.
+The goal of the Hackathon was to encourage students from all over the world to work in a project over the weekend with the aim of networking, learning as much as possible and having fun in the mean time.
 
 <blockquote class="twitter-tweet tw-align-center">{{< tweet 799984109414191104 >}}</blockquote>
 
@@ -35,6 +35,8 @@ The projects I liked the most using [Skyscanner API](http://business.skyscanner.
 - [BuddyFlights](https://devpost.com/software/buddyflights): the project suggests based on your Facebook friends' location intermediate stops for your journey along the price of the tickets. I love the idea and I hope that these guys keep working on it or even helps inspire our internal team in charge of the inspiration map in the website.
 
 - [CityMatch](https://devpost.com/software/citymatch): this project included gamification in order to suggest travel destinations making use of Microsoft Cognitive services. I was instantly sold into the idea and hope that they keep working on it in the future.
+
+<blockquote class="twitter-tweet tw-align-center">{{< tweet 800355990608691204 >}}</blockquote>
 
 The projects I liked the most using other sponsor's APIs were:
 
