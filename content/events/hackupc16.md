@@ -10,6 +10,8 @@ date = "2016-10-23T18:34:25+02:00"
 
 I attended the event as a company representative for [Skyscanner](http://skyscanner.net), the main sponsor of the event. The hackathon gathered 500 students from all over the world and was an immense success.
 
+<blockquote class="twitter-tweet tw-align-center">{{< tweet 784441926577717248 >}}</blockquote>
+
 This was my 4th hackathon over the last year so far but my first one as a sponsor and not a participant. Therefore, the event gave me the opportunity to gain a different insight for this kind of events.
 
 I spent about 18 hours at the event during weekend with the goal of helping participants make the most out of [Skyscanner API](http://en.business.skyscanner.net/).
