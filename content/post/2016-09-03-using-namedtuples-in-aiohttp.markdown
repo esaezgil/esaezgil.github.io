@@ -64,6 +64,3 @@ In this case I had written tests that checked the actual functionality on a high
     ```
 
 Always good to bear in mind.
-
-![Screen Shot 2016-09-02 at 21.31.12](https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png)
-

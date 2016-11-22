@@ -54,9 +54,12 @@ The Metaclasses are used in the Django Models to dynamically create classes.
 
 	
   4. **Difference between select_related and prefetch_related in Django:**
-_prefetch_related:_  does a separate lookup for each relationship, and does the ‘joining’ in Python. This allows it to prefetch many-to-many and many-to-one objects
-_select_related:_  limited to single-valued relationships - foreign key and one-to-one. Creating an SQL join including the fields of the related object in the `SELECT`statement retrieving the related objects in the same (but more complex) database query.By using select_related instead of prefetch_related, one query to the DB is saved. More info on Django QuerySet:
-[https://docs.djangoproject.com/en/1.10/ref/models/querysets/](https://docs.djangoproject.com/en/1.10/ref/models/querysets/)
+**prefetch_related**: does a separate lookup for each relationship, and does the ‘joining’ in Python. This allows it to prefetch many-to-many and many-to-one objects.
+<br>
+  **select_related**: limited to single-valued relationships - foreign key and one-to-one. Creates an SQL join including the fields of the related object in the `SELECT`statement retrieving the related objects in the same (but more complex) database query. 
+<br>
+  By using `select_related` instead of `prefetch_related`, one query to the DB is saved.
+ More info on Django QuerySet: [https://docs.djangoproject.com/en/1.10/ref/models/querysets/](https://docs.djangoproject.com/en/1.10/ref/models/querysets/)
 
 
-Head over to this post for more details on Metaclasses in Django: [http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html](http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html)![Screen Shot 2016-09-02 at 21.31.12](https://thinkreleaseblog.files.wordpress.com/2016/09/screen-shot-2016-09-02-at-21-31-12.png)
+Head over to this post for more details on Metaclasses in Django: [http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html](http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html)

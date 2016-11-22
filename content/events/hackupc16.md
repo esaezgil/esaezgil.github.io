@@ -1,6 +1,6 @@
 +++
 title = "HackUPC'16"
-bigimg = "/img/hackupc16.png"
+bigimg = ""
 subtitle = ""
 date = "2016-10-23T18:34:25+02:00"
 
@@ -20,9 +20,8 @@ One of my favorite moments during the Hackathon was the 'Science Fair' demos at 
 
 Finally, I had the chance to deliver [a short talk](https://www.youtube.com/watch?v=PD2KGBIVbI0&feature=youtu.be&t=3664) at the end of the event where I encouraged attendees to apply for a [position at Skyscanner](http://www.skyscanner.net/jobs/) after talking with them over the weekend about company culture and mission.
 
-{{< tweet 784503844839497728 >}}
-
+<blockquote class="twitter-tweet tw-align-center">{{< tweet 784503844839497728 >}}</blockquote>
 Overall, attending this event as a sponsor was a really good experience.
 Looking forward to attend another hackathon soon enough!
 
-{{< tweet 785133806915313664 >}}
+<blockquote class="twitter-tweet tw-align-center">{{< tweet 785133806915313664 >}}</blockquote>

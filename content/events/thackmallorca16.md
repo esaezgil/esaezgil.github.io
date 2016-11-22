@@ -2,7 +2,7 @@
 title = "THack Mallorca - May'16"
 subtitle = ""
 date = "2016-05-25T18:04:04+02:00"
-bigimg = "/img/thack16.png"
+bigimg = ""
 
 +++
 
@@ -10,7 +10,7 @@ During Friday night May 6 through Sunday May 8 I attended [THack Mallorca](https
 
 During the weekend I worked almost non-stop in a 4 people team: 2 developers from [minube](http://minube.com) and 2 developers from [Skyscanner](http://skyscanner.net) including myself.
 
-{{< tweet 728899724145725440 >}}
+<blockquote class="twitter-tweet tw-align-center">{{< tweet 728899724145725440 >}}</blockquote>
 
 After discussing different sort of ideas during a quick brain storming session, we agreed on creating a new product targeting travelers who prioritize activities over sightseeing. We also tried to maximize our ROI by consuming three external APIs from different sponsors. The team developed an internal API that suggested the best hotel based on the location of the activities chosen by the user and I developed an Android app consuming the team's API.
 
@@ -24,7 +24,7 @@ It was a great and nice surprise to win 3 prizes from 3 different sponsors:
 - Second prize from [Musement] (http://musement.com) for best use of their API
 - First prize from [Booking.com] (http://booking.com) for best API feedback
 
-{{< tweet 729330943937417216 >}}
+<blockquote class="twitter-tweet tw-align-center">{{< tweet 729330943937417216 >}}</blockquote>
 
 I had a great time during this event and would gladly join again in the future.
 

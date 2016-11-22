@@ -1,6 +1,6 @@
 baseurl = "https://esaezgil.github.io/"
 title = "Hej, I'm Enrique"
-subtitle = "Documenting my learning journey"
+subtitle = "Software engineer/Telecom engineer/ICT enthusiast"
 languageCode = "en-us"
 theme =  "beautifulhugo"
 PygmentsCodeFences = true
@@ -10,7 +10,7 @@ pygmentsStyle = "manni"
 CanonifyUrls = true
 
 [Params]
-  subtitle = "Documenting my learning journey"
+  subtitle = "Software engineer - Telecom engineer - ICT enthusiast"
   logo = "img/icon.jpg"
 
 [[menu.main]]
