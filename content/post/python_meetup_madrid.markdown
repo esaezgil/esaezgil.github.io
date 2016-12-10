@@ -1,5 +1,5 @@
 +++
-title = "Madrid Python Meetup"
+title = "Madrid Python Meetup - November'16"
 subtitle = ""
 date = "2016-12-01T19:55:00+01:00"
 bigimg = ""
@@ -21,7 +21,7 @@ There were four talks, all of them revolving around Python and Geographic Inform
 
 The most important take outs from his talk for me were:
 
-- The data model and the obfuscation of the data in it can be part of the business model. By hindering competitors from using/accessing the data that is supposed to be freely available, such as the pollution measurements in this case, competitors can not
+- The data model and the obfuscation of the data in it can be part of the business model. By hindering competitors from using/accessing the data that is supposed to be freely available, such as the pollution measurements in this case, competitors are in disadvantage when when the contract is to be renewed.
 
 - Data Science consists on Data cleaning most of the time rather than creating/implementing new fancy algorithms which was quite surprising for me.
 
@@ -50,7 +50,9 @@ The main learning I got from his talk is that the IDE should be considered as an
 
 **Summary**
 
-Overall the topics discussed in the Meetup were not interesting for my day to day work but it was refreshing to learn about people using Python for so many different things.
+Overall the topics discussed in the Meetup were not directly related to my day to day work but it was refreshing to learn about people using Python for so many different things.
+
+Finally, this kind of events are used by companies to recruit people and this time was no different. I have heard countless times about it as a suggestion for people looking for a job to attend or do a presentation at this kind of events and I believe it is an effective way to find a new job.
 
 [Carto's](https://carto.com/) office in the very city Center of Madrid were really cool by the way.
 
