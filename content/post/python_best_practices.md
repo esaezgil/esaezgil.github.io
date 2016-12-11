@@ -17,3 +17,5 @@ During the talk I covered the most common Python project's structure and the res
 **Slides:**
 
 {{< speakerdeck 2e42ac8c87a24bc3ad90cc5a40cc894a >}}
+
+Unfortunately due to technical problems the talk was not recorded :(
