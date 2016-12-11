@@ -25,12 +25,12 @@ I attended [THack Mallorca](https://www.tnooz.com/event/thack-mallorca-2016/) as
 Another team from [Skyscanner](https://www.skyscanner.net/) flew to Barcelona for some days and we worked in an internal Hackathon around some of our projects we felt could use some extra manpower. The Hackathon was very successful as we finished all the projects we started and as a consequence, some of my colleagues published an open source library: [pyfailsafe](https://github.com/Skyscanner/pyfailsafe).
 
 ### HackUPC
-I attended [HackUPC](http://hackupc.com/) in Barcelona as a sponsor to help out hackers make use of the [Skyscanner API](http://en.business.skyscanner.net/).  It was my first Hackathon as a sponsor and the experience was really good, read more about it [here](https://esaezgil.github.io/events/hackupc16/)
+I attended [HackUPC](http://hackupc.com/) in Barcelona as a sponsor to help out hackers make use of the [Skyscanner API](http://en.business.skyscanner.net/).  It was my first Hackathon as a sponsor and the experience was really good, read more about it [here](https://esaezgil.github.io/events/hackupc16/).
 
 <blockquote class="twitter-tweet tw-align-center">{{<tweet 784503844839497728>}}</blockquote>
 
 ### LauzHack
-I attended [LauzHack](http://lauzhack.com/) in Switzerland once again as a sponsor. I delivered a talk to help hackers get started with the [Skyscanner API](http://en.business.skyscanner.net/) and help them over the rest of the weekend along my colleague [Manuel Miranda](https://twitter.com/blckdt). I wrote about the experience [here](https://esaezgil.github.io/events/).
+I attended [LauzHack](http://lauzhack.com/) in Switzerland once again as a sponsor. I delivered a talk to help hackers get started with the [Skyscanner API](http://en.business.skyscanner.net/) and assist them over the rest of the weekend along my colleague [Manuel Miranda](https://twitter.com/blckdt). I wrote about the experience [here](https://esaezgil.github.io/events/).
 
 <blockquote class="twitter-tweet tw-align-center">{{<tweet 800355990608691204>}}</blockquote>
 
@@ -51,15 +51,15 @@ Furthermore, I attended in November the [Madrid Python Meetup](https://www.meetu
 
 ### Docker Meetup
 
-During the weekend of the Docker anniversary, there were multiple events run all over the world. This was an informal gathering to talk about this technology in which there was a brief introduction about Docker and a hands on lab in which we setup an example project.
+During the weekend of the Docker anniversary, there were multiple events run all over the world. It was an informal gathering to talk about this technology. There was a brief introduction about Docker and a hands on lab in which we setup an example project.
 
-I also attended and help organizing another [Docker Meetup](https://www.meetup.com/docker-barcelona-spain/), this time during the week, in which [Matt Feigal](https://twitter.com/mattfgl), an engineer from Google, talked about [Kubernetes](http://kubernetes.io/). His talk was quite interesting as I could see a lot of similar concepts between the [AWS cloud](https://aws.amazon.com/) and the [Google cloud](https://cloud.google.com/).
+I also attended and helped organizing another [Docker Meetup](https://www.meetup.com/docker-barcelona-spain/), this time during the week, in which [Matt Feigal](https://twitter.com/mattfgl), an engineer from Google, talked about [Kubernetes](http://kubernetes.io/). His talk was quite interesting as I could see a lot of similar concepts between the [AWS cloud](https://aws.amazon.com/) and the [Google cloud](https://cloud.google.com/).
 
 <blockquote class="twitter-tweet tw-align-center">{{<tweet 737692360746881026>}}</blockquote>
 
 ### VLC weekend Meetup
 
-The [VLC](http://www.videolan.org/vlc/index.html) board met in Barcelona at our office (Skyscanner) during the weekend to discuss over the weekend their plans and whatnot. I had the opportunity to hang out with them during Saturday evening and during Sunday. Although we were not involved at all in their discussions it was nice to talk with the maintainers and leaders of such an important Open Source project.
+The [VLC](http://www.videolan.org/vlc/index.html) board met in Barcelona at our office (Skyscanner) during the weekend to discuss about their plans and whatnot. I had the opportunity to hang out with them during Saturday evening and during Sunday. Although we were not involved at all in their discussions it was nice to talk with the maintainers and leaders of such an important Open Source project.
 
 Talks
 =====
