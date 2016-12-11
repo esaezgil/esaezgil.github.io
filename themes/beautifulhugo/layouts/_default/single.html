@@ -16,7 +16,7 @@
       {{ else if eq .Type "events" }}
         {{ partial "post.html" . }}
       {{ else }}
-        NO MATCHING PARTIAL
+      	{{ partial "post.html" . }}
       {{ end }}
 
     </div>

@@ -33,6 +33,11 @@ CanonifyUrls = true
     url = "/events/"
     weight = 1
 
+[[menu.main]]
+    name = "Books"
+    url = "/page/books/"
+    weight = 1
+
 [Author]
   name = "Enrique Saez"
   github = "esaezgil"
