@@ -9,6 +9,8 @@ pygmentsStyle = "manni"
 
 CanonifyUrls = true
 
+disqusShortname = "esaezgil"
+
 [Params]
   subtitle = "Software engineer - Telecom engineer - ICT enthusiast"
   logo = "img/icon.jpg"
