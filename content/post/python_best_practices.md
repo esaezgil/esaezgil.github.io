@@ -18,4 +18,8 @@ During the talk I covered the most common Python project's structure and the res
 
 {{< speakerdeck 2e42ac8c87a24bc3ad90cc5a40cc894a >}}
 
+**GitHub repo**
+
+https://github.com/esaezgil/pythonBestPractices
+
 Unfortunately due to technical problems the talk was not recorded :(
