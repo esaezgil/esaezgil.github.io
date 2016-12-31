@@ -30,3 +30,5 @@ Furthermore, A. Jesse Davis provides an interesting generic list of topics to wr
 - Reviews
 
 Reflecting back on my own blog I have covered so far either stories or reviews (Meetups, Hackathons, contributing to Open Source, books page). Topics I want to write about in the future are *How-tos* and *How Something Works*. I believe these two last topics are certainly the most valuable for others.
+
+**[Update]** Back in the day I also checked [this post](https://www.troyhunt.com/the-ghost-who-codes-how-anonymity-is/) by [Troy Hunt](https://twitter.com/troyhunt). Although there's some controversy around the topic, I believe that maintaining for a while a technical blog can help me improve my skills. An example for it that I look up to is [Jeff Knupp's blog](https://jeffknupp.com/).
