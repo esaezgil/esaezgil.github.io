@@ -54,20 +54,20 @@ If not born in mind, a time-consuming testing pipeline will drag down the team's
 
 # Enforcing the API contract
 
-In order to enforce the API contract, schemas for the APIs endpoints' responses should be defined and all releases must be validated against them. There are several tools available to automate the validation of the defined schemas for example [*jsonschema*](https://pypi.python.org/pypi/jsonschema) in Python.
-
 In order to overcome the aforementioned hurdle in the service we are creating at the moment, we implemented the following strategy:
+
+  - Created [JSON Schemas](http://json-schema.org) for the API endpoints' responses. In order to enforce the API contract, all releases must be validated against them. There are several tools available to automate the validation of the defined schemas for example [*jsonschema*](https://pypi.python.org/pypi/jsonschema) in Python.
 
   - Development of a new set of Unit Tests for our main endpoint (offering lots of flexibility on its usage), covering the different scenarios by:
 
     - Mocking the response of third-party services.
 
-    - Creating a set of schemas whose properties are not set to *required*.
+    - Creating a set of JSON schemas whose properties are not set to *required*.
 
-    - Validating the returned response from the endpoint against the defined schemas by dynamically setting the required properties for each test according to the scenario.
+    - Validating the returned response from the endpoint against the defined JSON Schemas by dynamically setting the required properties for each test according to the scenario.
 
-  - Development of a new set of Integration Tests with the tightly coupled third-party services that would alert us of any breaking change on the 3rd party's side by validating that their response abides to the service's contract.
+  - Development of a new set of Integration Tests with the tightly coupled third-party services that would alert us of any breaking change on the 3rd party's side. This can be achieved by validating that their response abides to the service's contract defined in a JSON Schema.
 
-  - Development of a set of Acceptance Tests that check the different clients' use-cases and validates the endpoint's responses against strict schemas (schemas in which all required properties are compulsory).
+  - Development of a set of Acceptance Tests that check the different clients' use-cases and validates the endpoint's responses against strict JSON Schemas (JSON Schemas in which all required properties are compulsory).
 
   Finally, the acceptance tests's schemas can be used as the service's documentation.
