@@ -6,7 +6,7 @@ bigimg = ""
 
 +++
 
-This past weekend 18th - 20th November I attended [Lauzhack](http://lauzhack.com), a student-organized and student-oriented Hackathon in Lausanne, Switzerland, as a [Skyscanner](http://skyscanner.net) representative.
+Throughout the weekend of 18th - 20th November I attended [Lauzhack](http://lauzhack.com), a student-organized and student-oriented Hackathon in Lausanne, Switzerland, as a [Skyscanner](http://skyscanner.net) representative.
 
 <blockquote class="twitter-tweet tw-align-center">{{< tweet 799973200994140160 >}}</blockquote>
 
