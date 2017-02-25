@@ -1,6 +1,6 @@
 baseurl = "https://esaezgil.github.io/"
 title = "Hej, I'm Enrique"
-subtitle = "Software engineer/Telecom engineer/ICT enthusiast"
+subtitle = "Software & Telecom engineer - ICT enthusiast"
 languageCode = "en-us"
 theme =  "beautifulhugo"
 PygmentsCodeFences = true
@@ -12,7 +12,7 @@ CanonifyUrls = true
 disqusShortname = "esaezgil"
 
 [Params]
-  subtitle = "Software engineer - Telecom engineer - ICT enthusiast"
+  subtitle = "Software & Telecom engineer - ICT enthusiast"
   logo = "img/icon.jpg"
 
 [[menu.main]]
