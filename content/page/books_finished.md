@@ -6,7 +6,11 @@ This is a brief list of the books I have read recently or I am reading at the mo
 
 <center>{{< figure src="https://images-na.ssl-images-amazon.com/images/I/41TINACY3hL._SX384_BO1,204,203,200_.jpg" title="Clean Code by Robert C. Martin" width="220" height="196" >}}</center>
 
-The Clean Code book has once again put for me the practice of writing software for other's people to read and understand front and center. 
+The Clean Code book has once again put front and center for me that writing software is a practice in which its output should be centered around:
+
+  - the reproducibility of the results
+  - an incremental refinement of the work based on the tests written for reproducibility
+  - the easiness for other people to read, understand, maintain and extend the code
 
 <center>{{< figure src="https://images-na.ssl-images-amazon.com/images/I/41brHoUIAiL._SX384_BO1,204,203,200_.jpg" title="Writing Idiomatic Python by Jeff Knupp" width="220" height="196" >}}</center>
 
