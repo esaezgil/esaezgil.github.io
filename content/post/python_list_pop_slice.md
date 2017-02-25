@@ -1,5 +1,5 @@
 +++
-title = "Python lists: pop() or slice?"
+title = "Python lists: pop vs slice performance"
 subtitle = ""
 date = "2017-02-22T15:16:33+01:00"
 bigimg = ""
