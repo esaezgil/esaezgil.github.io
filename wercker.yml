@@ -13,4 +13,4 @@ deploy:
         token: $GIT_TOKEN
         repo: esaezgil/esaezgil.github.io
         path: public
-        domain: esaezgil.com
+        domain: https://esaezgil.com
