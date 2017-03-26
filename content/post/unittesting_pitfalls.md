@@ -73,7 +73,7 @@ In the test above, it can be seen that the call to the database is being patched
 
 However, this does not imply that the integration with third-party services should not be tested through integration tests as I detailed in [my previous post about test driven APIs](http://esaezgil.com/post/test_driven_API/)
 
-A similar example is the following one in which the calls to a the [Redis database](https://redis.io/) required patching:
+A similar example is the following one in which the calls to the [Redis database](https://redis.io/) required patching:
 
 - [Mocking API calls in unit testing](http://stackoverflow.com/questions/42819073/mocking-api-calls-in-unit-testing/42820601)
 
@@ -114,7 +114,7 @@ Finally, check the following question showing that checking the output of the ca
 
 Testing exceptions:
 -------------------
-One of the key behaviors to test are exception handling. As I suggested in this answer, the way to test that exceptions are raised is by patching the call that can raise the exception. This can be achieved through the `side_effect` function.
+One of the key behaviors to test are exception handling. The way to test that exceptions are raised is by patching the call that can raise the exception. This can be achieved through the `side_effect` function.
 
 The next example shows how to force raising an exception to test that it is properly managed.
 
@@ -144,7 +144,7 @@ def test_validate_json_specifications(mock_file_open, draft_4_validator_mock):
     mock_file_open.assert_called_with('foo_path_to_data/schema/foo_json_file_path')
     draft_4_validator_mock.assert_called()
 ```
-The person asking was trying to use the patch wrong and not taking advantage of `side_effect`. As it can be seen, every time the `jsonschema` function of the module being tested was being called, a `Draft4Validator` object would have been created (had the class been correctly instantiated).
+The person asking was trying to use the patch wrong and not taking advantage of `side_effect`. As it can be seen, every time the `jsonschema` function of the module being tested was called, a `Draft4Validator` object would have been created (had the class been correctly instantiated).
 
 Instead, the Draft4Validator object is the one to be mocked and the relevant calls to any of its methods the ones to be patched.
 An example of such way to proceed can be found in the answer I posted:
@@ -180,7 +180,7 @@ Some of the most common used features are the following:
 Testing that exceptions are raised
 -----------------------------------
 
-Fortunately, pytest provides powerful features to test to [assert that exceptions are raised](). Some examples of wrong usage of such features ensues:
+Fortunately, pytest provides powerful features to [test that exceptions are handled properly](http://doc.pytest.org/en/latest/assert.html#assertions-about-expected-exceptions).
 
 The next example shows how to force raising an exception and test that it actually raised:
 
