@@ -1,4 +1,4 @@
-baseurl = "https://esaezgil.github.io/"
+baseurl = "https://esaezgil.com/"
 title = "Hej, I'm Enrique"
 subtitle = "Software & Telecom engineer - ICT enthusiast"
 languageCode = "en-us"
@@ -41,7 +41,7 @@ disqusShortname = "esaezgil"
     weight = 1
 
 [Author]
-  name = "Enrique Saez"
+  name = "Enrique Saez Gil"
   github = "esaezgil"
   twitter = "eqirn"
   linkedin = "in/enriquesaezgil/en"
