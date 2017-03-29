@@ -1,20 +1,9 @@
----
-author: thinkreleaseblog
-comments: true
-date: 2016-09-04 13:24:25+00:00
-excerpt: 'Key learnings #python #oss #django '
-layout: post
-link: https://thinkreleaseblog.wordpress.com/2016/09/04/contributing-to-pretix/
-slug: contributing-to-pretix
-title: Contributing to Pretix
-wordpress_id: 162
-categories:
-- Python
-tags:
-- django
-- oss
-- Python
----
++++
+date = "2016-09-04T13:24:25+01:00"
+title = "Contributing to Pretix"
+subtitle = ""
+bigimg = ""
++++
 
 Recently I had the chance to contribute to Pretix ([https://pretix.eu/about/en/](https://pretix.eu/about/en/)) a Django-based event ticketing platform.<!--more-->
 
