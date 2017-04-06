@@ -32,7 +32,7 @@ disqusShortname = "esaezgil"
     weight = 2
 
 [[menu.main]]
-    name = "Events"
+    name = "Hackathons"
     url = "/events/"
     weight = 1
 
