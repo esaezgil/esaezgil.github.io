@@ -11,7 +11,7 @@ I am Telecommunications Engineer passionate about the ICT industry. After attend
 During my [Master studies](http://www.en.aau.dk/education/master/wireless-communication-systems) at [Aalborg University](http://www.en.aau.dk/), Denmark, I had the opportunity to work in the [MassM2M research group](http://massm2m.es.aau.dk/) and participate in the entire product life-cycle, from the initial research up to the development of a prototype for a robust wireless communication system.<br>
 Check [this video](https://vimeo.com/66733915) for a demo of the system transmitting audio over WiFi even after a jammer is switched on.
 
-Furthermore, I had the chance to work for a short time at a startup, [Reseiwe](http://reseiwe.com/), that spin-off from this research group while completing my [Master Thesis](http://projekter.aau.dk/projekter/files/198541091/main_report_4_june.pdf).
+Afterwards, I had the chance to work part-time at a startup, [Reseiwe](http://reseiwe.com/), that spin-off from the research group while completing my [Master Thesis](http://projekter.aau.dk/projekter/files/198541091/main_report_4_june.pdf).
 
 I enjoy learning about new technologies, that I could eventually make use of to implement an innovative service.<br>
 I like playing sports (football, padel), travelling around Europe and reading (Kapuściński, Tom Wolfe).
