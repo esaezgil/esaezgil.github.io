@@ -7,6 +7,7 @@ bigimg = ""
 +++
 
 During Friday night May 6 through Sunday May 8 I attended [THack Mallorca](https://www.tnooz.com/event/thack-mallorca-2016/), a Hackathon organized by [Tnooz](https://tnooz.com), a global provider of news and analysis to the travel industry.
+<!--more-->
 
 <blockquote class="twitter-tweet tw-align-center">{{< tweet 728798299474546688 >}}</blockquote>
 

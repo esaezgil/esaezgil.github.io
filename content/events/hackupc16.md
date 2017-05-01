@@ -7,6 +7,7 @@ date = "2016-10-23T18:34:25+02:00"
 +++
 
 [HackUPC](https://hackupc.com/) is a student-led and student-oriented hackathon for tech-enthusiast held in Barcelona, at the premises of Universitat Politecnica de Catalunya over the weekend of October 1st 2016.
+<!--more-->
 
 I attended the event as a company representative for [Skyscanner](http://skyscanner.net), the main sponsor of the event. The hackathon gathered 500 students from all over the world and was an immense success.
 

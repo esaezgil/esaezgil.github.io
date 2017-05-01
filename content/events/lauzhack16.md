@@ -7,6 +7,7 @@ bigimg = ""
 +++
 
 Throughout the weekend of 18th - 20th November I attended [Lauzhack](http://lauzhack.com), a student-organized and student-oriented Hackathon in Lausanne, Switzerland, as a [Skyscanner](http://skyscanner.net) representative.
+<!--more-->
 
 <blockquote class="twitter-tweet tw-align-center">{{< tweet 799973200994140160 >}}</blockquote>
 
@@ -54,5 +55,3 @@ My take out points:
 - Hackathons set the perfect ambiance for innovation. Working within a strict timeframe helps effectively deliver the basics of an impactful product.
 
 Looking forward to LauzHack'17
-
-
