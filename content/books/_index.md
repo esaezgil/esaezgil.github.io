@@ -1,5 +1,6 @@
 +++
 title = "Books"
+comments = true
 +++
 
 Find more about the books I have enjoyed lately:
