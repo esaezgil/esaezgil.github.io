@@ -12,6 +12,8 @@ CanonifyUrls = true
 relativeURLs = true
 
 disqusShortname = "esaezgil"
+googleAnalytics = "UA-86132389-1"
+
 
 [Params]
   subtitle = "Software & Telecom engineer - ICT enthusiast"
