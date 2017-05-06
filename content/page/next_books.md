@@ -1,5 +1,7 @@
 +++
 title = "Next books"
+subtitle = "Books I want to read next"
+comments = true
 +++
 
 This is a list of books I want to read next, **feel free to recommend me some other books in the comments below**:

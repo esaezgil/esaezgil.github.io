@@ -1,5 +1,7 @@
 +++
-title = "Current and past books"
+title = "Finished books"
+subtitle = "Current and past books"
+comments = true
 +++
 
 This is a brief list of the books I have read recently or I am reading at the moment:
