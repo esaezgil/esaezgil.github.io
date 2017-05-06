@@ -1,5 +1,5 @@
 baseurl = "https://esaezgil.com/"
-title = "Enrique Saez Gil"
+title = "Enrique Saez"
 subtitle = "Software & Telecom engineer - ICT enthusiast"
 languageCode = "en-us"
 theme =  "beautifulhugo"
@@ -7,7 +7,7 @@ PygmentsCodeFences = true
 pygmentsuseclasses = false
 pygmentsStyle = "manni"
 
-CanonifyUrls = false
+CanonifyUrls = true
 
 relativeURLs = true
 
