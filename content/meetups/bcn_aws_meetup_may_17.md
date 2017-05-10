@@ -5,7 +5,7 @@ date = "2017-05-10T19:55:00+01:00"
 bigimg = ""
 +++
 
-As part of the [Skyscanner](http://skyscanner.net) ambassador group in Barcelona, we support the local software community by helping organize different events. On May 9th the Barcelona AWS meetup was held at the office.
+As part of the [Skyscanner](http://skyscanner.net) ambassador group in Barcelona, we support the local software community by helping organize different events. On May 9th the [Barcelona AWS meetup](https://www.meetup.com/Barcelona-Amazon-Web-Services-Meetup/events/239518577/) was held at the office.
 <!--more-->
 
 There were two talks in the meetup, both dealing with serverless computing:
@@ -26,7 +26,7 @@ Finally it was mentioned the challenges that cloud-first services pose such as p
 
 Overall it was really interesting listening to their experience as I can closely relate to many of the problems that surfaced to them while developing our own cloud-native services.
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/cHm2JpSQVSHpOL" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:3px; max-width: 100%; allowfullscreen; > </iframe> <div style="margin-bottom:3px"> <a href="//www.slideshare.net/cansrht/serverless-architectures-on-aws-lambda" title="Serverless Architectures on AWS Lambda" target="_blank">Serverless Architectures on AWS Lambda</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/cansrht">Serhat CAN</a></strong> </div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/cHm2JpSQVSHpOL" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/cansrht/serverless-architectures-on-aws-lambda" title="Serverless Architectures on AWS Lambda" target="_blank">Serverless Architectures on AWS Lambda</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/cansrht">Serhat CAN</a></strong> </div>
 
 **2nd talk**
 
@@ -39,7 +39,9 @@ Radek talked about the different AWS services that could be used for the process
  - Long delay in logs (up to 20 minutes)
  - Limits to the *infinite* resources that the cloud provides
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/K284LtP7pBU87q" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:3px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:3px" align="right"> <a href="//www.slideshare.net/radekmiazio/serverless-data-processing-with-data-pipeline" title="Serverless data processing with Data Pipeline" target="_blank">Serverless data processing with Data Pipeline</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/radekmiazio">Radek Miazio</a></strong> </div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/K284LtP7pBU87q" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/radekmiazio/serverless-data-processing-with-data-pipeline" title="Serverless data processing with Data Pipeline" target="_blank">Serverless data processing with Data Pipeline</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/radekmiazio">Radek Miazio</a></strong> </div>
+
+**Final thoughts**
 
 From both talks it could be distilled that when designing a serverless service the solution has to take into account the constraints of the still immature services offered which sometimes are not clearly laid out in the docs.
 
