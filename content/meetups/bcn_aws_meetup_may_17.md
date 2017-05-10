@@ -16,8 +16,6 @@ The first talk by [Serhat Can](https://twitter.com/srhtcn) dealt with serverless
 
 [OpsGenie](https://www.opsgenie.com/) is an alerting service somehow similar to the one that [VictorOps](http://victorops.com) offers. At Skyscanner we make use of VictorOps for alerting, on-call rotation and 24 hour support.
 
-During the talk it was clear that OpsGenie makes use of a wide variety of AWS services for their core business.
-
 One of the use cases shown that caught my attention was the [DynamoDB](https://aws.amazon.com/dynamodb/) autoscaling system they have in place. Some of the cool features along it include a configurable DynamoDB table alarm in [Cloudwatch](https://aws.amazon.com/cloudwatch/) that is updated with the increase/decrease of the table capacity.
 
 At Skyscanner hotels we faced similar issues in the past as we make an intensive use of DynamoDB for the service that manages the sorting of hotel partners in the search results in case of price parity. The algorithm behind this computation, that we call [*Partner Sorting Algorithm*](http://codevoyagers.com/2016/02/24/solving-the-problem-of-one-billion-computations/) serves the precomputed positions for each partner from a DynamoDB table.
@@ -28,7 +26,7 @@ Finally it was mentioned the challenges that cloud-first services pose such as p
 
 Overall it was really interesting listening to their experience as I can closely relate to many of the problems that surfaced to them while developing our own cloud-native services.
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/cHm2JpSQVSHpOL" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:3px; max-width: 100%; align=: center allowfullscreen; align="center"> </iframe> <div style="margin-bottom:3px" align="center"> <a href="//www.slideshare.net/cansrht/serverless-architectures-on-aws-lambda" title="Serverless Architectures on AWS Lambda" target="_blank">Serverless Architectures on AWS Lambda</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/cansrht">Serhat CAN</a></strong> </div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/cHm2JpSQVSHpOL" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:3px; max-width: 100%; allowfullscreen; > </iframe> <div style="margin-bottom:3px"> <a href="//www.slideshare.net/cansrht/serverless-architectures-on-aws-lambda" title="Serverless Architectures on AWS Lambda" target="_blank">Serverless Architectures on AWS Lambda</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/cansrht">Serhat CAN</a></strong> </div>
 
 **2nd talk**
 
@@ -41,7 +39,7 @@ Radek talked about the different AWS services that could be used for the process
  - Long delay in logs (up to 20 minutes)
  - Limits to the *infinite* resources that the cloud provides
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/K284LtP7pBU87q" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:3px; max-width: 100%;" allowfullscreen align="center"> </iframe> <div style="margin-bottom:3px" align="right"> <a href="//www.slideshare.net/radekmiazio/serverless-data-processing-with-data-pipeline" title="Serverless data processing with Data Pipeline" target="_blank">Serverless data processing with Data Pipeline</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/radekmiazio">Radek Miazio</a></strong> </div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/K284LtP7pBU87q" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:3px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:3px" align="right"> <a href="//www.slideshare.net/radekmiazio/serverless-data-processing-with-data-pipeline" title="Serverless data processing with Data Pipeline" target="_blank">Serverless data processing with Data Pipeline</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/radekmiazio">Radek Miazio</a></strong> </div>
 
 From both talks it could be distilled that when designing a serverless service the solution has to take into account the constraints of the still immature services offered which sometimes are not clearly laid out in the docs.
 
