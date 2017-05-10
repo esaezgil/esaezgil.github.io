@@ -49,6 +49,12 @@ googleAnalytics = "UA-86132389-1"
     weight = 2
 
 [[menu.main]]
+    parent = "events"
+    name = "Meetups"
+    url = "/meetups/"
+    weight = 3
+
+[[menu.main]]
     identifier = "more"
     name = "More"
     weight = 4
