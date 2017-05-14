@@ -22,9 +22,7 @@
   <meta property="og:image" content="{{ . | absURL }}" />
   <meta name="twitter:image" content="{{ . | absURL }}" />
 {{- end }}
-{{- with .Summary | default .Site.Params.subtitle | default .Description }}
-  <meta name="twitter:card" content="{{ . }}" />
-  {{- end }}
+<meta name="twitter:card" content="summary" />
 {{- with .Site.Author.twitter }}
   <meta name="twitter:site" content="@{{ . }}" />
   <meta name="twitter:creator" content="@{{ . }}" />
