@@ -1,24 +1,24 @@
 baseurl = "https://esaezgil.com/"
 title = "Enrique Saez"
-subtitle = "Software & Telecom engineer - ICT enthusiast"
 languageCode = "en-us"
 theme =  "beautifulhugo"
+
 PygmentsCodeFences = true
 pygmentsuseclasses = false
 pygmentsStyle = "manni"
 
 CanonifyUrls = true
-
 relativeURLs = true
 
 disqusShortname = "esaezgil"
 googleAnalytics = "UA-86132389-1"
+enableRobotsTXT = true
 
 
 [Params]
+  description = "Enrique Saez Gil personal blog - python, software, books, open source, events"
   subtitle = "Software & Telecom engineer - ICT enthusiast"
   logo = "img/icon.jpg"
-  description="Enrique Saez Gil personal blog - python, software, books, open source, events"
   comments = true
 
 [[menu.main]]
