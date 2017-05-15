@@ -1,5 +1,5 @@
 +++
-title = "HackUPC'16"
+title = "HackUPC - Oct'16"
 bigimg = ""
 subtitle = ""
 date = "2016-10-23T18:34:25+02:00"
