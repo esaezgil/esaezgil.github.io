@@ -16,13 +16,13 @@ I came along with another engineer from [Skyscanner](https://skyscanner.net). Ne
 We both ended up joining the *Infobecas* team which pitched their idea about a two-sided platform for institutions and scholarship seekers that automatically matches individuals with scholarships.<br>
 The reason for joining their team boiled down to the clear scope of the project, the social vision behind it and the feasibility of implementing a minimum viable product over the short time span of the hackathon.
 
-We ended up with a team of four but only two developers. We discussed different possibilities for parallelizing the work between the two developers taking into account:
+We worked in a team of four but with only two developers. We discussed different possibilities for parallelizing the software developing work taking into account:
 
 - the strict time constraint
 - our own technical abilities and current expertise
 - making a mobile first product, available from the beginning to the highest number of users
 
-We reached to the conclusion that going for a backend/frontend architecture implemented between two people over the next 24 hours would severely haphazard the possibility of having something usable for the demos. Therefore, we wanted to abstract from the frontend part as much as possible and focus on the backend where both of us had the most experience.
+We  quickly concluded that going for a backend/frontend architecture implemented between two people over the next 24 hours would severely haphazard the possibility of having something usable for the demos. Therefore, we wanted to abstract from the frontend part as much as possible and focus on the backend where both of us had the most experience.
 
 The solution we agreed on would make use of the [Telegram](https://telegram.com) API to connect people through a chat based interaction with our backend in charge of matching institutions offering scholarships with individuals based on the inputs collected through a chat-based conversation.
 
@@ -59,4 +59,8 @@ Reflecting back on the 3 projects that I participated in, they all shared the fo
 - A working prototype even though it implies mocking some of the data
 - A solution for an actual problem that is scalable and extendable
 
-P.S. Take a look at the blog for the previous hackathon: https://esaezgil.com/events/thackmallorca16/
+P.S. Take a look at some of my previous blogs about hackathons I attended:
+
+- [THack Mallorca](https://esaezgil.com/events/thackmallorca16/) as a participant
+- [LauzHack](https://esaezgil.com/events/lauzhack16/) as a sponsor
+- [HackUPC](https://esaezgil.com/events/hackupc16/) as a sponsor
