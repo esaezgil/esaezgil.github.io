@@ -14,3 +14,5 @@ title="Fluent Python by Luciano Ramalho" width="220" height="196" >}}</center>
 title="Grokking Algorithms by Aditya Bhargava" width="220" height="196" >}}</center>
 <center>{{< figure src="https://images-na.ssl-images-amazon.com/images/I/514xvNk9rTL._SX379_BO1,204,203,200_.jpg"
 title="Designing Data-Intensive Applications by Martin Kleppmann" width="220" height="196" >}}</center>
+<center>{{< figure src="https://imagery.pragprog.com/products/498/bopytest_xlargebeta.jpg?1489599400"
+title="Python Testing with pytest by Brian Okken" width="220" height="196" >}}</center>
