@@ -24,7 +24,7 @@ enableRobotsTXT = true
 [[menu.main]]
     name = "Blog"
     url = "/"
-    weight = 1
+    weight = 2
 
 [[menu.main]]
     name = "About"
@@ -34,7 +34,7 @@ enableRobotsTXT = true
 [[menu.main]]
     identifier = "events"
     name = "Events"
-    weight = 3
+    weight = 2
 
 [[menu.main]]
     parent = "events"
@@ -50,14 +50,14 @@ enableRobotsTXT = true
 
 [[menu.main]]
     parent = "events"
-    name = "Meetups"
+    name = "Meetups & Conferences"
     url = "/meetups/"
     weight = 3
 
 [[menu.main]]
     identifier = "more"
     name = "More"
-    weight = 4
+    weight = 2
 
 [[menu.main]]
     parent = "more"
