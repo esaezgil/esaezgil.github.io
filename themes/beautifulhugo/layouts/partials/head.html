@@ -8,7 +8,7 @@
   <meta property="og:title" content="{{ . }}" />
   <meta name="twitter:title" content="{{ . | truncate 70 }}" />
 {{- end }}
-{{- with .Site.Params.description | default .Site.Params.subtitle | default .Summary }}
+{{- with .Description | default .Params.subtitle | default .Summary }}
   <meta name="description" content="{{ . }}">
   <meta property="og:description" content="{{ . }}">
   <meta name="twitter:description" content="{{ . | truncate 200 }}">
@@ -22,7 +22,7 @@
   <meta property="og:image" content="{{ . | absURL }}" />
   <meta name="twitter:image" content="{{ . | absURL }}" />
 {{- end }}
-<meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary" />
 {{- with .Site.Author.twitter }}
   <meta name="twitter:site" content="@{{ . }}" />
   <meta name="twitter:creator" content="@{{ . }}" />

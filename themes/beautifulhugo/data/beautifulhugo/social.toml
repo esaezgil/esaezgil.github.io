@@ -100,14 +100,3 @@ url = "https://keybase.io/%s"
 title = "Keybase"
 icon = "fa-key"
 
-[[social_icons]]
-id = "speakerdeck"
-url = "https://speakerdeck.com/%s" 
-title = "Speakerdeck"
-icon = "fa-slideshare"
-
-[[social_icons]]
-id = "meetup"
-url = "https://www.meetup.com/members/%s/"
-title = "Meetup"
-icon = "fa-meetup"

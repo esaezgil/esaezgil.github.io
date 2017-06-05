@@ -37,3 +37,4 @@
   translation: "Search {{ .Site.Title }}"
 - id: gcseClose
   translation: "Close"
+
