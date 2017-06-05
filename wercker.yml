@@ -1,20 +1,22 @@
 box: debian
 build:
   steps:
+    - install-packages:
+        packages: git
+    - script:
+        name: download theme
+        code: |
+            $(git clone https://github.com/esaezgil/beautifulhugo ./themes/beautifulhugo_custom)
     - arjen/hugo-build:
         version: "0.21"
-        theme: beautifulhugo
+        theme: beautifulhugo_custom
         flags: --buildDrafts=false
 deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - script:
-        name: download theme
-        code: |
-            $(git clone https://github.com/esaezgil/beautifulhugo ./themes/beautifulhugo
-    - uetchy/gh-pages:
+    - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         repo: esaezgil/esaezgil.github.io
-        path: public
+        basedir: public
         domain: https://esaezgil.com
