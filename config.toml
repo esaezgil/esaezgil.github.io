@@ -73,6 +73,12 @@ enableRobotsTXT = true
 
 [[menu.main]]
     parent = "more"
+    name = "Reviews"
+    url = "/reviews/"
+    weight = 2
+
+[[menu.main]]
+    parent = "more"
     name = "Links"
     url = "/interesting_links/"
     weight = 3
