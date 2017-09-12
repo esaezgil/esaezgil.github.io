@@ -3,6 +3,8 @@ date = "2016-09-03T14:34:00+01:00"
 title = "Contributing to aiohttp"
 subtitle = ""
 bigimg = ""
+keywords = "python, aiohttp, open source, contributing"
+description = "Lessons learnt from contributing to an open source project, aiohttp"
 +++
 
 Recently I had the opportunity to contribute to the [**aiohttp** library](https://github.com/KeepSafe/aiohttp/). This is one of the libraries that we, the [Hotels](https://www.skyscanner.net/hotels) backend team at [Skyscanner](https://www.skyscanner.net), make use of on a daily basis to create a new backend service. <!--more-->

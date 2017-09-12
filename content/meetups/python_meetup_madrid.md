@@ -3,7 +3,8 @@ title = "Madrid Python Meetup - November'16"
 subtitle = ""
 date = "2016-12-01T19:55:00+01:00"
 bigimg = ""
-
+keywords = "python, review, meetup, open source community"
+description = "Review of the Madrid Python Meetup, November'16"
 +++
 
 Last November I attended the [Madrid Python Meetup](https://www.meetup.com/Madrid-Python-Meetup/events/235214434/). Being a regular attendant of [Barcelona Python Meetup](https://www.meetup.com/python-185/) I was curious about the Python community in Madrid.

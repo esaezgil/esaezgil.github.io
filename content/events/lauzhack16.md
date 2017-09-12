@@ -3,7 +3,8 @@ title = "LauzHack - Nov'16"
 subtitle = ""
 date = "2016-11-22T18:04:04+02:00"
 bigimg = ""
-
+keywords = "hackathon, review, lauzhack"
+description = "Review of the Lauzhack hackathon, Lausanne November'16"
 +++
 
 Throughout the weekend of 18th - 20th November I attended [Lauzhack](http://lauzhack.com), a student-organized and student-oriented Hackathon in Lausanne, Switzerland, as a [Skyscanner](http://skyscanner.net) representative.

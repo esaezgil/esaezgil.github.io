@@ -3,7 +3,8 @@ title = "Scheduling logrotate in CentOS"
 bigimg = ""
 date = "2016-12-30T11:54:24+02:00"
 subtitle = ""
-
+keywords = "logrotate, CentOS, open source, logs"
+description = "Scheduling log rotate in a CentOS system"
 +++
 
 Logs are a fundamental piece of the web server architecture for debugging, monitoring

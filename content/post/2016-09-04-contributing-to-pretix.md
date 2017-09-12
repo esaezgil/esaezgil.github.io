@@ -3,6 +3,8 @@ date = "2016-09-04T13:24:25+01:00"
 title = "Contributing to Pretix"
 subtitle = ""
 bigimg = ""
+keywords = "python, pretix, open source, contributing"
+description = "Lessons learnt from contributing to an open source project, pretix"
 +++
 
 Recently I had the chance to contribute to Pretix ([https://pretix.eu/about/en/](https://pretix.eu/about/en/)) a Django-based event ticketing platform.<!--more-->

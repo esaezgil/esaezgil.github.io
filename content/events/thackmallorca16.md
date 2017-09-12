@@ -3,7 +3,8 @@ title = "THack Mallorca - May'16"
 subtitle = ""
 date = "2016-05-25T18:04:04+02:00"
 bigimg = ""
-
+keywords = "hackathon, review, thack"
+description = "Review of the THack hackathon, Mallorca May'16"
 +++
 
 During Friday night May 6 through Sunday May 8 I attended [THack Mallorca](https://www.tnooz.com/event/thack-mallorca-2016/), a Hackathon organized by [Tnooz](https://tnooz.com), a global provider of news and analysis to the travel industry.

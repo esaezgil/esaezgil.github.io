@@ -3,7 +3,8 @@ title = "PyconWeb - May'17"
 bigimg = ""
 subtitle = ""
 date = "2017-05-28T18:34:25+02:00"
-
+keywords = "review, conference, python, open source community"
+description = "Review of the Pyconweb conference, Munich May'17"
 +++
 
 The [Pyconweb](https//pyconweb.com) conference, held in the premises of the [Ludwig Maximilian University of Munich](https://lmu.edu), took place during the last weekend of May. The conference aimed to gather people with a common interest for Python-based web development.

@@ -3,7 +3,8 @@ title = "Reasons for a blog"
 subtitle = ""
 date = "2016-12-29T01:37:32+02:00"
 bigimg = ""
-
+keywords = "review, open source"
+description = "Reasons for keeping a blog as a software developer"
 +++
 
 I have been enjoying the [Talk Python Podcast](https://talkpython.fm/episodes/all) for a while and at least two episodes revolve around the importance of having a blog as a software developer.

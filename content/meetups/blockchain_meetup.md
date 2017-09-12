@@ -3,6 +3,8 @@ title = "Barcelona Blockchain Meetup - June'17"
 subtitle = ""
 date = "2017-06-07T19:55:00+01:00"
 bigimg = ""
+keywords = "review, meetup, Blockchain"
+description = "Review of the Blockchain Meetup, Barcelona June'17"
 +++
 
 Yesterday I attended the [Barcelona Blockchain Meetup](https://www.meetup.com/barcelonablockchain/events/239809893/). My goal was to get a feeling of the developer community in Barcelona around this technology.

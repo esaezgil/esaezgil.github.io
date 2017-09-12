@@ -3,6 +3,8 @@ title = "Python lists: pop vs slice performance"
 subtitle = ""
 date = "2017-02-22T15:16:33+01:00"
 bigimg = ""
+keywords = "python, performance, pop, slice"
+description = "Performance of pop vs slice in Python lists"
 +++
 
 Recently I had a comment in a merge request in which I was suggested to copy the `Nth-1` last elements of a list, `a[1:]`, instead of popping its first element, `pop(0)`.

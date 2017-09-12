@@ -3,7 +3,8 @@ title = "Test-driven information system services"
 subtitle = ""
 date = "2017-01-27T13:27:21+01:00"
 bigimg = ""
-
+keywords = "python, API, testing, jsonschema"
+description = "Testing infrastructure during API design and development"
 +++
 
 Working for the backend service at [Skyscanner Hotels](https://www.skyscanner.net/hotels) I take part in the development of new services and its associated APIs quite regularly.

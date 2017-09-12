@@ -3,6 +3,8 @@ title = "Review: effective Android testing for mobile developers"
 bigimg = ""
 subtitle = ""
 date = "2017-09-05T16:34:25+02:00"
+keywords = "android, review, java, testing, course"
+description = "Review of the effective Android testing for mobile developers"
 +++
 
 This is my review of [effective Android testing for mobile developers](https://www.linkedin.com/learning/effective-android-testing-for-mobile-developers/) by [Chiu-Ki Chan](https://twitter.com/chiuki).

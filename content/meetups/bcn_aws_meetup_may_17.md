@@ -3,6 +3,8 @@ title = "Barcelona AWS Meetup - May'17"
 subtitle = ""
 date = "2017-05-10T19:55:00+01:00"
 bigimg = ""
+keywords = "AWS, review, meetup, serverless"
+description = "Review of the AWS Meetup, Barcelona May'17"
 +++
 
 As part of the [Skyscanner](http://skyscanner.net) ambassador group in Barcelona, we support the local software community by helping organize different events. On May 9th the [Barcelona AWS meetup](https://www.meetup.com/Barcelona-Amazon-Web-Services-Meetup/events/239518577/) was held at the office.

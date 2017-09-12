@@ -3,7 +3,8 @@ title = "2016 review"
 subtitle = ""
 date = "2016-12-12T19:37:32+02:00"
 bigimg = ""
-
+keywords = "python, review, open source, contributing, Hackathons, Meetups, talks"
+description = "2016 year review, python, open source, contributing, Hackathons, Meetups, talks"
 +++
 
 2016 is coming to an end and I would like to look back and review what I have been up to during the last year:
@@ -64,7 +65,7 @@ The [VLC](http://www.videolan.org/vlc/index.html) board met in Barcelona at our 
 Talks
 =====
 
-As I mentioned previously, I [delivered a talk](https://esaezgil.github.io/post/python_best_practices/) in the  [Barcelona Python Meetup](https://www.meetup.com/python-185/). It was a good experience since I learnt a lot while preparing for the talk and I look forward to deliver another one in the future. Take a look at the [slides](https://speakerdeck.com/esaezgil/python-projects-best-practices-1) and the [GitHub repo](https://github.com/esaezgil/pythonBestPractices) I created for it. 
+As I mentioned previously, I [delivered a talk](https://esaezgil.github.io/post/python_best_practices/) in the  [Barcelona Python Meetup](https://www.meetup.com/python-185/). It was a good experience since I learnt a lot while preparing for the talk and I look forward to deliver another one in the future. Take a look at the [slides](https://speakerdeck.com/esaezgil/python-projects-best-practices-1) and the [GitHub repo](https://github.com/esaezgil/pythonBestPractices) I created for it.
 
 <blockquote class="twitter-tweet tw-align-center">{{<tweet 789159836730679296>}}</blockquote>
 

@@ -3,7 +3,8 @@ title = "LaTeX and moderncv in macOS"
 subtitle = ""
 date = "2017-02-11T18:25:12+02:00"
 bigimg = ""
-
+keywords = "LaTeX, macOS, moderncv"
+description = "LaTeX and moderncv setup"
 +++
 
 Confronted with the task of writing a CV for the first time many students resort to Microsoft Word and sloppy templates to be found on the Internet. <!--more-->

@@ -3,6 +3,8 @@ title = "Unit-testing pitfalls & pytest basic features"
 subtitle = ""
 date = "2017-03-25T15:16:33+01:00"
 bigimg = ""
+keywords = "python, testing, mock, pytest"
+description = "Python unit-testing pitfalls & pytest basic features"
 +++
 
 Lately, I have been answering some questions in [StackOverflow](http://stackoverflow.com/users/4378118/enrique?tab=profile) related to Unit Testing in Python with [Mock](http://www.voidspace.org.uk/python/mock/) and [pytest](http://doc.pytest.org/en/latest/). These are some of the questions I answered:

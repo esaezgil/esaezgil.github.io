@@ -3,7 +3,8 @@ title = "HackUPC - Oct'16"
 bigimg = ""
 subtitle = ""
 date = "2016-10-23T18:34:25+02:00"
-
+keywords = "hackathon, review, hackupc"
+description = "Review of the HackUPC hackathon, Barcelona October'16"
 +++
 
 [HackUPC](https://hackupc.com/) is a student-led and student-oriented hackathon for tech-enthusiast held in Barcelona, at the premises of Universitat Politecnica de Catalunya over the weekend of October 1st 2016.

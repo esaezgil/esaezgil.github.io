@@ -3,7 +3,8 @@ title = "AngelHack - May'17"
 bigimg = ""
 subtitle = ""
 date = "2017-05-25T18:34:25+02:00"
-
+keywords = "hackathon, review, chatbot, telegram, docker, python"
+description = "Review of the AngelHack hackathon, Barcelona May'17"
 +++
 
 [AngelHack](https://angelhack.com/) organized a hackathon in Barcelona last weekend. Having attended lately two other hackathons as a sponsor I thought it would be nice to get back to the hacker side and put together a project over the weekend.

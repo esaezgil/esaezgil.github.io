@@ -3,7 +3,8 @@ title = "Talk: Python Best Practices"
 subtitle = ""
 date = "2016-10-22T19:37:32+02:00"
 bigimg = ""
-
+keywords = "python, talks, open source, best practices"
+description = "Best practices for a python project"
 +++
 
 Over the last year I have attended the [Barcelona Python meetup](https://www.meetup.com/python-185/) hosted at [Skyscanner](http://skyscanner.net)'s office.
