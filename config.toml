@@ -83,6 +83,12 @@ enableRobotsTXT = true
     url = "/interesting_links/"
     weight = 3
 
+[[menu.main]]
+    parent = "more"
+    name = "Donate"
+    url = "/donate/"
+    weight = 4
+
 [Author]
   name = "Enrique Saez Gil"
   github = "esaezgil"
@@ -118,4 +124,3 @@ weight = 100
 name  = "date"
 weight = 10
 pattern = "2006"
-
