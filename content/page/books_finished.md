@@ -39,3 +39,7 @@ Again listening to episode [John Sonmez](https://twitter.com/jsonmez) on the [@T
 
 <center>{{< figure src="https://images-na.ssl-images-amazon.com/images/I/41Xz4UVM-0L._SX331_BO1,204,203,200_.jpg" title="The Effective Engineer by Edmond Lau" width="220" height="196" >}}</center>
 This is a book we gave away as a prize at the [LauzHack Hackathon](http://lauzhack.com) in Switzerland which I [attended](https://esaezgil.github.io/events/) as a Skyscanner representative. I was curious about it and I am reading it now.
+
+<center>{{< figure src="https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg"
+title="Grokking Algorithms by Aditya Bhargava" width="220" height="196" >}}</center>
+I enjoyed this book and wrote a brief review about it: https://esaezgil.com/reviews/grokking_algorithms/
