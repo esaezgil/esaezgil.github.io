@@ -30,3 +30,5 @@ It was a good refresher of some of the concepts I had studied during my [Bachelo
 Other interesting points were the overview of dynamic programming, greedy algorithms, big O notaton, the discussion on simple algorithms and its complexity, NP-complete problems, as well as the super simple implementation of BDFS in Python.
 
 Overall I enjoyed reading the book and as the author points out, instilled in me a demand for new and deeper knowledge on some of the topics.
+
+P.S. there's a github repo with implementations of the different algorithms in many languages: https://github.com/egonSchiele/grokking_algorithms as well as an errata page: http://adit.io/errata.html
