@@ -60,7 +60,7 @@ Previous experience
 
 [Ericsson](https://www.ericsson.com/en), Spain
 
- * Internship at [Ericsson R&D](https://www.ericsson.com/en) Madrid in the Testing and Continuous Integration team within the [Software Defined Networks](https://www.opennetworking.org/sdn-definition/) department.
+ * Internship at [Ericsson R&D](https://www.ericsson.com/en) Madrid in the Testing and Continuous Integration team within the [Software Defined Networks](https://www.ericsson.com/en/networks/topics/sdn) department.
 
 [MassM2M research group](http://massm2m.es.aau.dk/) at [Aalborg University](http://www.en.aau.dk/), Denmark
 
@@ -69,4 +69,4 @@ Check [this video](https://vimeo.com/66733915) for a demo of the system transmit
 
 [Reseiwe](http://reseiwe.com/), Denmark
 
-* Also during the Master, I had the chance to work part-time at a startup, [Reseiwe](http://reseiwe.com/), that spin-off from the research group while completing my [Master Thesis](http://projekter.aau.dk/projekter/files/198541091/main_report_4_june.pdf).
+* Also during the [Master](http://www.en.aau.dk/education/master/wireless-communication-systems), I had the chance to work part-time at a startup, [Reseiwe](http://reseiwe.com/), that spin-off from the [MassM2M research group](http://massm2m.es.aau.dk/) while completing my [Master Thesis](http://projekter.aau.dk/projekter/files/198541091/main_report_4_june.pdf).
