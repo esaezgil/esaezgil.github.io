@@ -10,7 +10,7 @@ description = "Contributing to MadBike Android app"
 [Hacktoberfest](https://hacktoberfest.digitalocean.com) is a month-long celebration of open source in which people are encouraged to contribute to open source projects in GitHub.
 <!--more-->
 
-I started this year's contributions by making a pull request to [MadBike](https://play.google.com/store/apps/details?id=org.drunkcode.madbike) an app that helps make use of [Madrid's public bike rental service](https://www.esmadrid.com/en/bike-rental-in-madrid).
+I started this year's contributions by making a [pull request](https://github.com/Mun0n/MADBike/pull/3) to [MadBike](https://play.google.com/store/apps/details?id=org.drunkcode.madbike) an app that helps make use of [Madrid's public bike rental service](https://www.esmadrid.com/en/bike-rental-in-madrid).
 
 In particular, this contribution tackles a reported issue for adding a map type selector using the [Google Maps Android API](https://developers.google.com/The proposed design looked simiandroid/reference/com/google/android/gms/maps/GoogleMap#setMapType(int)). The proposed design hinted to that of Google's default:
 
@@ -30,12 +30,15 @@ Furthermore, I had to fight with the [Gradle configuration](https://developer.an
 
 Overall, this contribution helped me refresh my Android development skills and learn about [Butter Knife](http://jakewharton.github.io/butterknife/), a framework to inject views into Android components that I had never heard about before. As usual [Voguella's website](http://www.vogella.com/tutorials/) has a really [nice tutorial](http://www.vogella.com/tutorials/AndroidButterknife/article.html) for it.
 
-The final results looks like as shown below:
-{{< gallery>}}
-  {{< figure thumb="-thumb" link="/img/madbike_android_app/madbike_android_map_type_contribution_1.png" >}}
-  {{< figure thumb="-thumb" link="/img/madbike_android_app/madbike_android_map_type_contribution_2.png" >}}
-  {{< figure thumb="-thumb" link="/img/madbike_android_app/madbike_android_map_type_contribution_3.png" >}}
+The final result is shown below:
+
+{{< gallery >}}
+  {{< figure link="/img/madbike_android_app/madbike_android_map_type_contribution_1.png" >}}
+  {{< figure link="/img/madbike_android_app/madbike_android_map_type_contribution_2.png" >}}
+  {{< figure link="/img/madbike_android_app/madbike_android_map_type_contribution_3.png" >}}
 {{< /gallery >}}
+
+<!-- {{< load-photoswipe >}} -->
 
 The not so happy part of the story is that my contribution has not yet been accepted.  <br>
 This is one of the drawbacks of contributing to open source projects as understandably maintainers work on them mostly on their spare time with no other reward than their personal interest on the project itself.
