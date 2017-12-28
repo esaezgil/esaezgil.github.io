@@ -57,6 +57,14 @@ Check [this video](https://vimeo.com/66733915) for a demo of the system transmit
 
 Additional
 -----------
+<p class="about-text">
+<span class="fa fa-slideshare about-icon"></span>
+Check the <a href="https://esaezgil.com/talks">talks</a> I gave
+</p>
+<p class="about-text">
+<span class="fa fa-trophy about-icon"></span>
+Read more about the <a href="https://esaezgil.com/events">hackathons</a> I attended
+</p>
 
 <p class="about-text">
 <span class="fa fa-heart about-icon"></span>  I enjoy:
