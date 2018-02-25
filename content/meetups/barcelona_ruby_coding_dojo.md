@@ -50,3 +50,4 @@ I enjoyed the meeting and the ensued discussion as it was not Ruby-centric but r
 Finally, after the meetup I am again looking forward to take up Sandi's book.
 
 Daniel's presentation can be found [here](https://github.com/dcarral/good-code/blob/master/slides/good_code_barcelona_02_2018.pdf)
+The initial tests suites used for the code Kata are found [here](https://github.com/dcarral/99bottles-polyglot)
