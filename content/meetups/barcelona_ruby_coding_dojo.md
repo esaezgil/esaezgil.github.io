@@ -18,7 +18,6 @@ These practices are mostly part of my daily work and the bit I found most intere
 
 <img src="/img/extreme_programming/simple_design_diagram.png" height="60%" width="60%"/>
 
-
 As depicted in the diagram the last priority when developing should be that the tests pass (as this is a taken for granted as otherwise the [Continuous Integration system](https://www.martinfowler.com/articles/continuousIntegration.html) would point it out and the code would not be merged).
 
 However, when working on other team's codebase I think that due to the lack of knowledge of the codebase, specially for old codebases with lots of technical debt, sometimes we put initially the most emphasis on passing the test and later, on revealing intention and doing so through the fewest elements.
@@ -28,6 +27,8 @@ I had not seen this diagram before but find it as a useful reminder of what shou
 <blockquote class="twitter-tweet tw-align-center">{{< tweet 965561247390490624 >}}</blockquote>
 
 Next, we started with the 99 bottles of beer code Kata based on [Sandi Metz's](https://twitter.com/sandimetz) [book](https://www.sandimetz.com/99bottles/) of the same name.
+
+<img src="/img/extreme_programming/sandi_metz_99_bottles_oop.jpeg" height="30%" width="30%"/>
 
 I bought Sandi's book before Christmas this year, after watching during lunch at work one of her talks but it's still unopened. It's actually this Kata what triggered my interest to attend the meetup.
 During the Kata we went through the first Chapter of the book
@@ -49,5 +50,9 @@ I enjoyed the meeting and the ensued discussion as it was not Ruby-centric but r
 
 Finally, after the meetup I am again looking forward to take up Sandi's book.
 
-Daniel's presentation can be found [here](https://github.com/dcarral/good-code/blob/master/slides/good_code_barcelona_02_2018.pdf)
+Resources
+---------
+
+Daniel's presentation can be found [here](https://github.com/dcarral/good-code/blob/master/slides/good_code_barcelona_02_2018.pdf).
+
 The initial tests suites used for the code Kata are found [here](https://github.com/dcarral/99bottles-polyglot)
