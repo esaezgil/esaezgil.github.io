@@ -4,7 +4,7 @@ subtitle = ""
 date = "2018-02-07T11:55:00+01:00"
 bigimg = ""
 keywords = "review, meetup, Coding Dojo, Ruby, 99 bottles, extreme programming"
-description = "Review of the Blockchain Meetup, Barcelona June'17"
+description = "Review of the Barcelona Ruby Coding Dojo Meetup, February'18"
 +++
 
 Yesterday I attended the [Barcelona on Rails Meetup](https://www.meetup.com/Barcelona-on-Rails/). The meetup itself was actually a Dojo and a presentation followed by a discussion around code quality.
