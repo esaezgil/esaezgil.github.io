@@ -43,3 +43,7 @@ This is a book we gave away as a prize at the [LauzHack Hackathon](http://lauzha
 <center>{{< figure src="https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg"
 title="Grokking Algorithms by Aditya Bhargava" width="220" height="196" >}}</center>
 I enjoyed this book and wrote a brief review about it: https://esaezgil.com/reviews/grokking_algorithms/
+
+<center>{{< figure src="https://imagery.pragprog.com/products/498/bopytest_xlargebeta.jpg?1489599400"
+title="Python Testing with pytest by Brian Okken" width="220" height="196" >}}</center>
+Read my review about it: https://esaezgil.com/reviews/review_python_testing_with_pytest_okken/

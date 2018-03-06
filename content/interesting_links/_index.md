@@ -18,3 +18,5 @@ Developers Writing the Future by Joel Spolsky:
 Building a Technical Career by Erika Carlson: [Youtube](https://www.youtube.com/watch?v=VorG4K_5gfw)
 
 GOTO 2013 - Career Advice for Programmers by Trisha Gee: [Youtube](https://www.youtube.com/watch?v=LlAn452X4Lc&list=PLjWGXtCeLl_8ZdgXg4fH6UA4OtoSgexJL&index=6)
+
+Cal Newport - So good they can't ignore you: https://www.youtube.com/watch?v=qwOdU02SE0w
