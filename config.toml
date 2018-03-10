@@ -124,3 +124,6 @@ weight = 100
 name  = "date"
 weight = 10
 pattern = "2006"
+
+[outputs]
+  home = ["HTML", "JSON"]
