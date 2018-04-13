@@ -255,3 +255,10 @@ test_complex.py::TestComplexScenario::test_complex[1] PASSED
 test_complex.py::TestComplexScenario::test_complex[2] PASSED
 ```
 where it can be checked that all the inputs were tested.
+
+Other references:
+
+ - https://medium.com/@bfortuner/python-unit-testing-with-pytest-and-mock-197499c4623c
+ - http://treyhunner.com/2014/10/the-many-flavors-of-mock-dot-patch/
+ - https://engineeringblog.yelp.com/2015/02/assert_called_once-threat-or-menace.html
+ - https://www.relaxdiego.com/2014/04/mocking-objects-in-python.html
