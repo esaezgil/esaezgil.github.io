@@ -88,6 +88,11 @@ enableRobotsTXT = true
     name = "Donate"
     url = "/donate/"
     weight = 4
+[[menu.main]]
+    parent = "more"
+    name = "Search"
+    url = "/search/"
+    weight = 4
 
 [Author]
   name = "Enrique Saez Gil"
