@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Review: effective Android testing for mobile developers</title>
+  <meta property="og:title" content="Review: effective Android testing for mobile developers" />
+  <meta name="twitter:title" content="Review: effective Android testing for mobile developers" />
+
+<meta name="description" content="Review of the effective Android testing for mobile developers">
+<meta property="og:description" content="Review of the effective Android testing for mobile developers">
+<meta name="twitter:description" content="Review of the effective Android testing for mobile developers">
+
+  <meta name="author" content="Enrique Saez Gil"/>
+  <meta property="og:image" content="https://esaezgil.com/img/icon.jpg" />
+  <meta name="twitter:image" content="https://esaezgil.com/img/icon.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@eqirn" />
+  <meta name="twitter:creator" content="@eqirn" />
+  <meta property="og:url" content="https://esaezgil.com/reviews/review_effective_android_testing_for_mobile_developers/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Enrique Saez" />
+
+  <meta name="generator" content="Hugo 0.40.2" />
+  <link rel="canonical" href="https://esaezgil.com/reviews/review_effective_android_testing_for_mobile_developers/" />
+  <link rel="alternate" href="" type="application/rss+xml" title="Enrique Saez">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://esaezgil.com/css/syntax.css" /><link rel="stylesheet" href="https://esaezgil.com/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-86132389-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://esaezgil.com/">Enrique Saez</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="../../about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="../../">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Events</a>
+              <div class="navlinks-children">
+                
+                  <a href="../../events/">Hackathons</a>
+                
+                  <a href="../../talks/">Talks</a>
+                
+                  <a href="../../meetups/">Meetups &amp; Conferences</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">More</a>
+              <div class="navlinks-children">
+                
+                  <a href="../../books/">Books</a>
+                
+                  <a href="../../now/">Now</a>
+                
+                  <a href="../../reviews/">Reviews</a>
+                
+                  <a href="../../interesting_links/">Links</a>
+                
+                  <a href="../../donate/">Donate</a>
+                
+                  <a href="../../search/">Search</a>
+                
+              </div>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Enrique Saez" href="https://esaezgil.com/">
+            <img class="avatar-img" src="https://esaezgil.com/img/icon.jpg" alt="Enrique Saez" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="reviews-heading">
+              <h1>Review: effective Android testing for mobile developers</h1>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>This is my review of <a href="https://www.linkedin.com/learning/effective-android-testing-for-mobile-developers/">effective Android testing for mobile developers</a> by <a href="https://twitter.com/chiuki">Chiu-Ki Chan</a>.</p>
+
+<p><strong>TLDR;</strong> crystal clear style, incremental refactoring laying out the concepts and best practices as they arise.
+</p>
+
+<h2 id="course-review">Course review</h2>
+
+<p>I really enjoyed the flow of the course by which as higher test constructions are added, the code for the example application evolves, making it more maintainable and clear.<br>
+Furthermore I could see how the testing concepts I apply in Python on a daily basis working in the backend of <a href="https://www.skyscanner.net/hotels">Skyscanner Hotels</a> have an equivalent in Android.</p>
+
+<p>I particularly enjoyed the refactor of the activity using the MVP pattern to isolate the interaction with the Android libraries and the robot pattern for implementing the separation of concerns.</p>
+
+<p>Recently, I contributed with a feature to the <a href="https://play.google.com/store/apps/details?id=net.skyscanner.android.main&amp;hl=en">Skyscanner Android app</a> which is as well using the MVP pattern.
+After going through the course, it is much clearer for me the reasoning for keeping all the logic in the Presenter. <br>
+I had briefly worked with Mockito previously so the concepts were familiar to me and thanks to the MVP pattern I could see that it is straight forward to apply it for the testing of the Presenter in the app.</p>
+
+<h3 id="minor-points-to-improve">Minor points to improve:</h3>
+
+<p>There were some castings that were not so clear but nothing that affects the super comprehensive flow of the course, I would say it is rather a reflection of my lack of knowledge.</p>
+
+<p>Although at the end of each chapter, a summary is shown, I would have preferred to have diagrams showing the interactions between the different components both through and at the end of the videos.</p>
+
+<h3 id="what-i-would-like-to-see-next">What I would like to see next:</h3>
+
+<p>The course is a starting point for introducing the testing concepts behind Android but I would like to see a more complex app with async interactions with web services, maybe for a future course? Where can I sign up for it? :)</p>
+
+<h2 id="final-words">Final words:</h2>
+
+<p>I would definitely recommend the course as an introduction to Android testing and best practices around it.</p>
+
+<p>Score: <sup>10</sup>&frasl;<sub>10</sub></p>
+
+<p>P.S. Am i supposed to pay 30$ indefinitely to get access to courses I took at some point on Linkedin Learn? In that case I would rather go for courses on Udemy and other platforms in which after buying the course, you have lifetime access to the material.</p>
+
+        
+
+        
+      </article>
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="https://esaezgil.com/reviews/grokking_algorithms/" data-toggle="tooltip" data-placement="top" title="Review: grokking algorithms by Aditya Y. Bhargava">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "esaezgil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/esaezgil" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/eqirn" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/enriquesaezgil/en" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com//users/4378118/enrique-saez/" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://keybase.io/esaezgil" title="Keybase">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-key fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Enrique Saez Gil
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+        
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://esaezgil.com/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://esaezgil.com/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+

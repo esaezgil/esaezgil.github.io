@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Barcelona AWS Meetup - May&#39;17</title>
+  <meta property="og:title" content="Barcelona AWS Meetup - May&#39;17" />
+  <meta name="twitter:title" content="Barcelona AWS Meetup - May&#39;17" />
+
+<meta name="description" content="Review of the AWS Meetup, Barcelona May&#39;17">
+<meta property="og:description" content="Review of the AWS Meetup, Barcelona May&#39;17">
+<meta name="twitter:description" content="Review of the AWS Meetup, Barcelona May&#39;17">
+
+  <meta name="author" content="Enrique Saez Gil"/>
+  <meta property="og:image" content="https://esaezgil.com/img/icon.jpg" />
+  <meta name="twitter:image" content="https://esaezgil.com/img/icon.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@eqirn" />
+  <meta name="twitter:creator" content="@eqirn" />
+  <meta property="og:url" content="https://esaezgil.com/meetups/bcn_aws_meetup_may_17/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Enrique Saez" />
+
+  <meta name="generator" content="Hugo 0.40.2" />
+  <link rel="canonical" href="https://esaezgil.com/meetups/bcn_aws_meetup_may_17/" />
+  <link rel="alternate" href="" type="application/rss+xml" title="Enrique Saez">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://esaezgil.com/css/syntax.css" /><link rel="stylesheet" href="https://esaezgil.com/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-86132389-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://esaezgil.com/">Enrique Saez</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="../../about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="../../">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Events</a>
+              <div class="navlinks-children">
+                
+                  <a href="../../events/">Hackathons</a>
+                
+                  <a href="../../talks/">Talks</a>
+                
+                  <a href="../../meetups/">Meetups &amp; Conferences</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">More</a>
+              <div class="navlinks-children">
+                
+                  <a href="../../books/">Books</a>
+                
+                  <a href="../../now/">Now</a>
+                
+                  <a href="../../reviews/">Reviews</a>
+                
+                  <a href="../../interesting_links/">Links</a>
+                
+                  <a href="../../donate/">Donate</a>
+                
+                  <a href="../../search/">Search</a>
+                
+              </div>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Enrique Saez" href="https://esaezgil.com/">
+            <img class="avatar-img" src="https://esaezgil.com/img/icon.jpg" alt="Enrique Saez" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="meetups-heading">
+              <h1>Barcelona AWS Meetup - May&#39;17</h1>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>As part of the <a href="http://skyscanner.net">Skyscanner</a> ambassador group in Barcelona, we support the local software community by helping organize different events. On May 9th the <a href="https://www.meetup.com/Barcelona-Amazon-Web-Services-Meetup/events/239518577/">Barcelona AWS meetup</a> was held at the office.
+</p>
+
+<p>There were two talks in the meetup, both dealing with serverless computing:</p>
+
+<p><strong>1st talk</strong></p>
+
+<p>The first talk by <a href="https://twitter.com/srhtcn">Serhat Can</a> dealt with serverless architectures on AWS Lambda. During the talk it was presented the experience of <a href="https://www.opsgenie.com/">OpsGenie</a> with serverless architectures for their alerting and monitoring service.</p>
+
+<p><a href="https://www.opsgenie.com/">OpsGenie</a> is an alerting service somehow similar to the one that <a href="http://victorops.com">VictorOps</a> offers. At Skyscanner we make use of VictorOps for alerting, on-call rotation and 24 hour support.</p>
+
+<p>One of the use cases shown that caught my attention was the <a href="https://aws.amazon.com/dynamodb/">DynamoDB</a> autoscaling system they have in place. Some of the cool features along it include a configurable DynamoDB table alarm in <a href="https://aws.amazon.com/cloudwatch/">Cloudwatch</a> that is updated with the increase/decrease of the table capacity.</p>
+
+<p>At Skyscanner hotels we faced similar issues in the past as we make an intensive use of DynamoDB for the service that manages the sorting of hotel partners in the search results in case of price parity. The algorithm behind this computation, that we call <a href="http://codevoyagers.com/2016/02/24/solving-the-problem-of-one-billion-computations/"><em>Partner Sorting Algorithm</em></a> serves the precomputed positions for each partner from a DynamoDB table.</p>
+
+<p>Another familiar example was the use of Lambdas for replicating data across regions for DynamoDB and ElasticSearch aiming to decouple the replication logic from the application logic. This solution did not work for us due to the large size of our tables and the long time it took to replicate the data between regions.</p>
+
+<p>Finally it was mentioned the challenges that cloud-first services pose such as proper monitoring, high availability, replication, cold start time and blue-green deployment (that we manage through <a href="https://github.com/Skyscanner/slingshot">Slingshot</a>).</p>
+
+<p>Overall it was really interesting listening to their experience as I can closely relate to many of the problems that surfaced to them while developing our own cloud-native services.</p>
+
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/key/cHm2JpSQVSHpOL" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/cansrht/serverless-architectures-on-aws-lambda" title="Serverless Architectures on AWS Lambda" target="_blank">Serverless Architectures on AWS Lambda</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/cansrht">Serhat CAN</a></strong> </div></p>
+
+<p><strong>2nd talk</strong></p>
+
+<p>The second talk focused on serverless data processing with Data Pipeline, Docker, Lambda, API Gateway, ECR and SNS by one of my colleagues at Skycanner, Radek Miazio.</p>
+
+<p>Radek talked about the different AWS services that could be used for the processing they needed to do in order to create an index for Skyscanner&rsquo;s internal representation of the world. After discarding many of the AWS services due to their limitations, they settled up with Data Pipeline and explained some of the problems they faced such as:</p>
+
+<ul>
+<li>Complex setup due to the massive JSON</li>
+<li>The long initialization that caused API Gateway to timeout (service cold start again)</li>
+<li>Long delay in logs (up to 20 minutes)</li>
+<li>Limits to the <em>infinite</em> resources that the cloud provides</li>
+</ul>
+
+<p><iframe src="//www.slideshare.net/slideshow/embed_code/key/K284LtP7pBU87q" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/radekmiazio/serverless-data-processing-with-data-pipeline" title="Serverless data processing with Data Pipeline" target="_blank">Serverless data processing with Data Pipeline</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/radekmiazio">Radek Miazio</a></strong> </div></p>
+
+<p><strong>Final thoughts</strong></p>
+
+<p>From both talks it could be distilled that when designing a serverless service the solution has to take into account the constraints of the still immature services offered which sometimes are not clearly laid out in the docs.</p>
+
+<p>Finally these experiences also surface that the vast computing resources that the cloud provides outgrow the intricacies of developing ad-hoc services coupled to the available proprietary services.</p>
+
+<p>The meetup was recorded and is available in <a href="https://www.youtube.com/watch?v=1u4L4CtVz4c">Youtube</a>:</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/1u4L4CtVz4c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+ </div>
+
+        
+
+        
+      </article>
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://esaezgil.com/meetups/python_meetup_madrid/" data-toggle="tooltip" data-placement="top" title="Madrid Python Meetup - November&#39;16">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://esaezgil.com/meetups/pyconweb_17/" data-toggle="tooltip" data-placement="top" title="PyconWeb - May&#39;17">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "esaezgil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/esaezgil" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/eqirn" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/enriquesaezgil/en" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com//users/4378118/enrique-saez/" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://keybase.io/esaezgil" title="Keybase">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-key fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Enrique Saez Gil
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+        
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://esaezgil.com/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://esaezgil.com/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reviews on Enrique Saez</title>
+    <link>https://esaezgil.com/reviews/</link>
+    <description>Recent content in Reviews on Enrique Saez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Sep 2017 12:24:22 +0200</lastBuildDate>
+    
+	<atom:link href="https://esaezgil.com/reviews/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Review: grokking algorithms by Aditya Y. Bhargava</title>
+      <link>https://esaezgil.com/reviews/grokking_algorithms/</link>
+      <pubDate>Fri, 22 Sep 2017 12:24:22 +0200</pubDate>
+      
+      <guid>https://esaezgil.com/reviews/grokking_algorithms/</guid>
+      <description>&lt;p&gt;This is a brief review of &lt;a href=&#34;hhttps://www.manning.com/books/grokking-algorithms&#34;&gt;grokking algorithms&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/_egonschiele&#34;&gt;Aditya Y. Bhargava&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; really approachable, clear and concise concepts increasingly exposing the reader to more complex and handy algorithms based on previously discussed concepts.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Review: effective Android testing for mobile developers</title>
+      <link>https://esaezgil.com/reviews/review_effective_android_testing_for_mobile_developers/</link>
+      <pubDate>Tue, 05 Sep 2017 16:34:25 +0200</pubDate>
+      
+      <guid>https://esaezgil.com/reviews/review_effective_android_testing_for_mobile_developers/</guid>
+      <description>&lt;p&gt;This is my review of &lt;a href=&#34;https://www.linkedin.com/learning/effective-android-testing-for-mobile-developers/&#34;&gt;effective Android testing for mobile developers&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/chiuki&#34;&gt;Chiu-Ki Chan&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; crystal clear style, incremental refactoring laying out the concepts and best practices as they arise.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

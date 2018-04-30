@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Contributing to aiohttp</title>
+  <meta property="og:title" content="Contributing to aiohttp" />
+  <meta name="twitter:title" content="Contributing to aiohttp" />
+
+<meta name="description" content="Lessons learnt from contributing to an open source project, aiohttp">
+<meta property="og:description" content="Lessons learnt from contributing to an open source project, aiohttp">
+<meta name="twitter:description" content="Lessons learnt from contributing to an open source project, aiohttp">
+
+  <meta name="author" content="Enrique Saez Gil"/>
+  <meta property="og:image" content="https://esaezgil.com/img/icon.jpg" />
+  <meta name="twitter:image" content="https://esaezgil.com/img/icon.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@eqirn" />
+  <meta name="twitter:creator" content="@eqirn" />
+  <meta property="og:url" content="https://esaezgil.com/post/2016-09-03-using-namedtuples-in-aiohttp/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Enrique Saez" />
+
+  <meta name="generator" content="Hugo 0.40.2" />
+  <link rel="canonical" href="https://esaezgil.com/post/2016-09-03-using-namedtuples-in-aiohttp/" />
+  <link rel="alternate" href="" type="application/rss+xml" title="Enrique Saez">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://esaezgil.com/css/syntax.css" /><link rel="stylesheet" href="https://esaezgil.com/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-86132389-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://esaezgil.com/">Enrique Saez</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="../../about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="../../">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Events</a>
+              <div class="navlinks-children">
+                
+                  <a href="../../events/">Hackathons</a>
+                
+                  <a href="../../talks/">Talks</a>
+                
+                  <a href="../../meetups/">Meetups &amp; Conferences</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">More</a>
+              <div class="navlinks-children">
+                
+                  <a href="../../books/">Books</a>
+                
+                  <a href="../../now/">Now</a>
+                
+                  <a href="../../reviews/">Reviews</a>
+                
+                  <a href="../../interesting_links/">Links</a>
+                
+                  <a href="../../donate/">Donate</a>
+                
+                  <a href="../../search/">Search</a>
+                
+              </div>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Enrique Saez" href="https://esaezgil.com/">
+            <img class="avatar-img" src="https://esaezgil.com/img/icon.jpg" alt="Enrique Saez" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Contributing to aiohttp</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;September 3, 2016
+  
+  
+  
+</span>
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Recently I had the opportunity to contribute to the <a href="https://github.com/KeepSafe/aiohttp/"><strong>aiohttp</strong> library</a>. This is one of the libraries that we, the <a href="https://www.skyscanner.net/hotels">Hotels</a> backend team at <a href="https://www.skyscanner.net">Skyscanner</a>, make use of on a daily basis to create a new backend service. 
+In this post I will briefly explain the main learnings from this contribution.</p>
+
+<p>The pull request can be found here:
+<a href="https://github.com/KeepSafe/aiohttp/pull/1020/files">https://github.com/KeepSafe/aiohttp/pull/1020/files</a></p>
+
+<p>Key learnings:</p>
+
+<ol>
+<li><p>Living on the edge:</p>
+
+<p>Working in the <em>master</em> branch of a project means that sometimes it may be unhealthy.
+It is always good advice to check whether <em>master</em> is healthy or not when you submit your MR to the CI system (<a href="https://travis-ci.org/KeepSafe/aiohttp">Travis CI</a> in this case) before pulling your hair searching for a non existing bug in your code.</p></li>
+
+<li><p>Namedtuples can be used to define a class through inheritance and by implementing the <strong>bool</strong> method,</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">WebSocketReady</span>(namedtuple(<span style="color:#c30">&#39;WebSocketReady&#39;</span>, <span style="color:#c30">&#39;ok protocol&#39;</span>)):
+    <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">__bool__</span>(self):
+        <span style="color:#069;font-weight:bold">return</span> self<span style="color:#555">.</span>ok</code></pre></div>
+<p>it is really easy to check for a condition:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">if</span> WebSocketReady:
+<span style="color:#555">...</span></code></pre></div></li>
+
+<li><p>Write Unit Tests:
+This might be obvious, but the point is not just to write them but to write them for every piece of code created.
+In this case I had written tests that checked the actual functionality on a high level like:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_websocket_not_ready</span>():
+    websocket_ready <span style="color:#555">=</span> WebSocketReady(False, None)
+    <span style="color:#069;font-weight:bold">assert</span> websocket_ready<span style="color:#555">.</span>ok <span style="color:#000;font-weight:bold">is</span> False
+    <span style="color:#069;font-weight:bold">assert</span> websocket_ready<span style="color:#555">.</span>protocol <span style="color:#000;font-weight:bold">is</span> None</code></pre></div>
+<p>But not the tests that checked the low level functionality like:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_bool_websocket_not_ready</span>():
+    websocket_ready <span style="color:#555">=</span> WebSocketReady(False, None)
+    <span style="color:#069;font-weight:bold">assert</span> <span style="color:#366">bool</span>(websocket_ready) <span style="color:#000;font-weight:bold">is</span> False</code></pre></div></li>
+</ol>
+
+<p>Always good to bear in mind.</p>
+
+        
+
+        
+      </article>
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://esaezgil.com/post/summerschools/" data-toggle="tooltip" data-placement="top" title="Summer schools: an enriching experience">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://esaezgil.com/post/2016-09-04-contributing-to-pretix/" data-toggle="tooltip" data-placement="top" title="Contributing to Pretix">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "esaezgil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/esaezgil" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/eqirn" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/enriquesaezgil/en" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com//users/4378118/enrique-saez/" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://keybase.io/esaezgil" title="Keybase">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-key fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Enrique Saez Gil
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+        
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://esaezgil.com/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://esaezgil.com/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+
