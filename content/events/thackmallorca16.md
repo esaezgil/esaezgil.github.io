@@ -36,4 +36,4 @@ I had a great time during this event and would gladly join again in the future.
 
 Check the presentation we did for the final pitch:
 
-{{< speakerdeck f96342f403e34a488e49bf296bbc1581 >}}
+https://speakerdeck.com/esaezgil/activiti-dot-es-technobeatles

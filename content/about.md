@@ -26,7 +26,7 @@ BSc. in Communication Systems Engineering at <a href="https://uc3m.es">Universid
 </p>
 
 <p class="about-text">
-<span class="fa fa-group about-icon"></span>  Community and Volunteering:
+<span class="fa fa-users about-icon"></span>  Community and Volunteering:
 <ul style="list-style: none; padding-right: 10em">
 <li> I am part of the Skyscanner Barcelona Ambassador group organizing events for the software developer community in Barcelona like the <a href="http://www.meetup.com/es-ES/python-185/">Python meetup</a>, the <a href="https://www.meetup.com/docker-barcelona-spain/">Docker meetup</a>, or <a href="http://www.hacktoberfestbarcelona.com">Hacktoberfest Barcelona</a> among others. </li>
 <br>
@@ -35,7 +35,7 @@ Get in touch if you are looking for a space to host your software related meetup
 </p>
 
 <p class="about-text">
-<span class="fa fa-twitter about-icon"></span> If you wanna get in touch, hit me up on <a href="https://twitter.com/eqirn">@equirn </a>
+<span class="fa fa-at about-icon"></span> If you wanna get in touch, hit me up on <a href="https://twitter.com/eqirn">@equirn </a>
 </p>
 
 Previous professional experience
@@ -58,18 +58,18 @@ Check [this video](https://vimeo.com/66733915) for a demo of the system transmit
 Additional
 -----------
 <p class="about-text">
-<span class="fa fa-slideshare about-icon"></span>
+<span class="fa fa-microphone about-icon"></span>
 Check the <a href="https://esaezgil.com/talks">talks</a> I gave
 </p>
 <p class="about-text">
-<span class="fa fa-trophy about-icon"></span>
+<span class="fa fa-laptop about-icon"></span>
 Read more about the <a href="https://esaezgil.com/events">hackathons</a> I attended
 </p>
 
 <p class="about-text">
 <span class="fa fa-heart about-icon"></span>  I enjoy:
 <ul style="list-style: none; padding-right: 10em">
-<li><span class="fa fa-soccer-ball-o"></span> Doing sports (running, football, padel) </li>
+<li><span class="fa fa-futbol"></span> Doing sports (running, football, padel) </li>
 <li> <span class="fa fa-plane"></span> Travelling around Europe </li>
 <li> <span class="fa fa-book"></span> Reading (Kapuściński, Tom Wolfe) </li>
 <li> <span class="fa fa-check"></span>  Learning about new technologies </li>

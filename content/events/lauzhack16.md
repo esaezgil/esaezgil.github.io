@@ -22,7 +22,7 @@ During the weekend we had the chance to address students in both the initial tal
 
 These are the slides for the presentation:
 
-{{< speakerdeck 6ebaec24d33a4a1f91b41a683d26f6f1 >}}
+https://speakerdeck.com/esaezgil/skyscanner-api-guide-lauzhack-16
 
 During the rest of the weekend we tended to questions that hackers came up with during the development of their projects. It is a truly enriching experience when people find new usages for the provided data and it is specially valuable when some of them even find bugs that we can report back to our colleagues!
 
