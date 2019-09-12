@@ -20,6 +20,10 @@ deploy:
         code: |
           apt-get update
           apt-get -y install git
+          echo hola/adios
+          echo $WERCKER_GH_PAGES_REPO
+          echo $WERCKER_GIT_DOMAIN
+          echo $WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY
     - lukevivier/gh-pages:
         token: $GIT_TOKEN
         basedir: public
