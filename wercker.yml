@@ -15,6 +15,11 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
+    - script:
+        name: install git
+        code: |
+          apt-get update
+          apt-get -y install git
     - lukevivier/gh-pages:
         token: $GIT_TOKEN
         basedir: public
