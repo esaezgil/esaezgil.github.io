@@ -7,17 +7,26 @@ build:
         name: download theme
         code: |
             $(git clone https://github.com/esaezgil/beautifulhugo ./themes/beautifulhugo_custom)
-    - arjen/hugo-build:
-        version: "0.58.3"
+    - arjen/hugo-build@2.2.0:
+        version: "0.55.5"
         theme: beautifulhugo_custom
         flags: --buildDrafts=false
 deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - pahnev/gh-pages@0.3.1:
+    - script:
+        name: install git
+        code: |
+          apt-get update
+          apt-get -y install git
+          echo hola/adios
+          echo $WERCKER_GH_PAGES_REPO
+          echo $WERCKER_GIT_DOMAIN
+          echo $WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY
+    - pahnev/gh-pages@0.3.1:    
         token: $GIT_TOKEN
-        repo: esaezgil/esaezgil.github.io
+        domain: esaezgil.com
         basedir: public
-        domain: https://esaezgil.com
         branch: master
+
