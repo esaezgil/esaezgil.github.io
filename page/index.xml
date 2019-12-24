@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Enrique Saez</title>
@@ -17,9 +17,8 @@
       
       <guid>https://esaezgil.com/page/books_finished/</guid>
       <description>This is a brief list of the books I have read recently or I am reading at the moment:
-  Clean Code by Robert C. Martin    
 The Clean Code book has once again put front and center for me that writing software is a practice in which its output should be centered around:
- the reproducibility of the results an incremental refinement of the work based on the tests written for reproducibility the easiness for other people to read, understand, maintain and extend the code    Writing Idiomatic Python by Jeff Knupp</description>
+ the reproducibility of the results an incremental refinement of the work based on the tests written for reproducibility the easiness for other people to read, understand, maintain and extend the code  I really enjoyed going through Jeff’s posts.</description>
     </item>
     
     <item>
@@ -28,8 +27,7 @@ The Clean Code book has once again put front and center for me that writing soft
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://esaezgil.com/page/next_books/</guid>
-      <description>This is a list of books I want to read next, feel free to recommend me some other books in the comments below:
-  Head First Design Patterns by Eric Freeman       Fluent Python by Luciano Ramalho       Grokking Algorithms by Aditya Bhargava       Designing Data-Intensive Applications by Martin Kleppmann       Python Testing with pytest by Brian Okken</description>
+      <description>This is a list of books I want to read next, feel free to recommend me some other books in the comments below:</description>
     </item>
     
   </channel>

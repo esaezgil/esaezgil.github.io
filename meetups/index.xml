@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meetups on Enrique Saez</title>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 07 Feb 2018 11:55:00 +0100</pubDate>
       
       <guid>https://esaezgil.com/meetups/barcelona_ruby_coding_dojo/</guid>
-      <description>&lt;p&gt;Yesterday I attended the &lt;a href=&#34;https://www.meetup.com/Barcelona-on-Rails/&#34;&gt;Barcelona on Rails Meetup&lt;/a&gt;. The meetup itself was actually a Dojo and a presentation followed by a discussion around code quality.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Yesterday I attended the &lt;a href=&#34;https://www.meetup.com/Barcelona-on-Rails/&#34;&gt;Barcelona on Rails Meetup&lt;/a&gt;. The meetup itself was actually a Dojo and a presentation followed by a discussion around code quality.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,8 +27,7 @@
       
       <guid>https://esaezgil.com/meetups/hacktoberfest_barcelona/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://Hacktoberfest.digitalocean&#34;&gt;Hacktoberfest&lt;/a&gt; is an event sponsored by GitHub and Digital Ocean
-to promote new contributions to open source. After talking with &lt;a href=&#34;twitter.com/joanvila&#34;&gt;Joan&lt;/a&gt;, a fellow engineer at &lt;a href=&#34;https://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt; we decided to host such an event at Skyscanner&amp;rsquo;s premises: &lt;a href=&#34;https://hacktoberfestbarcelona.com&#34;&gt;Hacktoberfest Barcelona&lt;/a&gt;.
-&lt;/p&gt;</description>
+to promote new contributions to open source. After talking with &lt;a href=&#34;twitter.com/joanvila&#34;&gt;Joan&lt;/a&gt;, a fellow engineer at &lt;a href=&#34;https://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt; we decided to host such an event at Skyscanner&#39;s premises: &lt;a href=&#34;https://hacktoberfestbarcelona.com&#34;&gt;Hacktoberfest Barcelona&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -38,8 +36,7 @@ to promote new contributions to open source. After talking with &lt;a href=&#34;
       <pubDate>Thu, 21 Sep 2017 23:25:00 +0100</pubDate>
       
       <guid>https://esaezgil.com/meetups/producthunt_madrid/</guid>
-      <description>&lt;p&gt;Today I attended &lt;a href=&#34;https://twitter.com/MadProductHunt&#34;&gt;Madrid ProductHunt&lt;/a&gt; as I was curious about &lt;a href=&#34;https://transferwise.com&#34;&gt;Transferwise&lt;/a&gt; and about the startup scene in Madrid.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Today I attended &lt;a href=&#34;https://twitter.com/MadProductHunt&#34;&gt;Madrid ProductHunt&lt;/a&gt; as I was curious about &lt;a href=&#34;https://transferwise.com&#34;&gt;Transferwise&lt;/a&gt; and about the startup scene in Madrid.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,8 +45,7 @@ to promote new contributions to open source. After talking with &lt;a href=&#34;
       <pubDate>Wed, 07 Jun 2017 19:55:00 +0100</pubDate>
       
       <guid>https://esaezgil.com/meetups/blockchain_meetup/</guid>
-      <description>&lt;p&gt;Yesterday I attended the &lt;a href=&#34;https://www.meetup.com/barcelonablockchain/events/239809893/&#34;&gt;Barcelona Blockchain Meetup&lt;/a&gt;. My goal was to get a feeling of the developer community in Barcelona around this technology.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Yesterday I attended the &lt;a href=&#34;https://www.meetup.com/barcelonablockchain/events/239809893/&#34;&gt;Barcelona Blockchain Meetup&lt;/a&gt;. My goal was to get a feeling of the developer community in Barcelona around this technology.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,8 +54,7 @@ to promote new contributions to open source. After talking with &lt;a href=&#34;
       <pubDate>Sun, 28 May 2017 18:34:25 +0200</pubDate>
       
       <guid>https://esaezgil.com/meetups/pyconweb_17/</guid>
-      <description>&lt;p&gt;The &lt;a href=&#34;https//pyconweb.com&#34;&gt;Pyconweb&lt;/a&gt; conference, held in the premises of the &lt;a href=&#34;https://lmu.edu&#34;&gt;Ludwig Maximilian University of Munich&lt;/a&gt;, took place during the last weekend of May. The conference aimed to gather people with a common interest for Python-based web development.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;The &lt;a href=&#34;https//pyconweb.com&#34;&gt;Pyconweb&lt;/a&gt; conference, held in the premises of the &lt;a href=&#34;https://lmu.edu&#34;&gt;Ludwig Maximilian University of Munich&lt;/a&gt;, took place during the last weekend of May. The conference aimed to gather people with a common interest for Python-based web development.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -68,8 +63,7 @@ to promote new contributions to open source. After talking with &lt;a href=&#34;
       <pubDate>Wed, 10 May 2017 19:55:00 +0100</pubDate>
       
       <guid>https://esaezgil.com/meetups/bcn_aws_meetup_may_17/</guid>
-      <description>&lt;p&gt;As part of the &lt;a href=&#34;http://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt; ambassador group in Barcelona, we support the local software community by helping organize different events. On May 9th the &lt;a href=&#34;https://www.meetup.com/Barcelona-Amazon-Web-Services-Meetup/events/239518577/&#34;&gt;Barcelona AWS meetup&lt;/a&gt; was held at the office.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;As part of the &lt;a href=&#34;http://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt; ambassador group in Barcelona, we support the local software community by helping organize different events. On May 9th the &lt;a href=&#34;https://www.meetup.com/Barcelona-Amazon-Web-Services-Meetup/events/239518577/&#34;&gt;Barcelona AWS meetup&lt;/a&gt; was held at the office.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -78,8 +72,7 @@ to promote new contributions to open source. After talking with &lt;a href=&#34;
       <pubDate>Thu, 01 Dec 2016 19:55:00 +0100</pubDate>
       
       <guid>https://esaezgil.com/meetups/python_meetup_madrid/</guid>
-      <description>&lt;p&gt;Last November I attended the &lt;a href=&#34;https://www.meetup.com/Madrid-Python-Meetup/events/235214434/&#34;&gt;Madrid Python Meetup&lt;/a&gt;. Being a regular attendant of &lt;a href=&#34;https://www.meetup.com/python-185/&#34;&gt;Barcelona Python Meetup&lt;/a&gt; I was curious about the Python community in Madrid.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Last November I attended the &lt;a href=&#34;https://www.meetup.com/Madrid-Python-Meetup/events/235214434/&#34;&gt;Madrid Python Meetup&lt;/a&gt;. Being a regular attendant of &lt;a href=&#34;https://www.meetup.com/python-185/&#34;&gt;Barcelona Python Meetup&lt;/a&gt; I was curious about the Python community in Madrid.&lt;/p&gt;</description>
     </item>
     
   </channel>

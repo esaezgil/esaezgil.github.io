@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Enrique Saez</title>
@@ -17,8 +17,7 @@
       <pubDate>Sun, 05 Nov 2017 21:34:23 +0200</pubDate>
       
       <guid>https://esaezgil.com/post/contributin_donate_bitcoin/</guid>
-      <description>&lt;p&gt;During the &lt;a href=&#34;https://hacktoberfestbarcelona.com&#34;&gt;Hacktoberfest Barcelona&lt;/a&gt; event I started working on contributing to the &lt;a href=&#34;https://github.com/nrobinson2000/donate-bitcoin&#34;&gt;Donate Bitcoin&lt;/a&gt; project.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;During the &lt;a href=&#34;https://hacktoberfestbarcelona.com&#34;&gt;Hacktoberfest Barcelona&lt;/a&gt; event I started working on contributing to the &lt;a href=&#34;https://github.com/nrobinson2000/donate-bitcoin&#34;&gt;Donate Bitcoin&lt;/a&gt; project.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Thu, 05 Oct 2017 19:35:13 +0200</pubDate>
       
       <guid>https://esaezgil.com/post/contributing_android_madbike/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://hacktoberfest.digitalocean.com&#34;&gt;Hacktoberfest&lt;/a&gt; is a month-long celebration of open source in which people are encouraged to contribute to open source projects in GitHub.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://hacktoberfest.digitalocean.com&#34;&gt;Hacktoberfest&lt;/a&gt; is a month-long celebration of open source in which people are encouraged to contribute to open source projects in GitHub.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -37,8 +35,7 @@
       <pubDate>Sat, 25 Mar 2017 15:16:33 +0100</pubDate>
       
       <guid>https://esaezgil.com/post/unittesting_pitfalls/</guid>
-      <description>&lt;p&gt;Lately, I have been answering some questions in &lt;a href=&#34;http://stackoverflow.com/users/4378118/enrique?tab=profile&#34;&gt;StackOverflow&lt;/a&gt; related to Unit Testing in Python with &lt;a href=&#34;http://www.voidspace.org.uk/python/mock/&#34;&gt;Mock&lt;/a&gt; and &lt;a href=&#34;http://doc.pytest.org/en/latest/&#34;&gt;pytest&lt;/a&gt;. These are some of the questions I answered:
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Lately, I have been answering some questions in &lt;a href=&#34;http://stackoverflow.com/users/4378118/enrique?tab=profile&#34;&gt;StackOverflow&lt;/a&gt; related to Unit Testing in Python with &lt;a href=&#34;http://www.voidspace.org.uk/python/mock/&#34;&gt;Mock&lt;/a&gt; and &lt;a href=&#34;http://doc.pytest.org/en/latest/&#34;&gt;pytest&lt;/a&gt;. These are some of the questions I answered:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,8 +45,7 @@
       
       <guid>https://esaezgil.com/post/python_list_pop_slice/</guid>
       <description>&lt;p&gt;Recently I had a comment in a merge request in which I was suggested to copy the &lt;code&gt;Nth-1&lt;/code&gt; last elements of a list, &lt;code&gt;a[1:]&lt;/code&gt;, instead of popping its first element, &lt;code&gt;pop(0)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I was curious about its performance implications and decided to do some simple tests: &lt;/p&gt;</description>
+&lt;p&gt;I was curious about its performance implications and decided to do some simple tests:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,7 +54,7 @@
       <pubDate>Sat, 11 Feb 2017 18:25:12 +0200</pubDate>
       
       <guid>https://esaezgil.com/post/moderncv_latex_mac/</guid>
-      <description>&lt;p&gt;Confronted with the task of writing a CV for the first time many students resort to Microsoft Word and sloppy templates to be found on the Internet. &lt;/p&gt;</description>
+      <description>&lt;p&gt;Confronted with the task of writing a CV for the first time many students resort to Microsoft Word and sloppy templates to be found on the Internet.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -67,8 +63,7 @@
       <pubDate>Fri, 27 Jan 2017 13:27:21 +0100</pubDate>
       
       <guid>https://esaezgil.com/post/test_driven_api/</guid>
-      <description>&lt;p&gt;Working for the backend service at &lt;a href=&#34;https://www.skyscanner.net/hotels&#34;&gt;Skyscanner Hotels&lt;/a&gt; I take part in the development of new services and its associated APIs quite regularly.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Working for the backend service at &lt;a href=&#34;https://www.skyscanner.net/hotels&#34;&gt;Skyscanner Hotels&lt;/a&gt; I take part in the development of new services and its associated APIs quite regularly.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -78,8 +73,7 @@
       
       <guid>https://esaezgil.com/post/logrotate_scheduling_centos/</guid>
       <description>&lt;p&gt;Logs are a fundamental piece of the web server architecture for debugging, monitoring
-and alerting purposes.
-&lt;/p&gt;</description>
+and alerting purposes.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -88,8 +82,7 @@ and alerting purposes.
       <pubDate>Thu, 29 Dec 2016 01:37:32 +0200</pubDate>
       
       <guid>https://esaezgil.com/post/reasons_for_a_blog/</guid>
-      <description>&lt;p&gt;I have been enjoying the &lt;a href=&#34;https://talkpython.fm/episodes/all&#34;&gt;Talk Python Podcast&lt;/a&gt; for a while and at least two episodes revolve around the importance of having a blog as a software developer.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have been enjoying the &lt;a href=&#34;https://talkpython.fm/episodes/all&#34;&gt;Talk Python Podcast&lt;/a&gt; for a while and at least two episodes revolve around the importance of having a blog as a software developer.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -98,8 +91,7 @@ and alerting purposes.
       <pubDate>Mon, 12 Dec 2016 19:37:32 +0200</pubDate>
       
       <guid>https://esaezgil.com/post/enrique_2016_review/</guid>
-      <description>&lt;p&gt;2016 is coming to an end and I would like to look back and review what I have been up to during the last year:
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;2016 is coming to an end and I would like to look back and review what I have been up to during the last year:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -108,8 +100,7 @@ and alerting purposes.
       <pubDate>Thu, 01 Dec 2016 19:55:00 +0100</pubDate>
       
       <guid>https://esaezgil.com/post/python_meetup_madrid/</guid>
-      <description>&lt;p&gt;Last November I attended the &lt;a href=&#34;https://www.meetup.com/Madrid-Python-Meetup/events/235214434/&#34;&gt;Madrid Python Meetup&lt;/a&gt;. Being a regular attendant of &lt;a href=&#34;https://www.meetup.com/python-185/&#34;&gt;Barcelona Python Meetup&lt;/a&gt; I was curious about the Python community in Madrid.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Last November I attended the &lt;a href=&#34;https://www.meetup.com/Madrid-Python-Meetup/events/235214434/&#34;&gt;Madrid Python Meetup&lt;/a&gt;. Being a regular attendant of &lt;a href=&#34;https://www.meetup.com/python-185/&#34;&gt;Barcelona Python Meetup&lt;/a&gt; I was curious about the Python community in Madrid.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -118,9 +109,8 @@ and alerting purposes.
       <pubDate>Sat, 22 Oct 2016 19:37:32 +0200</pubDate>
       
       <guid>https://esaezgil.com/post/python_best_practices/</guid>
-      <description>&lt;p&gt;Over the last year I have attended the &lt;a href=&#34;https://www.meetup.com/python-185/&#34;&gt;Barcelona Python meetup&lt;/a&gt; hosted at &lt;a href=&#34;http://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;&amp;rsquo;s office.
-The meetups were a really positive experience and being a super welcoming community I decided to deliver a talk.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Over the last year I have attended the &lt;a href=&#34;https://www.meetup.com/python-185/&#34;&gt;Barcelona Python meetup&lt;/a&gt; hosted at &lt;a href=&#34;http://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;&amp;lsquo;s office.
+The meetups were a really positive experience and being a super welcoming community I decided to deliver a talk.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -138,8 +128,7 @@ The meetups were a really positive experience and being a super welcoming commun
       <pubDate>Sat, 03 Sep 2016 14:34:00 +0100</pubDate>
       
       <guid>https://esaezgil.com/post/2016-09-03-using-namedtuples-in-aiohttp/</guid>
-      <description>&lt;p&gt;Recently I had the opportunity to contribute to the &lt;a href=&#34;https://github.com/KeepSafe/aiohttp/&#34;&gt;&lt;strong&gt;aiohttp&lt;/strong&gt; library&lt;/a&gt;. This is one of the libraries that we, the &lt;a href=&#34;https://www.skyscanner.net/hotels&#34;&gt;Hotels&lt;/a&gt; backend team at &lt;a href=&#34;https://www.skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;, make use of on a daily basis to create a new backend service. 
-In this post I will briefly explain the main learnings from this contribution.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Recently I had the opportunity to contribute to the &lt;a href=&#34;https://github.com/KeepSafe/aiohttp/&#34;&gt;&lt;strong&gt;aiohttp&lt;/strong&gt; library&lt;/a&gt;. This is one of the libraries that we, the &lt;a href=&#34;https://www.skyscanner.net/hotels&#34;&gt;Hotels&lt;/a&gt; backend team at &lt;a href=&#34;https://www.skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;, make use of on a daily basis to create a new backend service.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -148,8 +137,7 @@ In this post I will briefly explain the main learnings from this contribution.&l
       <pubDate>Sat, 30 Jul 2016 19:37:32 +0200</pubDate>
       
       <guid>https://esaezgil.com/post/summerschools/</guid>
-      <description>&lt;p&gt;During my studies in Denmark I attended two Summer Universities: &lt;a href=&#34;http://www.summerschool.aau.dk/&#34;&gt;Aalborg University Summer School&lt;/a&gt; and &lt;a href=&#34;http://www.dtu.dk/english/Education/Guest-students/Summer-University&#34;&gt;DTU International Summer University&lt;/a&gt;.
-  &lt;/p&gt;</description>
+      <description>&lt;p&gt;During my studies in Denmark I attended two Summer Universities: &lt;a href=&#34;http://www.summerschool.aau.dk/&#34;&gt;Aalborg University Summer School&lt;/a&gt; and &lt;a href=&#34;http://www.dtu.dk/english/Education/Guest-students/Summer-University&#34;&gt;DTU International Summer University&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

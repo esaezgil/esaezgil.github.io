@@ -1,19 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
+    
+
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Contributing to Pretix</title>
+  <title>Contributing to Pretix - Enrique Saez</title>
   <meta property="og:title" content="Contributing to Pretix" />
   <meta name="twitter:title" content="Contributing to Pretix" />
+  <meta name="description" content="Lessons learnt from contributing to an open source project, pretix">
+  <meta property="og:description" content="Lessons learnt from contributing to an open source project, pretix">
+  <meta name="twitter:description" content="Lessons learnt from contributing to an open source project, pretix">
+  <meta name="author" content="Enrique Saez Gil"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Enrique Saez",
+    
+    "url": "https:\/\/esaezgil.com\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/esaezgil.com\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/esaezgil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/esaezgil.com\/post\/2016-09-04-contributing-to-pretix\/",
+          "name": "Contributing to pretix"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Enrique Saez Gil"
+  },
+  "headline": "Contributing to Pretix",
+  "description" : "Lessons learnt from contributing to an open source project, pretix",
+  "inLanguage" : "en",
+  "wordCount":  315 ,
+  "datePublished" : "2016-09-04T13:24:25",
+  "dateModified" : "2016-09-04T13:24:25",
+  "image" : "https:\/\/esaezgil.com\/img\/icon.jpg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/esaezgil.com\/post\/2016-09-04-contributing-to-pretix\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/esaezgil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/esaezgil.com\/img\/icon.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta name="description" content="Lessons learnt from contributing to an open source project, pretix">
+<meta property="og:title" content="Contributing to Pretix" />
 <meta property="og:description" content="Lessons learnt from contributing to an open source project, pretix">
-<meta name="twitter:description" content="Lessons learnt from contributing to an open source project, pretix">
+<meta property="og:image" content="https://esaezgil.com/img/icon.jpg" />
+<meta property="og:url" content="https://esaezgil.com/post/2016-09-04-contributing-to-pretix/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Enrique Saez" />
 
-  <meta name="author" content="Enrique Saez Gil"/>
+  <meta name="twitter:title" content="Contributing to Pretix" />
+  <meta name="twitter:description" content="Lessons learnt from contributing to an open source project, pretix">
+  <meta name="twitter:image" content="https://esaezgil.com/img/icon.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@eqirn" />
+  <meta name="twitter:creator" content="@eqirn" />
   <meta property="og:image" content="https://esaezgil.com/img/icon.jpg" />
   <meta name="twitter:image" content="https://esaezgil.com/img/icon.jpg" />
   <meta name="twitter:card" content="summary" />
@@ -23,20 +104,115 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Enrique Saez" />
 
-  <meta name="generator" content="Hugo 0.40.2" />
-  <link rel="canonical" href="https://esaezgil.com/post/2016-09-04-contributing-to-pretix/" />
-  <link rel="alternate" href="" type="application/rss+xml" title="Enrique Saez">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://esaezgil.com/css/syntax.css" /><link rel="stylesheet" href="https://esaezgil.com/css/codeblock.css" />
+  <meta name="generator" content="Hugo 0.61.0" />
+  <link rel="alternate" href="https://esaezgil.com/index.xml" type="application/rss+xml" title="Enrique Saez"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://esaezgil.com/css/syntax.css" /><link rel="stylesheet" href="https://esaezgil.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-86132389-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://esaezgil.com/">Enrique Saez</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="../../about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="../../">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Events</a>
+              <div class="navlinks-children">
+                
+                  <a href="../../events/">Hackathons</a>
+                
+                  <a href="../../talks/">Talks</a>
+                
+                  <a href="../../meetups/">Meetups &amp; Conferences</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">More</a>
+              <div class="navlinks-children">
+                
+                  <a href="../../books/">Books</a>
+                
+                  <a href="../../now/">Now</a>
+                
+                  <a href="../../reviews/">Reviews</a>
+                
+                  <a href="../../interesting_links/">Links</a>
+                
+                  <a href="../../donate/">Donate</a>
+                
+                  <a href="../../search/">Search</a>
+                
+              </div>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Enrique Saez" href="https://esaezgil.com/">
+            <img class="avatar-img" src="https://esaezgil.com/img/icon.jpg" alt="Enrique Saez" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
+    
 
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -83,106 +259,12 @@
     </div>
 </div>
 
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-86132389-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
 
-</head>
-
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="https://esaezgil.com/">Enrique Saez</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        
-          
-            <li>
-              <a title="About" href="../../about/">About</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Blog" href="../../">Blog</a>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">Events</a>
-              <div class="navlinks-children">
-                
-                  <a href="../../events/">Hackathons</a>
-                
-                  <a href="../../talks/">Talks</a>
-                
-                  <a href="../../meetups/">Meetups &amp; Conferences</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">More</a>
-              <div class="navlinks-children">
-                
-                  <a href="../../books/">Books</a>
-                
-                  <a href="../../now/">Now</a>
-                
-                  <a href="../../reviews/">Reviews</a>
-                
-                  <a href="../../interesting_links/">Links</a>
-                
-                  <a href="../../donate/">Donate</a>
-                
-                  <a href="../../search/">Search</a>
-                
-              </div>
-            </li>
-          
-        
-
-        
-
-        
-      </ul>
-    </div>
-
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        
-          <a title="Enrique Saez" href="https://esaezgil.com/">
-            <img class="avatar-img" src="https://esaezgil.com/img/icon.jpg" alt="Enrique Saez" />
-          </a>
-        
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-
-
-    
   
   
   
+
+
 
 
 
@@ -192,24 +274,30 @@ ga('send', 'pageview');
   <header class="header-section ">
     
     <div class="intro-header no-img">
-      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>Contributing to Pretix</h1>
-                
-                
-                  <span class="post-meta">
+              
+                <h1>Contributing to Pretix</h1>
+              
+              
+              
+              
+                <span class="post-meta">
   
   
-  <i class="fa fa-calendar-o"></i>&nbsp;September 4, 2016
+  <i class="fas fa-calendar"></i>&nbsp;September 4, 2016
   
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Enrique Saez Gil
   
   
 </span>
 
-                
+              
             </div>
           </div>
         </div>
@@ -224,43 +312,57 @@ ga('send', 'pageview');
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Recently I had the chance to contribute to Pretix (<a href="https://pretix.eu/about/en/">https://pretix.eu/about/en/</a>) a Django-based event ticketing platform.</p>
-
-<p>I submitted a couple of merge requests that were accepted:
- - <a href="https://github.com/pretix/pretix/pull/202/files">https://github.com/pretix/pretix/pull/202/files</a> <a href="https://github.com/pretix/pretix/pull/204/files">https://github.com/pretix/pretix/pull/204/files</a></p>
-
+<p>I submitted a couple of merge requests that were accepted:</p>
+<ul>
+<li><a href="https://github.com/pretix/pretix/pull/202/files">https://github.com/pretix/pretix/pull/202/files</a> <a href="https://github.com/pretix/pretix/pull/204/files">https://github.com/pretix/pretix/pull/204/files</a></li>
+</ul>
 <p>I will briefly detail some of the key learnings:</p>
-
 <ol>
-<li><p><strong>Django models</strong>: Being absolutely new to Django, I had the opportunity to learn along the way about one of its key features, the Models.
+<li>
+<p><strong>Django models</strong>: Being absolutely new to Django, I had the opportunity to learn along the way about one of its key features, the Models.
 Models are objects that the ORM will store in the database, a quick intro here: 
 <a href="http://tutorial.djangogirls.org/en/django_orm/">http://tutorial.djangogirls.org/en/django_orm/</a>
 It was quite surprising as well the ease of the development thanks to the automatic migrations in the database schema.
 More detailed info on Models here:
-<a href="http://www.djangobook.com/en/2.0/chapter05.html">http://www.djangobook.com/en/2.0/chapter05.html</a></p></li>
-
-<li><p><strong>all keyword in Python</strong>:
+<a href="http://www.djangobook.com/en/2.0/chapter05.html">http://www.djangobook.com/en/2.0/chapter05.html</a></p>
+</li>
+<li>
+<p><strong>all keyword in Python</strong>:
 In order to check whether a condition was True for all the elements of a list I simply iterated over them and checked for the condition:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">for</span> i, op <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">enumerate</span>(positions):
-    cancelable_products<span style="color:#555">.</span>append(op<span style="color:#555">.</span>item<span style="color:#555">.</span>allow_cancel)
-<span style="color:#069;font-weight:bold">if</span> False <span style="color:#000;font-weight:bold">in</span> cancelable_products:
-    cancelable <span style="color:#555">=</span> False</code></pre></div>
-<p>However a much simpler solution making use of list comprehensions and the all() keyword in Python is possible:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cancelable <span style="color:#555">=</span> <span style="color:#366">all</span>([op<span style="color:#555">.</span>item<span style="color:#555">.</span>allow_cancel <span style="color:#069;font-weight:bold">for</span> op <span style="color:#000;font-weight:bold">in</span> positions])</code></pre></div></li>
-
-<li><p><strong>Metaclasses in Python</strong>:
-Although I had read about Python Metaclasses in this excellent post (<a href="https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/">https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/</a>), Django Models are a really good practical example of their value and use.
-The Metaclasses are used in the Django Models to dynamically create classes.</p></li>
-
-<li><p><strong>Difference between select_related and prefetch_related in Django:</strong>
-<strong>prefetch_related</strong>: does a separate lookup for each relationship, and does the ‘joining’ in Python. This allows it to prefetch many-to-many and many-to-one objects.
-<br>
-<strong>select_related</strong>: limited to single-valued relationships - foreign key and one-to-one. Creates an SQL join including the fields of the related object in the <code>SELECT</code>statement retrieving the related objects in the same (but more complex) database query.
-<br>
-By using <code>select_related</code> instead of <code>prefetch_related</code>, one query to the DB is saved.
- More info on Django QuerySet: <a href="https://docs.djangoproject.com/en/1.10/ref/models/querysets/">https://docs.djangoproject.com/en/1.10/ref/models/querysets/</a></p></li>
+</li>
 </ol>
+<pre><code>``` python
+for i, op in enumerate(positions):
+    cancelable_products.append(op.item.allow_cancel)
+if False in cancelable_products:
+    cancelable = False
+```
 
+However a much simpler solution making use of list comprehensions and the all() keyword in Python is possible:
+
+``` python
+cancelable = all([op.item.allow_cancel for op in positions])
+```
+</code></pre>
+<ol start="3">
+<li>
+<p><strong>Metaclasses in Python</strong>:
+Although I had read about Python Metaclasses in this excellent post (<a href="https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/">https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/</a>), Django Models are a really good practical example of their value and use.
+The Metaclasses are used in the Django Models to dynamically create classes.</p>
+</li>
+<li>
+<p><strong>Difference between select_related and prefetch_related in Django:</strong>
+<strong>prefetch_related</strong>: does a separate lookup for each relationship, and does the ‘joining’ in Python. This allows it to prefetch many-to-many and many-to-one objects.
+<!-- raw HTML omitted -->
+<strong>select_related</strong>: limited to single-valued relationships - foreign key and one-to-one. Creates an SQL join including the fields of the related object in the <code>SELECT</code>statement retrieving the related objects in the same (but more complex) database query.
+<!-- raw HTML omitted -->
+By using <code>select_related</code> instead of <code>prefetch_related</code>, one query to the DB is saved.
+ More info on Django QuerySet: <a href="https://docs.djangoproject.com/en/1.10/ref/models/querysets/">https://docs.djangoproject.com/en/1.10/ref/models/querysets/</a></p>
+</li>
+</ol>
 <p>Head over to this post for more details on Metaclasses in Django: <a href="http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html">http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html</a></p>
+
+        
 
         
 
@@ -283,9 +385,10 @@ By using <code>select_related</code> instead of <code>prefetch_related</code>, o
 
       
         
+          
           <div class="disqus-comments">
             <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -305,6 +408,7 @@ By using <code>select_related</code> instead of <code>prefetch_related</code>, o
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
           </div>
+          
         
         
       
@@ -322,40 +426,40 @@ By using <code>select_related</code> instead of <code>prefetch_related</code>, o
               <li>
                 <a href="https://github.com/esaezgil" title="GitHub">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/eqirn" title="Twitter">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
               <li>
                 <a href="https://linkedin.com/in/enriquesaezgil/en" title="LinkedIn">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
               <li>
                 <a href="https://stackoverflow.com//users/4378118/enrique-saez/" title="StackOverflow">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
               <li>
                 <a href="https://keybase.io/esaezgil" title="Keybase">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-key fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-key fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -368,9 +472,16 @@ By using <code>select_related</code> instead of <code>prefetch_related</code>, o
             
           
 
-          &nbsp;&bull;&nbsp;
-          2018
-        
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2018
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://esaezgil.com/">Enrique Saez</a>
+          
+        </p>
         
         <p class="credits theme-by text-muted">
           <a href="http://gohugo.io">Hugo</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
@@ -379,16 +490,16 @@ By using <code>select_related</code> instead of <code>prefetch_related</code>, o
       </div>
     </div>
   </div>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://esaezgil.com/js/main.js"></script><script> renderMathInElement(document.body); </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
-<script src="https://esaezgil.com/js/load-photoswipe.js"></script>
+
+<script src="https://esaezgil.com/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://esaezgil.com/js/load-photoswipe.js"></script>
+
+
+
 
 
 
