@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hackathons on Enrique Saez</title>
@@ -17,7 +17,8 @@
       <pubDate>Thu, 25 Jan 2018 15:14:05 +0200</pubDate>
       
       <guid>https://esaezgil.com/events/hackatrips_2018/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.ifema.es/fitur_06/&#34;&gt;Fitur&lt;/a&gt; is the largest trade show for the tourism industry in the world. It is held in &lt;a href=&#34;http://www.ifema.es/Institucional_06/&#34;&gt;Ifema&lt;/a&gt;, Madrid&#39;s trade fair, once a year.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.ifema.es/fitur_06/&#34;&gt;Fitur&lt;/a&gt; is the largest trade show for the tourism industry in the world. It is held in &lt;a href=&#34;http://www.ifema.es/Institucional_06/&#34;&gt;Ifema&lt;/a&gt;, Madrid&amp;rsquo;s trade fair, once a year.&lt;/p&gt;
+
 &lt;p&gt;During the last two days of the fair, &lt;a href=&#34;https://minube.com&#34;&gt;minube&lt;/a&gt; organized &lt;a href=&#34;https://Hackatrips.com/&#34;&gt;Hackatrips&lt;/a&gt;, a hackathon encouraging innovation around the tourism industry.&lt;/p&gt;</description>
     </item>
     

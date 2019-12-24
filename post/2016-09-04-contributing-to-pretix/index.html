@@ -63,7 +63,7 @@
   "headline": "Contributing to Pretix",
   "description" : "Lessons learnt from contributing to an open source project, pretix",
   "inLanguage" : "en",
-  "wordCount":  315 ,
+  "wordCount":  310 ,
   "datePublished" : "2016-09-04T13:24:25",
   "dateModified" : "2016-09-04T13:24:25",
   "image" : "https:\/\/esaezgil.com\/img\/icon.jpg",
@@ -104,7 +104,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Enrique Saez" />
 
-  <meta name="generator" content="Hugo 0.61.0" />
+  <meta name="generator" content="Hugo 0.55.5" />
   <link rel="alternate" href="https://esaezgil.com/index.xml" type="application/rss+xml" title="Enrique Saez"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -312,54 +312,42 @@ if (!doNotTrack) {
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Recently I had the chance to contribute to Pretix (<a href="https://pretix.eu/about/en/">https://pretix.eu/about/en/</a>) a Django-based event ticketing platform.</p>
-<p>I submitted a couple of merge requests that were accepted:</p>
-<ul>
-<li><a href="https://github.com/pretix/pretix/pull/202/files">https://github.com/pretix/pretix/pull/202/files</a> <a href="https://github.com/pretix/pretix/pull/204/files">https://github.com/pretix/pretix/pull/204/files</a></li>
-</ul>
+
+<p>I submitted a couple of merge requests that were accepted:
+ - <a href="https://github.com/pretix/pretix/pull/202/files">https://github.com/pretix/pretix/pull/202/files</a> <a href="https://github.com/pretix/pretix/pull/204/files">https://github.com/pretix/pretix/pull/204/files</a></p>
+
 <p>I will briefly detail some of the key learnings:</p>
+
 <ol>
-<li>
-<p><strong>Django models</strong>: Being absolutely new to Django, I had the opportunity to learn along the way about one of its key features, the Models.
+<li><p><strong>Django models</strong>: Being absolutely new to Django, I had the opportunity to learn along the way about one of its key features, the Models.
 Models are objects that the ORM will store in the database, a quick intro here: 
 <a href="http://tutorial.djangogirls.org/en/django_orm/">http://tutorial.djangogirls.org/en/django_orm/</a>
 It was quite surprising as well the ease of the development thanks to the automatic migrations in the database schema.
 More detailed info on Models here:
-<a href="http://www.djangobook.com/en/2.0/chapter05.html">http://www.djangobook.com/en/2.0/chapter05.html</a></p>
-</li>
-<li>
-<p><strong>all keyword in Python</strong>:
+<a href="http://www.djangobook.com/en/2.0/chapter05.html">http://www.djangobook.com/en/2.0/chapter05.html</a></p></li>
+
+<li><p><strong>all keyword in Python</strong>:
 In order to check whether a condition was True for all the elements of a list I simply iterated over them and checked for the condition:</p>
-</li>
-</ol>
-<pre><code>``` python
-for i, op in enumerate(positions):
-    cancelable_products.append(op.item.allow_cancel)
-if False in cancelable_products:
-    cancelable = False
-```
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">for</span> i, op <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">enumerate</span>(positions):
+    cancelable_products<span style="color:#555">.</span>append(op<span style="color:#555">.</span>item<span style="color:#555">.</span>allow_cancel)
+<span style="color:#069;font-weight:bold">if</span> False <span style="color:#000;font-weight:bold">in</span> cancelable_products:
+    cancelable <span style="color:#555">=</span> False</code></pre></div>
+<p>However a much simpler solution making use of list comprehensions and the all() keyword in Python is possible:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cancelable <span style="color:#555">=</span> <span style="color:#366">all</span>([op<span style="color:#555">.</span>item<span style="color:#555">.</span>allow_cancel <span style="color:#069;font-weight:bold">for</span> op <span style="color:#000;font-weight:bold">in</span> positions])</code></pre></div></li>
 
-However a much simpler solution making use of list comprehensions and the all() keyword in Python is possible:
-
-``` python
-cancelable = all([op.item.allow_cancel for op in positions])
-```
-</code></pre>
-<ol start="3">
-<li>
-<p><strong>Metaclasses in Python</strong>:
+<li><p><strong>Metaclasses in Python</strong>:
 Although I had read about Python Metaclasses in this excellent post (<a href="https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/">https://jeffknupp.com/blog/2013/12/28/improve-your-python-metaclasses-and-dynamic-classes-with-type/</a>), Django Models are a really good practical example of their value and use.
-The Metaclasses are used in the Django Models to dynamically create classes.</p>
-</li>
-<li>
-<p><strong>Difference between select_related and prefetch_related in Django:</strong>
+The Metaclasses are used in the Django Models to dynamically create classes.</p></li>
+
+<li><p><strong>Difference between select_related and prefetch_related in Django:</strong>
 <strong>prefetch_related</strong>: does a separate lookup for each relationship, and does the ‘joining’ in Python. This allows it to prefetch many-to-many and many-to-one objects.
-<!-- raw HTML omitted -->
+<br>
 <strong>select_related</strong>: limited to single-valued relationships - foreign key and one-to-one. Creates an SQL join including the fields of the related object in the <code>SELECT</code>statement retrieving the related objects in the same (but more complex) database query.
-<!-- raw HTML omitted -->
+<br>
 By using <code>select_related</code> instead of <code>prefetch_related</code>, one query to the DB is saved.
- More info on Django QuerySet: <a href="https://docs.djangoproject.com/en/1.10/ref/models/querysets/">https://docs.djangoproject.com/en/1.10/ref/models/querysets/</a></p>
-</li>
+ More info on Django QuerySet: <a href="https://docs.djangoproject.com/en/1.10/ref/models/querysets/">https://docs.djangoproject.com/en/1.10/ref/models/querysets/</a></p></li>
 </ol>
+
 <p>Head over to this post for more details on Metaclasses in Django: <a href="http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html">http://reinout.vanrees.org/weblog/2013/05/16/advanced-python-metaclasses.html</a></p>
 
         

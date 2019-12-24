@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reviews on Enrique Saez</title>
@@ -18,6 +18,7 @@
       
       <guid>https://esaezgil.com/reviews/grokking_algorithms/</guid>
       <description>&lt;p&gt;This is a brief review of &lt;a href=&#34;hhttps://www.manning.com/books/grokking-algorithms&#34;&gt;grokking algorithms&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/_egonschiele&#34;&gt;Aditya Y. Bhargava&lt;/a&gt;.&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; really approachable, clear and concise concepts increasingly exposing the reader to more complex and handy algorithms based on previously discussed concepts.&lt;/p&gt;</description>
     </item>
     
@@ -28,6 +29,7 @@
       
       <guid>https://esaezgil.com/reviews/review_effective_android_testing_for_mobile_developers/</guid>
       <description>&lt;p&gt;This is my review of &lt;a href=&#34;https://www.linkedin.com/learning/effective-android-testing-for-mobile-developers/&#34;&gt;effective Android testing for mobile developers&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/chiuki&#34;&gt;Chiu-Ki Chan&lt;/a&gt;.&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; crystal clear style, incremental refactoring laying out the concepts and best practices as they arise.&lt;/p&gt;</description>
     </item>
     

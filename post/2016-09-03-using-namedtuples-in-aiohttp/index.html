@@ -63,7 +63,7 @@
   "headline": "Contributing to aiohttp",
   "description" : "Lessons learnt from contributing to an open source project, aiohttp",
   "inLanguage" : "en",
-  "wordCount":  252 ,
+  "wordCount":  240 ,
   "datePublished" : "2016-09-03T14:34:00",
   "dateModified" : "2016-09-03T14:34:00",
   "image" : "https:\/\/esaezgil.com\/img\/icon.jpg",
@@ -104,7 +104,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Enrique Saez" />
 
-  <meta name="generator" content="Hugo 0.61.0" />
+  <meta name="generator" content="Hugo 0.55.5" />
   <link rel="alternate" href="https://esaezgil.com/index.xml" type="application/rss+xml" title="Enrique Saez"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -312,52 +312,41 @@ if (!doNotTrack) {
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Recently I had the opportunity to contribute to the <a href="https://github.com/KeepSafe/aiohttp/"><strong>aiohttp</strong> library</a>. This is one of the libraries that we, the <a href="https://www.skyscanner.net/hotels">Hotels</a> backend team at <a href="https://www.skyscanner.net">Skyscanner</a>, make use of on a daily basis to create a new backend service.</p>
+
 <p>In this post I will briefly explain the main learnings from this contribution.</p>
+
 <p>The pull request can be found here:
 <a href="https://github.com/KeepSafe/aiohttp/pull/1020/files">https://github.com/KeepSafe/aiohttp/pull/1020/files</a></p>
+
 <p>Key learnings:</p>
+
 <ol>
-<li>Living on the edge:</li>
-</ol>
-<pre><code>Working in the _master_ branch of a project means that sometimes it may be unhealthy.
-It is always good advice to check whether _master_ is healthy or not when you submit your MR to the CI system ([Travis CI](https://travis-ci.org/KeepSafe/aiohttp) in this case) before pulling your hair searching for a non existing bug in your code.
-</code></pre>
-<ol start="2">
-<li>Namedtuples can be used to define a class through inheritance and by implementing the <strong>bool</strong> method,</li>
-</ol>
-<pre><code>``` python
-class WebSocketReady(namedtuple('WebSocketReady', 'ok protocol')):
-    def __bool__(self):
-        return self.ok
-```
+<li><p>Living on the edge:</p>
 
-it is really easy to check for a condition:
+<p>Working in the <em>master</em> branch of a project means that sometimes it may be unhealthy.
+It is always good advice to check whether <em>master</em> is healthy or not when you submit your MR to the CI system (<a href="https://travis-ci.org/KeepSafe/aiohttp">Travis CI</a> in this case) before pulling your hair searching for a non existing bug in your code.</p></li>
 
-``` python
-if WebSocketReady:
-...
-```
-</code></pre>
-<ol start="3">
-<li>Write Unit Tests:
+<li><p>Namedtuples can be used to define a class through inheritance and by implementing the <strong>bool</strong> method,</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">WebSocketReady</span>(namedtuple(<span style="color:#c30">&#39;WebSocketReady&#39;</span>, <span style="color:#c30">&#39;ok protocol&#39;</span>)):
+    <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">__bool__</span>(self):
+        <span style="color:#069;font-weight:bold">return</span> self<span style="color:#555">.</span>ok</code></pre></div>
+<p>it is really easy to check for a condition:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">if</span> WebSocketReady:
+<span style="color:#555">...</span></code></pre></div></li>
+
+<li><p>Write Unit Tests:
 This might be obvious, but the point is not just to write them but to write them for every piece of code created.
-In this case I had written tests that checked the actual functionality on a high level like:</li>
+In this case I had written tests that checked the actual functionality on a high level like:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_websocket_not_ready</span>():
+    websocket_ready <span style="color:#555">=</span> WebSocketReady(False, None)
+    <span style="color:#069;font-weight:bold">assert</span> websocket_ready<span style="color:#555">.</span>ok <span style="color:#000;font-weight:bold">is</span> False
+    <span style="color:#069;font-weight:bold">assert</span> websocket_ready<span style="color:#555">.</span>protocol <span style="color:#000;font-weight:bold">is</span> None</code></pre></div>
+<p>But not the tests that checked the low level functionality like:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_bool_websocket_not_ready</span>():
+    websocket_ready <span style="color:#555">=</span> WebSocketReady(False, None)
+    <span style="color:#069;font-weight:bold">assert</span> <span style="color:#366">bool</span>(websocket_ready) <span style="color:#000;font-weight:bold">is</span> False</code></pre></div></li>
 </ol>
-<pre><code>``` python
-def test_websocket_not_ready():
-    websocket_ready = WebSocketReady(False, None)
-    assert websocket_ready.ok is False
-    assert websocket_ready.protocol is None
-```
 
-But not the tests that checked the low level functionality like:
-
-``` python
-def test_bool_websocket_not_ready():
-    websocket_ready = WebSocketReady(False, None)
-    assert bool(websocket_ready) is False
-```
-</code></pre>
 <p>Always good to bear in mind.</p>
 
         

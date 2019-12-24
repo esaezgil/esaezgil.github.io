@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Enrique Saez</title>
@@ -45,6 +45,7 @@
       
       <guid>https://esaezgil.com/post/python_list_pop_slice/</guid>
       <description>&lt;p&gt;Recently I had a comment in a merge request in which I was suggested to copy the &lt;code&gt;Nth-1&lt;/code&gt; last elements of a list, &lt;code&gt;a[1:]&lt;/code&gt;, instead of popping its first element, &lt;code&gt;pop(0)&lt;/code&gt;.&lt;/p&gt;
+
 &lt;p&gt;I was curious about its performance implications and decided to do some simple tests:&lt;/p&gt;</description>
     </item>
     
@@ -109,7 +110,7 @@ and alerting purposes.&lt;/p&gt;</description>
       <pubDate>Sat, 22 Oct 2016 19:37:32 +0200</pubDate>
       
       <guid>https://esaezgil.com/post/python_best_practices/</guid>
-      <description>&lt;p&gt;Over the last year I have attended the &lt;a href=&#34;https://www.meetup.com/python-185/&#34;&gt;Barcelona Python meetup&lt;/a&gt; hosted at &lt;a href=&#34;http://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;&amp;lsquo;s office.
+      <description>&lt;p&gt;Over the last year I have attended the &lt;a href=&#34;https://www.meetup.com/python-185/&#34;&gt;Barcelona Python meetup&lt;/a&gt; hosted at &lt;a href=&#34;http://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt;&amp;rsquo;s office.
 The meetups were a really positive experience and being a super welcoming community I decided to deliver a talk.&lt;/p&gt;</description>
     </item>
     

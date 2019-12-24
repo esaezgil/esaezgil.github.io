@@ -63,7 +63,7 @@
   "headline": "Test-driven information system services",
   "description" : "Testing infrastructure during API design and development",
   "inLanguage" : "en",
-  "wordCount":  549 ,
+  "wordCount":  571 ,
   "datePublished" : "2017-01-27T13:27:21",
   "dateModified" : "2017-01-27T13:27:21",
   "image" : "https:\/\/esaezgil.com\/img\/icon.jpg",
@@ -104,7 +104,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Enrique Saez" />
 
-  <meta name="generator" content="Hugo 0.61.0" />
+  <meta name="generator" content="Hugo 0.55.5" />
   <link rel="alternate" href="https://esaezgil.com/index.xml" type="application/rss+xml" title="Enrique Saez"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -312,60 +312,79 @@ if (!doNotTrack) {
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Working for the backend service at <a href="https://www.skyscanner.net/hotels">Skyscanner Hotels</a> I take part in the development of new services and its associated APIs quite regularly.</p>
+
 <p>When it comes to API design and development, breaking API changes might void the work of other teams&rsquo; work, haphazard the timely product delivery, negatively impact several KPIs and be responsible for not delivering any user value and of course break the service for existing users.</p>
+
 <p>Therefore, a flexible yet strong API contract from the beginning allows for the parallelization of the work, a much faster iteration and an incremental release of functionality.</p>
+
 <p>This post aims to describe a strategy for validating and enforcing an API contract during its iterative development.</p>
+
 <h1 id="test-driven-apis">Test-driven APIs</h1>
+
 <p>During the development of an information system service, a solid development pipeline requires:</p>
+
 <ul>
 <li>a strong test suite</li>
 <li>an automated test infrastructure</li>
 <li>a zero-click deployment process</li>
 </ul>
+
 <p>Such a solid pipeline along a well-defined vision for the product plays a central role to the overall success of the project and the ever-increasing value delivery to the user.</p>
+
 <p>Furthermore, a strong test suite implies covering all layers of the service:</p>
+
 <ul>
 <li>the most basic behavior through Unit Tests</li>
 <li>the integration with third-party services through Integration Tests</li>
 <li>the overall user-facing functionality through Acceptance Tests</li>
 </ul>
-<!-- raw HTML omitted -->
+
+<p><center>
+<figure>
+<img src="../../img/testing_pyramid.png" width="360" height="305"/>
+<figcaption>
+<b>Figure 1: </b>Testing pyramid showing the decremental amount of tests a system should have for higher abstractions<br>
+(original source: <a href="https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html">google testing blog</a>)
+</figcaption>
+</figure>
+</center></p>
+
 <p>As shown in Figure 1, a decremental test suite is based on the fact that the width and depth of tests covering the most basic behavior, though Unit Tests, will allow for a less exhaustive coverage of the subsequent testing stages.</p>
+
 <p>Every higher logical abstraction implies a longer testing time:</p>
+
 <ul>
 <li>Integration tests: require interaction with third-party services</li>
 <li>Acceptance tests: require setting up blank production-like environments on the fly and interact with third-party services.</li>
 </ul>
+
 <p>Moreover, when it comes to acceptance tests for complex yet flexible APIs, the myriad of possible scenarios might quickly lead to a large set of acceptance tests yielding the previously detailed undesired scenario.</p>
-<p>If not born in mind, a time-consuming testing pipeline will drag down the team's iteration speed.</p>
+
+<p>If not born in mind, a time-consuming testing pipeline will drag down the team&rsquo;s iteration speed.</p>
+
 <h1 id="enforcing-the-api-contract">Enforcing the API contract</h1>
+
 <p>In order to overcome the aforementioned hurdle in the service we are creating at the moment, we implemented the following strategy:</p>
+
 <ul>
-<li>
-<p>Created <a href="http://json-schema.org">JSON Schemas</a> for the API endpoints&rsquo; responses. In order to enforce the API contract, all releases must be validated against them. There are several tools available to automate the validation of the defined schemas for example <a href="https://pypi.python.org/pypi/jsonschema"><em>jsonschema</em></a> in Python.</p>
-</li>
-<li>
-<p>Development of a new set of Unit Tests for our main endpoint (offering lots of flexibility on its usage), covering the different scenarios by:</p>
+<li><p>Created <a href="http://json-schema.org">JSON Schemas</a> for the API endpoints&rsquo; responses. In order to enforce the API contract, all releases must be validated against them. There are several tools available to automate the validation of the defined schemas for example <a href="https://pypi.python.org/pypi/jsonschema"><em>jsonschema</em></a> in Python.</p></li>
+
+<li><p>Development of a new set of Unit Tests for our main endpoint (offering lots of flexibility on its usage), covering the different scenarios by:</p>
+
 <ul>
-<li>
-<p>Mocking the response of third-party services.</p>
-</li>
-<li>
-<p>Creating a set of JSON schemas whose properties are not set to <em>required</em>.</p>
-</li>
-<li>
-<p>Validating the returned response from the endpoint against the defined JSON Schemas by dynamically setting the required properties for each test according to the scenario.</p>
-</li>
+<li><p>Mocking the response of third-party services.</p></li>
+
+<li><p>Creating a set of JSON schemas whose properties are not set to <em>required</em>.</p></li>
+
+<li><p>Validating the returned response from the endpoint against the defined JSON Schemas by dynamically setting the required properties for each test according to the scenario.</p></li>
+</ul></li>
+
+<li><p>Development of a new set of Integration Tests with the tightly coupled third-party services that would alert us of any breaking change on the 3rd party&rsquo;s side. This can be achieved by validating that their response abides to the service&rsquo;s contract defined in a JSON Schema.</p></li>
+
+<li><p>Development of a set of Acceptance Tests that check the different clients&rsquo; use-cases and validates the endpoint&rsquo;s responses against strict JSON Schemas (JSON Schemas in which all required properties are compulsory).</p></li>
 </ul>
-</li>
-<li>
-<p>Development of a new set of Integration Tests with the tightly coupled third-party services that would alert us of any breaking change on the 3rd party's side. This can be achieved by validating that their response abides to the service's contract defined in a JSON Schema.</p>
-</li>
-<li>
-<p>Development of a set of Acceptance Tests that check the different clients&rsquo; use-cases and validates the endpoint's responses against strict JSON Schemas (JSON Schemas in which all required properties are compulsory).</p>
-</li>
-</ul>
-<p>Finally, the acceptance tests's schemas can be used as the service's documentation.</p>
+
+<p>Finally, the acceptance tests&rsquo;s schemas can be used as the service&rsquo;s documentation.</p>
 
         
 

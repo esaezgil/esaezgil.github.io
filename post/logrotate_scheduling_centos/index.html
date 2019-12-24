@@ -63,7 +63,7 @@
   "headline": "Scheduling logrotate in CentOS",
   "description" : "Scheduling log rotate in a CentOS system",
   "inLanguage" : "en",
-  "wordCount":  341 ,
+  "wordCount":  349 ,
   "datePublished" : "2016-12-30T11:54:24",
   "dateModified" : "2016-12-30T11:54:24",
   "image" : "https:\/\/esaezgil.com\/img\/icon.jpg",
@@ -104,7 +104,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Enrique Saez" />
 
-  <meta name="generator" content="Hugo 0.61.0" />
+  <meta name="generator" content="Hugo 0.55.5" />
   <link rel="alternate" href="https://esaezgil.com/index.xml" type="application/rss+xml" title="Enrique Saez"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -313,14 +313,31 @@ if (!doNotTrack) {
       <article role="main" class="blog-post">
         <p>Logs are a fundamental piece of the web server architecture for debugging, monitoring
 and alerting purposes.</p>
+
 <p>Some of the infrastructure at <a href="https://www.skyscanner.net/hotels">Skyscanner Hotels</a>&rsquo; Backend makes use of <a href="https://github.com/etsy/logster">logster</a> to send logs to <a href="https://graphiteapp.org/">Graphite</a> and generate alerts through <a href="https://github.com/scobal/seyren">Seyren</a> enabling ChatOps through <a href="https://slack.com/">Slack</a>. Although we usually check the different dashboards in <a href="https://www.elastic.co/products/kibana">Kibana</a>, having a well-maintained set of logs is important for quickly looking up and investigating an event.</p>
-<!-- raw HTML omitted -->
+
+<p><center>
+<link rel="stylesheet" href="../../css/hugo-easy-gallery.css" />
+<div class="box" style="max-width:720">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="../../img/alerting_monitoring_infrastructure_subset.png" alt="/img/alerting_monitoring_infrastructure_subset.png"/>
+    </div>
+    <a href="../../img/alerting_monitoring_infrastructure_subset.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Subset of the monitoring and alerting architecture</h4>
+      </figcaption>
+  </figure>
+</div>
+</center></p>
+
 <p><a href="http://www.linuxcommand.org/man_pages/logrotate8.html">Logrotate</a> is a small utility that allows to <em>rotate</em> the logs: archiving the current log, start a fresh one and delete old logs.</p>
+
 <p>Due to different reasons we were having problems with some of our logs and the fix turned out to be to schedule the log rotation at a specific time.</p>
+
 <h4 id="in-order-to-schedule-the-log-rotate-in-our-centos-systems-we-followed-these-steps">In order to schedule the log rotate in our CentOS systems we followed these steps:</h4>
+
 <ol>
-<li>
-<p>Understand that logrotate is executed once a day. If we check the logrotate RPM
+<li><p>Understand that logrotate is executed once a day. If we check the logrotate RPM
 <code>rpm -ql logrotate</code> we see something like the following:</p>
 <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/etc/cron.daily/logrotate
 /etc/logrotate.conf
@@ -331,20 +348,17 @@ and alerting purposes.</p>
 /usr/share/doc/logrotate-3.8.6/COPYING
 /usr/share/man/man5/logrotate.conf.5.gz
 /usr/share/man/man8/logrotate.8.gz
-/var/lib/logrotate.status
-</code></pre></div><ul>
-<li>
-<p>The reason for <code>logrotate</code> being executed once a day can be seen in the previous list. The RPM creates a configuration entry in the <code>/cron.daily/</code> directory. Consequently, logrotate will be executed daily.</p>
-</li>
-<li>
-<p>We would expect <strong>cron</strong> to be in charge of the scheduling of this task. However, for CentOS systems, <strong>anacron</strong> is the one in charge of the scheduling for daily events (among others). Furthermore, anacron introduces by default a random delay and it only starts running the scheduled tasks during the <code>START_HOURS_RANGE</code> as configured in <code>/etc/anacrontab</code>.</p>
-</li>
+/var/lib/logrotate.status</code></pre></div>
+<ul>
+<li><p>The reason for <code>logrotate</code> being executed once a day can be seen in the previous list. The RPM creates a configuration entry in the <code>/cron.daily/</code> directory. Consequently, logrotate will be executed daily.</p></li>
+
+<li><p>We would expect <strong>cron</strong> to be in charge of the scheduling of this task. However, for CentOS systems, <strong>anacron</strong> is the one in charge of the scheduling for daily events (among others). Furthermore, anacron introduces by default a random delay and it only starts running the scheduled tasks during the <code>START_HOURS_RANGE</code> as configured in <code>/etc/anacrontab</code>.</p></li>
 </ul>
-</li>
-<li>
-<p>Set the logrotate at a specific time: moving the logrotate configuration out of the <code>/logrotate.daily/</code> directory and scheduling its execution through cron.</p>
-</li>
+
+<ol>
+<li>Set the logrotate at a specific time: moving the logrotate configuration out of the <code>/logrotate.daily/</code> directory and scheduling its execution through cron.</li>
 </ol>
+
 <p>An example of the aforementioned solution can be achieved through <a href="https://www.ansible.com/">Ansible</a> as follows (<em>we make use of Ansible through <a href="https://www.jetbrains.com/teamcity/">TeamCity</a> for our automated deployment pipeline</em>):</p>
 <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">-<span style="color:#bbb"> </span>name:<span style="color:#bbb"> </span>check<span style="color:#bbb"> </span>logrotate<span style="color:#bbb"> </span>config<span style="color:#bbb"> </span>exists<span style="color:#bbb"> </span>in<span style="color:#bbb"> </span>cron.daily<span style="color:#bbb">
 </span><span style="color:#bbb"></span>stat:<span style="color:#bbb"> </span>path=/etc/cron.daily/logrotate<span style="color:#bbb">
@@ -355,12 +369,19 @@ and alerting purposes.</p>
 </span><span style="color:#bbb"></span>when:<span style="color:#bbb"> </span>logrotate_config.stat.exists<span style="color:#bbb">
 </span><span style="color:#bbb">
 </span><span style="color:#bbb"></span>-<span style="color:#bbb"> </span>name:<span style="color:#bbb"> </span>configure<span style="color:#bbb"> </span>daily<span style="color:#bbb"> </span>logrotate<span style="color:#bbb"> </span>cron<span style="color:#bbb">
-</span><span style="color:#bbb"></span>cron:<span style="color:#bbb"> </span>name=<span style="color:#c30">&#34;schedule logrotate&#34;</span><span style="color:#bbb"> </span>minute=<span style="color:#c30">&#34;0&#34;</span><span style="color:#bbb"> </span>hour=<span style="color:#c30">&#34;3&#34;</span><span style="color:#bbb"> </span>job=<span style="color:#c30">&#34;/opt/home/logrotate.cronjob&#34;</span><span style="color:#bbb">
-</span></code></pre></div><p>This way, logrotate will be executed every day at 3 am.</p>
+</span><span style="color:#bbb"></span>cron:<span style="color:#bbb"> </span>name=<span style="color:#c30">&#34;schedule logrotate&#34;</span><span style="color:#bbb"> </span>minute=<span style="color:#c30">&#34;0&#34;</span><span style="color:#bbb"> </span>hour=<span style="color:#c30">&#34;3&#34;</span><span style="color:#bbb"> </span>job=<span style="color:#c30">&#34;/opt/home/logrotate.cronjob&#34;</span></code></pre></div></li>
+</ol>
+
+<p>This way, logrotate will be executed every day at 3 am.</p>
+
 <p>Credits:</p>
+
 <p>I shall thank my colleague Kampde for his detailed walkthrough about the intricacies of cron, anacron and RPMs among others.</p>
+
 <p>References:</p>
+
 <p><a href="https://support.rackspace.com/how-to/understanding-logrotate-utility/">Logrotate</a></p>
+
 <p><a href="http://serverfault.com/questions/454118/why-does-my-centos-logrotate-run-at-random-times">CentOS and logrotate at serverfault</a></p>
 
         

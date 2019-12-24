@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meetups on Enrique Saez</title>
@@ -27,7 +27,7 @@
       
       <guid>https://esaezgil.com/meetups/hacktoberfest_barcelona/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://Hacktoberfest.digitalocean&#34;&gt;Hacktoberfest&lt;/a&gt; is an event sponsored by GitHub and Digital Ocean
-to promote new contributions to open source. After talking with &lt;a href=&#34;twitter.com/joanvila&#34;&gt;Joan&lt;/a&gt;, a fellow engineer at &lt;a href=&#34;https://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt; we decided to host such an event at Skyscanner&#39;s premises: &lt;a href=&#34;https://hacktoberfestbarcelona.com&#34;&gt;Hacktoberfest Barcelona&lt;/a&gt;.&lt;/p&gt;</description>
+to promote new contributions to open source. After talking with &lt;a href=&#34;twitter.com/joanvila&#34;&gt;Joan&lt;/a&gt;, a fellow engineer at &lt;a href=&#34;https://skyscanner.net&#34;&gt;Skyscanner&lt;/a&gt; we decided to host such an event at Skyscanner&amp;rsquo;s premises: &lt;a href=&#34;https://hacktoberfestbarcelona.com&#34;&gt;Hacktoberfest Barcelona&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>

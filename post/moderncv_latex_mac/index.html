@@ -63,7 +63,7 @@
   "headline": "LaTeX and moderncv in macOS",
   "description" : "LaTeX and moderncv setup",
   "inLanguage" : "en",
-  "wordCount":  294 ,
+  "wordCount":  300 ,
   "datePublished" : "2017-02-11T18:25:12",
   "dateModified" : "2017-02-11T18:25:12",
   "image" : "https:\/\/esaezgil.com\/img\/icon.jpg",
@@ -104,7 +104,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Enrique Saez" />
 
-  <meta name="generator" content="Hugo 0.61.0" />
+  <meta name="generator" content="Hugo 0.55.5" />
   <link rel="alternate" href="https://esaezgil.com/index.xml" type="application/rss+xml" title="Enrique Saez"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -312,30 +312,49 @@ if (!doNotTrack) {
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Confronted with the task of writing a CV for the first time many students resort to Microsoft Word and sloppy templates to be found on the Internet.</p>
+
 <p>Recently, I was helping a family friend proofreading her CV and decided to also teach her about <a href="http://www.latex-project.org/about/">LaTeX</a> and <a href="https://github.com/xdanaux/moderncv">moderncv</a> in order to craft a high quality CV for her summer internship applications.</p>
+
 <p>I used LaTeX extensively in the past to write my <a href="http://projekter.aau.dk/projekter/en/studentthesis/enabling-the-spectral-efficient-coexistence-of-device-to-device-and-device-to-infrastructure-communications-through-opportunistic-interference-cancellation(6171379f-9d84-4eb0-a7fe-b14d830e4a6e).html">Master Thesis</a>, multiple essays and student projects during my Master studies. Since I had been using <a href="https://miktex.org/">MiKTeX</a> in Windows, which takes quite a lot of space in the hard drive, I decided to check if I could make it through with a minimal LaTeX installation in my MacBook. Fortunately, this was the case:</p>
+
 <p><strong>moderncv and LaTeX minimal requirements for macOS:</strong></p>
+
 <ul>
-<li>
-<p><a href="https://www.tug.org/mactex/morepackages.html">BasicTeX</a>: BasicTeX is a subset of TeX Live of size 110 megabytes instead of 2 gigabytes. Perfect for our purposes!</p>
-</li>
-<li>
-<p><a href="http://www.xm1math.net/texmaker/download.html">Texmaker</a>: Texmaker is my favorite LaTeX editor, it is free and cross-platform.</p>
-</li>
-<li>
-<p><a href="http://amaxwell.github.io/tlutility/">TeX Live Utility</a>: a graphical interface for <a href="http://www.tug.org/texlive/tlmgr.html">TeX Live Manager</a>, which is a tool provided to update and maintain TeX Live. We will use <em>TeX Live Utility</em> to install moderncv and some extra packages required.</p>
-</li>
+<li><p><a href="https://www.tug.org/mactex/morepackages.html">BasicTeX</a>: BasicTeX is a subset of TeX Live of size 110 megabytes instead of 2 gigabytes. Perfect for our purposes!</p></li>
+
+<li><p><a href="http://www.xm1math.net/texmaker/download.html">Texmaker</a>: Texmaker is my favorite LaTeX editor, it is free and cross-platform.</p></li>
+
+<li><p><a href="http://amaxwell.github.io/tlutility/">TeX Live Utility</a>: a graphical interface for <a href="http://www.tug.org/texlive/tlmgr.html">TeX Live Manager</a>, which is a tool provided to update and maintain TeX Live. We will use <em>TeX Live Utility</em> to install moderncv and some extra packages required.</p></li>
 </ul>
+
 <p>After installing the previous, we need to install moderncv along some extra requirements through TeX Live Utility. As shown in the picture below, it can be done by simply searching for the packages and installing them.</p>
-<!-- raw HTML omitted -->
+
+<p><center>
+<link rel="stylesheet" href="../../css/hugo-easy-gallery.css" />
+<div class="box" style="max-width:720">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="../../img/TeXLiveUtility.png" alt="/img/TeXLiveUtility.png"/>
+    </div>
+    <a href="../../img/TeXLiveUtility.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Installing packages with TeX Live Utility</h4>
+      </figcaption>
+  </figure>
+</div>
+</center></p>
+
 <p>The complete list of packages to be installed through TeX Live Utility are:</p>
+
 <ul>
 <li>moderncv</li>
 <li>xpatch</li>
 <li>fontawesome</li>
 </ul>
+
 <p>After this relatively short process you should be ready to start writing your shiny new CV.</p>
-<p>Check <a href="https://github.com/xdanaux/moderncv">Xavier Danaux's GitHub</a> for examples or <a href="http://www.latextemplates.com/template/moderncv-cv-and-cover-letter">LaTeX Templates</a> to help you get started.</p>
+
+<p>Check <a href="https://github.com/xdanaux/moderncv">Xavier Danaux&rsquo;s GitHub</a> for examples or <a href="http://www.latextemplates.com/template/moderncv-cv-and-cover-letter">LaTeX Templates</a> to help you get started.</p>
+
 <p>Finally, bear in mind that moderncv includes a fantastic template for cover letters as well.</p>
 
         

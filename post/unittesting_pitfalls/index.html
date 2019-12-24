@@ -63,7 +63,7 @@
   "headline": "Unit-testing pitfalls \x26 pytest basic features",
   "description" : "Python unit-testing pitfalls \x26 pytest basic features",
   "inLanguage" : "en",
-  "wordCount":  1121 ,
+  "wordCount":  1120 ,
   "datePublished" : "2017-03-25T15:16:33",
   "dateModified" : "2017-03-25T15:16:33",
   "image" : "https:\/\/esaezgil.com\/img\/icon.jpg",
@@ -104,7 +104,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Enrique Saez" />
 
-  <meta name="generator" content="Hugo 0.61.0" />
+  <meta name="generator" content="Hugo 0.55.5" />
   <link rel="alternate" href="https://esaezgil.com/index.xml" type="application/rss+xml" title="Enrique Saez"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -312,8 +312,11 @@ if (!doNotTrack) {
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Lately, I have been answering some questions in <a href="http://stackoverflow.com/users/4378118/enrique?tab=profile">StackOverflow</a> related to Unit Testing in Python with <a href="http://www.voidspace.org.uk/python/mock/">Mock</a> and <a href="http://doc.pytest.org/en/latest/">pytest</a>. These are some of the questions I answered:</p>
+
 <ul>
-<li><a href="http://stackoverflow.com/questions/42676681/pytest-and-yield-based-tests/42753785#42753785">pytest and yield based tests</a></li>
+<li><a href="http://stackoverflow.com/questions/42676681/pytest-and-yield-based-tests/42753785#42753785">pytest and yield based tests</a>
+
+<ul>
 <li><a href="http://stackoverflow.com/questions/41314953/pytest-how-to-force-raising-exceptions-during-unit-testing/42753384#42753384">pytest: How to force raising Exceptions during unit-testing?</a></li>
 <li><a href="http://stackoverflow.com/questions/42704292/mocking-file-open-and-throwing-exception/42707396#42707396">Mocking file open and throwing exception</a></li>
 <li><a href="http://stackoverflow.com/questions/42631344/how-to-avoid-a-trip-to-the-database-in-this-test-case">Avoiding a call to the database during tests</a></li>
@@ -321,57 +324,68 @@ if (!doNotTrack) {
 <li><a href="http://stackoverflow.com/questions/42674971/testing-constructor-using-mock/42846459">Testing constructor using mock</a></li>
 <li><a href="http://stackoverflow.com/questions/42824059/preset-input-for-unit-tests-in-python-3/42827843">Preset input for Unit tests in Python 3</a></li>
 <li><a href="http://stackoverflow.com/questions/42819073/mocking-api-calls-in-unit-testing/42820601">Mocking API calls in unit testing</a></li>
+</ul></li>
 </ul>
+
 <p>Going through the list, there are some common pitfalls that can be identified related to the misunderstanding of basic python unit tests concepts and pytest features and inner workings. Inspired by a <a href="http://alexmarandon.com/articles/python_mock_gotchas/">similar post</a> I recently bumped into, I will go through them in detail.</p>
+
 <h1 id="what-does-patch-do">What does patch do?</h1>
+
 <p><a href="http://www.diveintopython.net/getting_to_know_python/everything_is_an_object.html">Everything in Python is an object</a>. As detailed in the <a href="https://docs.python.org/3/library/unittest.mock.html#quick-guide">Python docs</a> the patch decorator/context manager allows to easily mocking classes/objects. Any class/object can be replaced with either a mock, or in general any other object, during the test and restored afterwards.</p>
+
 <p>Therefore, patch allows to mock objects/calls in order to return predefined objects/constants/whatnot. This is really useful when testing system that interact with third parties, allowing for the removal of dependencies during tests.</p>
+
 <h2 id="patching-external-dependencies">Patching external dependencies</h2>
+
 <p>The following question, highlights precisely the aforementioned usage:</p>
+
 <ul>
 <li><a href="http://stackoverflow.com/questions/42631344/how-to-avoid-a-trip-to-the-database-in-this-test-case/42794893#42794893">How to avoid a trip to the database in this Test case</a></li>
 </ul>
 <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">.models</span> <span style="color:#069;font-weight:bold">import</span> ApplicationType
 
 <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">get_application_type</span>(self, value):
- item_name <span style="color:#555">=</span> <span style="color:#c30"></span><span style="color:#c30">&#34;</span><span style="color:#c30">Application Type</span><span style="color:#c30">&#34;</span>
- self<span style="color:#555">.</span>base_details[<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">application_type</span><span style="color:#c30">&#39;</span>] <span style="color:#555">=</span> None
+ item_name <span style="color:#555">=</span> <span style="color:#c30">&#34;Application Type&#34;</span>
+ self<span style="color:#555">.</span>base_details[<span style="color:#c30">&#39;application_type&#39;</span>] <span style="color:#555">=</span> None
  <span style="color:#069;font-weight:bold">try</span>:
      <span style="color:#069;font-weight:bold">if</span> value:
          <span style="color:#069;font-weight:bold">try</span>:
              result <span style="color:#555">=</span> ApplicationType<span style="color:#555">.</span>objects<span style="color:#555">.</span>get(title<span style="color:#555">=</span>value) <span style="color:#09f;font-style:italic"># &lt;= How do I avoid hitting this DB object?</span>
-             self<span style="color:#555">.</span>base_details[<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">application_type</span><span style="color:#c30">&#39;</span>] <span style="color:#555">=</span> result<span style="color:#555">.</span>id
+             self<span style="color:#555">.</span>base_details[<span style="color:#c30">&#39;application_type&#39;</span>] <span style="color:#555">=</span> result<span style="color:#555">.</span><span style="color:#366">id</span>
              <span style="color:#069;font-weight:bold">return</span> True
           <span style="color:#069;font-weight:bold">except</span> ApplicationType<span style="color:#555">.</span>DoesNotExist:
-            [<span style="color:#555">.</span><span style="color:#555">.</span><span style="color:#555">.</span>]
+            [<span style="color:#555">...</span>]
          <span style="color:#069;font-weight:bold">else</span>:
-           self<span style="color:#555">.</span>error_msg <span style="color:#555">=</span> <span style="color:#c30"></span><span style="color:#c30">&#34;</span><span style="color:#c30">Blank Value: {}</span><span style="color:#c30">&#34;</span><span style="color:#555">.</span>format(item_name)
+           self<span style="color:#555">.</span>error_msg <span style="color:#555">=</span> <span style="color:#c30">&#34;Blank Value: {}&#34;</span><span style="color:#555">.</span>format(item_name)
            <span style="color:#069;font-weight:bold">return</span> False
  <span style="color:#069;font-weight:bold">except</span>:
-     <span style="color:#069;font-weight:bold">raise</span>
-</code></pre></div><p>During unit-testing it is a requirement to avoid the interaction with a third-party service. In order to do so, we can use patch as follows (notice that this is for illustrative purposes and I do not necessarily agree with what and how it is being tested):</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@pytest.mark.parametrize</span>(<span style="color:#c30"></span><span style="color:#c30">&#34;</span><span style="color:#c30">entry</span><span style="color:#c30">&#34;</span>, [<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">Type 1</span><span style="color:#c30">&#39;</span>, <span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">Type 2</span><span style="color:#c30">&#39;</span>])
-<span style="color:#99f">@patch</span>(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">ApplicationType.objects.get</span><span style="color:#c30">&#39;</span>)
+     <span style="color:#069;font-weight:bold">raise</span></code></pre></div>
+<p>During unit-testing it is a requirement to avoid the interaction with a third-party service. In order to do so, we can use patch as follows (notice that this is for illustrative purposes and I do not necessarily agree with what and how it is being tested):</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@pytest.mark.parametrize</span>(<span style="color:#c30">&#34;entry&#34;</span>, [<span style="color:#c30">&#39;Type 1&#39;</span>, <span style="color:#c30">&#39;Type 2&#39;</span>])
+<span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;ApplicationType.objects.get&#39;</span>)
 <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_get_application_type_populates_dict_when_value_provided_exists_in_database</span>(self, db_mocked_call, entry):
-    mocked_db_object <span style="color:#555">=</span> {<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">id</span><span style="color:#c30">&#39;</span>: <span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">test_id</span><span style="color:#c30">&#39;</span>}
+    mocked_db_object <span style="color:#555">=</span> {<span style="color:#c30">&#39;id&#39;</span>: <span style="color:#c30">&#39;test_id&#39;</span>}
     db_mocked_call<span style="color:#555">.</span>return_value <span style="color:#555">=</span> mocked_db_object
     application_type <span style="color:#555">=</span> ApplicationTypeFactory<span style="color:#555">.</span>build(title<span style="color:#555">=</span>entry)
     <span style="color:#069;font-weight:bold">assert</span> self<span style="color:#555">.</span>base_info_values<span style="color:#555">.</span>get_application_type(entry) <span style="color:#555">==</span> True
-    <span style="color:#069;font-weight:bold">assert</span> self<span style="color:#555">.</span>base_info_values<span style="color:#555">.</span>base_details[<span style="color:#c30"></span><span style="color:#c30">&#34;</span><span style="color:#c30">application_type</span><span style="color:#c30">&#34;</span>] <span style="color:#000;font-weight:bold">is</span> <span style="color:#000;font-weight:bold">not</span> None
-</code></pre></div><p>In the test above, it can be seen that the call to the database is being patched. Furthermore, a dictionary, <code>mocked_db_object</code>, will be returned when the call is made.</p>
+    <span style="color:#069;font-weight:bold">assert</span> self<span style="color:#555">.</span>base_info_values<span style="color:#555">.</span>base_details[<span style="color:#c30">&#34;application_type&#34;</span>] <span style="color:#000;font-weight:bold">is</span> <span style="color:#000;font-weight:bold">not</span> None</code></pre></div>
+<p>In the test above, it can be seen that the call to the database is being patched. Furthermore, a dictionary, <code>mocked_db_object</code>, will be returned when the call is made.</p>
+
 <p><strong>This approach yields complete control over the inputs and outputs of our test and allowing to deterministically validate the code</strong>. The usage of <code>parametrize</code> is reviewed in detail further below.</p>
+
 <p>However, this does not imply that the integration with third-party services should not be tested through integration tests as I detailed in <a href="http://esaezgil.com/post/test_driven_API/">my previous post about test driven APIs</a></p>
+
 <p>A similar example is the following one in which the calls to the <a href="https://redis.io/">Redis database</a> required patching:</p>
+
 <ul>
 <li><a href="http://stackoverflow.com/questions/42819073/mocking-api-calls-in-unit-testing/42820601">Mocking API calls in unit testing</a></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-redispool <span style="color:#555">=</span> None
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">redispool <span style="color:#555">=</span> None
 
 <span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">myRedis</span>(<span style="color:#366">object</span>):
 
   <span style="color:#069;font-weight:bold">def</span> __init__(self, redisHost, redisPort, redisDBNum):
-      [<span style="color:#555">.</span><span style="color:#555">.</span><span style="color:#555">.</span>]
+      [<span style="color:#555">...</span>]
 
       <span style="color:#069;font-weight:bold">global</span> redispool
       redispool <span style="color:#555">=</span> redis<span style="color:#555">.</span>ConnectionPool(host<span style="color:#555">=</span>self<span style="color:#555">.</span>_redishost,
@@ -379,120 +393,131 @@ redispool <span style="color:#555">=</span> None
                                             db<span style="color:#555">=</span>self<span style="color:#555">.</span>_redisdb)
 
   <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">write_redis</span>(self, key, value):
-       retval <span style="color:#555">=</span> self<span style="color:#555">.</span>_redis_instance<span style="color:#555">.</span>set(key, value)
-       LOGGER<span style="color:#555">.</span>info(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">Writing data to redis (</span><span style="color:#a00">%s</span><span style="color:#c30">, </span><span style="color:#a00">%s</span><span style="color:#c30">). Retval=</span><span style="color:#a00">%s</span><span style="color:#c30">&#39;</span>, key, value, retval)
-       <span style="color:#069;font-weight:bold">return</span> retval
-</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@mock.patch</span>(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">redis.StrictRedis.set</span><span style="color:#c30">&#39;</span>)
+       retval <span style="color:#555">=</span> self<span style="color:#555">.</span>_redis_instance<span style="color:#555">.</span><span style="color:#366">set</span>(key, value)
+       LOGGER<span style="color:#555">.</span>info(<span style="color:#c30">&#39;Writing data to redis (</span><span style="color:#a00">%s</span><span style="color:#c30">, </span><span style="color:#a00">%s</span><span style="color:#c30">). Retval=</span><span style="color:#a00">%s</span><span style="color:#c30">&#39;</span>, key, value, retval)
+       <span style="color:#069;font-weight:bold">return</span> retval</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@mock.patch</span>(<span style="color:#c30">&#39;redis.StrictRedis.set&#39;</span>)
 <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_myRedis_write</span>(mock_strict_redis_set):
     mock_strict_redis_set<span style="color:#555">.</span>return_value <span style="color:#555">=</span> {}
-    myRedisObj <span style="color:#555">=</span> myRedis(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">localhost</span><span style="color:#c30">&#39;</span>, <span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">8888</span><span style="color:#c30">&#39;</span>, <span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">11</span><span style="color:#c30">&#39;</span>)
+    myRedisObj <span style="color:#555">=</span> myRedis(<span style="color:#c30">&#39;localhost&#39;</span>, <span style="color:#c30">&#39;8888&#39;</span>, <span style="color:#c30">&#39;11&#39;</span>)
     redis_connect <span style="color:#555">=</span> myRedisObj<span style="color:#555">.</span>redis_connect()
-    connect <span style="color:#555">=</span> myRedisObj<span style="color:#555">.</span>write_redis(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">1</span><span style="color:#c30">&#39;</span>, <span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">2</span><span style="color:#c30">&#39;</span>)
-    <span style="color:#069;font-weight:bold">assert</span> connect <span style="color:#555">==</span> {}
-</code></pre></div><p>As the previous examples show, one of the most important concepts is knowing <a href="https://docs.python.org/3/library/unittest.mock.html#where-to-patch">where to patch</a>, which the linked docs explain quite clearly.</p>
+    connect <span style="color:#555">=</span> myRedisObj<span style="color:#555">.</span>write_redis(<span style="color:#c30">&#39;1&#39;</span>, <span style="color:#c30">&#39;2&#39;</span>)
+    <span style="color:#069;font-weight:bold">assert</span> connect <span style="color:#555">==</span> {}</code></pre></div>
+<p>As the previous examples show, one of the most important concepts is knowing <a href="https://docs.python.org/3/library/unittest.mock.html#where-to-patch">where to patch</a>, which the linked docs explain quite clearly.</p>
+
 <p>Finally, check the following question showing that checking the output of the calls being tested is not always required. Instead, what should be checked is that the calls took place with functions like <code>called_with</code> or <code>call_count</code>:
 <a href="http://stackoverflow.com/questions/42824059/preset-input-for-unit-tests-in-python-3/42827843">Preset input for Unit tests in Python 3</a></p>
+
 <h2 id="testing-exceptions">Testing exceptions:</h2>
+
 <p>One of the key behaviors to test are exception handling. The way to test that exceptions are raised is by patching the call that can raise the exception. This can be achieved through the <code>side_effect</code> function.</p>
+
 <p>The next example shows how to force raising an exception to test that it is properly managed.</p>
+
 <ul>
 <li><a href="http://stackoverflow.com/questions/42704292/mocking-file-open-and-throwing-exception/42707396#42707396">Mocking file open and throwing exception</a></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">validate_json_specifications</span>(path_to_data_folder, json_file_path, json_data) <span style="color:#555">-</span><span style="color:#555">&gt;</span> None:
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">validate_json_specifications</span>(path_to_data_folder, json_file_path, json_data) <span style="color:#555">-&gt;</span> None:
 
-    schema_file_path <span style="color:#555">=</span> os<span style="color:#555">.</span>path<span style="color:#555">.</span>join(path_to_data_folder, <span style="color:#c30"></span><span style="color:#c30">&#34;</span><span style="color:#c30">schema</span><span style="color:#c30">&#34;</span>, os<span style="color:#555">.</span>path<span style="color:#555">.</span>basename(json_file_path))
-    resolver <span style="color:#555">=</span> RefResolver(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">file://</span><span style="color:#c30">&#39;</span> <span style="color:#555">+</span> schema_file_path, None)
-    <span style="color:#069;font-weight:bold">with</span> <span style="color:#366">open</span>(schema_file_path) <span style="color:#069;font-weight:bold">as</span> schema_data:
-        <span style="color:#069;font-weight:bold">try</span>:
-            Draft4Validator(json<span style="color:#555">.</span>load(schema_data), resolver<span style="color:#555">=</span>resolver)<span style="color:#555">.</span>validate(json_data)
-        <span style="color:#069;font-weight:bold">except</span> ValidationError <span style="color:#069;font-weight:bold">as</span> e:
-            <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">...</span><span style="color:#c30">&#39;</span>)
-            <span style="color:#366">exit</span>()
-</code></pre></div><p>The non-working tests for this code were as follows:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@patch</span>(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">builtins.open</span><span style="color:#c30">&#39;</span>, mock_open(read_data<span style="color:#555">=</span>{}))
-<span style="color:#99f">@patch</span>(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">myproject.common.helper.jsonschema</span><span style="color:#c30">&#39;</span>, Draft4Validator())
+     schema_file_path <span style="color:#555">=</span> os<span style="color:#555">.</span>path<span style="color:#555">.</span>join(path_to_data_folder, <span style="color:#c30">&#34;schema&#34;</span>, os<span style="color:#555">.</span>path<span style="color:#555">.</span>basename(json_file_path))
+     resolver <span style="color:#555">=</span> RefResolver(<span style="color:#c30">&#39;file://&#39;</span> <span style="color:#555">+</span> schema_file_path, None)
+     <span style="color:#069;font-weight:bold">with</span> <span style="color:#366">open</span>(schema_file_path) <span style="color:#069;font-weight:bold">as</span> schema_data:
+         <span style="color:#069;font-weight:bold">try</span>:
+             Draft4Validator(json<span style="color:#555">.</span>load(schema_data), resolver<span style="color:#555">=</span>resolver)<span style="color:#555">.</span>validate(json_data)
+         <span style="color:#069;font-weight:bold">except</span> ValidationError <span style="color:#069;font-weight:bold">as</span> e:
+             <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;...&#39;</span>)
+             <span style="color:#366">exit</span>()</code></pre></div>
+<p>The non-working tests for this code were as follows:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;builtins.open&#39;</span>, mock_open(read_data<span style="color:#555">=</span>{}))
+<span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;myproject.common.helper.jsonschema&#39;</span>, Draft4Validator())
 <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_validate_json_specifications</span>(mock_file_open, draft_4_validator_mock):
-    validate_json_specifications(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">foo_path_to_data</span><span style="color:#c30">&#39;</span>, <span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">foo_json_file_path</span><span style="color:#c30">&#39;</span>, {})
-    mock_file_open<span style="color:#555">.</span>assert_called_with(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">foo_path_to_data/schema/foo_json_file_path</span><span style="color:#c30">&#39;</span>)
-    draft_4_validator_mock<span style="color:#555">.</span>assert_called()
-</code></pre></div><p>The person asking was trying to use the patch wrong and not taking advantage of <code>side_effect</code>. As it can be seen, every time the <code>jsonschema</code> function of the module being tested was called, a <code>Draft4Validator</code> object would have been created (had the class been correctly instantiated).</p>
+    validate_json_specifications(<span style="color:#c30">&#39;foo_path_to_data&#39;</span>, <span style="color:#c30">&#39;foo_json_file_path&#39;</span>, {})
+    mock_file_open<span style="color:#555">.</span>assert_called_with(<span style="color:#c30">&#39;foo_path_to_data/schema/foo_json_file_path&#39;</span>)
+    draft_4_validator_mock<span style="color:#555">.</span>assert_called()</code></pre></div>
+<p>The person asking was trying to use the patch wrong and not taking advantage of <code>side_effect</code>. As it can be seen, every time the <code>jsonschema</code> function of the module being tested was called, a <code>Draft4Validator</code> object would have been created (had the class been correctly instantiated).</p>
+
 <p>Instead, the Draft4Validator object is the one to be mocked and the relevant calls to any of its methods the ones to be patched.
 An example of such way to proceed can be found in the answer I posted:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#99f">@patch</span>(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">sys.exit</span><span style="color:#c30">&#39;</span>)
-<span style="color:#99f">@patch</span>(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">myproject.common.helper.jsonschema.Draft4Validator</span><span style="color:#c30">&#39;</span>)
-<span style="color:#99f">@patch</span>(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">builtins.open</span><span style="color:#c30">&#39;</span>)
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;sys.exit&#39;</span>)
+<span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;myproject.common.helper.jsonschema.Draft4Validator&#39;</span>)
+<span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;builtins.open&#39;</span>)
 <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_validate_json_specifications</span>(mock_file_open, draft_4_validator_mock, exit_mock):
     <span style="color:#069;font-weight:bold">with</span> pytest<span style="color:#555">.</span>raises(ValidationError):
         mock_file_open<span style="color:#555">.</span>return_value <span style="color:#555">=</span> {}
         draft_4_validator_mock <span style="color:#555">=</span> Mock()
         draft_4_validator_mock<span style="color:#555">.</span>side_effect <span style="color:#555">=</span> ValidationError
 
-        validate_json_specifications(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">foo_path_to_data</span><span style="color:#c30">&#39;</span>, <span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">foo_json_file_path</span><span style="color:#c30">&#39;</span>, {})
+        validate_json_specifications(<span style="color:#c30">&#39;foo_path_to_data&#39;</span>, <span style="color:#c30">&#39;foo_json_file_path&#39;</span>, {})
 
         <span style="color:#069;font-weight:bold">assert</span> draft_4_validator_mock<span style="color:#555">.</span>call_count <span style="color:#555">==</span> <span style="color:#f60">1</span>
         <span style="color:#069;font-weight:bold">assert</span> draft_4_validator_mock<span style="color:#555">.</span>validate<span style="color:#555">.</span>assert_called_with({})        
-        <span style="color:#069;font-weight:bold">assert</span> exit_mock<span style="color:#555">.</span>call_count <span style="color:#555">==</span> <span style="color:#f60">1</span>
-</code></pre></div><p>In the previous test we can check again how easy it is to test the expected path for the exception through the creation of a mock object and associating a <code>side_effect</code> to it.</p>
+        <span style="color:#069;font-weight:bold">assert</span> exit_mock<span style="color:#555">.</span>call_count <span style="color:#555">==</span> <span style="color:#f60">1</span></code></pre></div>
+<p>In the previous test we can check again how easy it is to test the expected path for the exception through the creation of a mock object and associating a <code>side_effect</code> to it.</p>
+
 <h1 id="pytest-basic-features">pytest basic features:</h1>
+
 <p><a href="pytest.org">Pytest</a> is a very powerful testing framework and knowing about the feaures that it provides helps creating a robust and concise testing architecture for your project.</p>
+
 <p>Some of the most common used features are the following:</p>
+
 <h2 id="testing-that-exceptions-are-raised">Testing that exceptions are raised</h2>
+
 <p>Fortunately, pytest provides powerful features to <a href="http://doc.pytest.org/en/latest/assert.html#assertions-about-expected-exceptions">test that exceptions are handled properly</a>.</p>
+
 <p>The next example shows how to force raising an exception and test that it actually raised:</p>
+
 <ul>
 <li><a href="http://stackoverflow.com/questions/41314953/pytest-how-to-force-raising-exceptions-during-unit-testing/42753384#42753384">pytest: How to force raising Exceptions during unit-testing?</a></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">MyRequest</span>(metaclass<span style="color:#555">=</span>Singleton):
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">MyRequest</span>(metaclass<span style="color:#555">=</span>Singleton):
 
-    <span style="color:#069;font-weight:bold">def</span> __init__(self, retry_tries<span style="color:#555">=</span><span style="color:#f60">3</span>, retry_backoff<span style="color:#555">=</span><span style="color:#f60">0.1</span>, retry_codes<span style="color:#555">=</span>None):
-        [<span style="color:#555">.</span><span style="color:#555">.</span><span style="color:#555">.</span>]
+     <span style="color:#069;font-weight:bold">def</span> __init__(self, retry_tries<span style="color:#555">=</span><span style="color:#f60">3</span>, retry_backoff<span style="color:#555">=</span><span style="color:#f60">0.1</span>, retry_codes<span style="color:#555">=</span>None):
+         [<span style="color:#555">...</span>]
 
-    <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">request</span>(self, request_method, request_url, <span style="color:#555">*</span><span style="color:#555">*</span>kwargs):
-        <span style="color:#069;font-weight:bold">try</span>:
-            <span style="color:#069;font-weight:bold">return</span> self<span style="color:#555">.</span>session<span style="color:#555">.</span>request(method<span style="color:#555">=</span>request_method, url<span style="color:#555">=</span>request_url, <span style="color:#555">*</span><span style="color:#555">*</span>kwargs)
-        <span style="color:#069;font-weight:bold">except</span> <span style="color:#c00;font-weight:bold">Exception</span> <span style="color:#069;font-weight:bold">as</span> ex:
-            log<span style="color:#555">.</span>warning([<span style="color:#555">.</span><span style="color:#555">.</span><span style="color:#555">.</span>]])
-            <span style="color:#069;font-weight:bold">raise</span>
-</code></pre></div><p>The test could look something similar to the following:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">requests.exceptions</span> <span style="color:#069;font-weight:bold">import</span> ConnectTimeout, ReadTimeout, Timeout
+     <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">request</span>(self, request_method, request_url, <span style="color:#555">**</span>kwargs):
+         <span style="color:#069;font-weight:bold">try</span>:
+             <span style="color:#069;font-weight:bold">return</span> self<span style="color:#555">.</span>session<span style="color:#555">.</span>request(method<span style="color:#555">=</span>request_method, url<span style="color:#555">=</span>request_url, <span style="color:#555">**</span>kwargs)
+         <span style="color:#069;font-weight:bold">except</span> <span style="color:#c00;font-weight:bold">Exception</span> <span style="color:#069;font-weight:bold">as</span> ex:
+             log<span style="color:#555">.</span>warning([<span style="color:#555">...</span>]])
+             <span style="color:#069;font-weight:bold">raise</span></code></pre></div>
+<p>The test could look something similar to the following:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">requests.exceptions</span> <span style="color:#069;font-weight:bold">import</span> ConnectTimeout, ReadTimeout, Timeout
 <span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">unittest.mock</span> <span style="color:#069;font-weight:bold">import</span> patch
 <span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">pytest</span>
 
 <span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">TestRequestService</span>:
-    <span style="color:#99f">@pytest.mark.parametrize</span>(<span style="color:#c30"></span><span style="color:#c30">&#34;</span><span style="color:#c30">expected_exception</span><span style="color:#c30">&#34;</span>, [ConnectTimeout, ReadTimeout, Timeout])
-    <span style="color:#99f">@patch</span>(<span style="color:#c30"></span><span style="color:#c30">&#39;</span><span style="color:#c30">path_to_module.MyRequest</span><span style="color:#c30">&#39;</span>)
+    <span style="color:#99f">@pytest.mark.parametrize</span>(<span style="color:#c30">&#34;expected_exception&#34;</span>, [ConnectTimeout, ReadTimeout, Timeout])
+    <span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;path_to_module.MyRequest&#39;</span>)
     <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_custom_request</span>(self, my_request_mock, expected_exception):
         my_request_mock<span style="color:#555">.</span>request<span style="color:#555">.</span>side_effect <span style="color:#555">=</span> expected_exception
         <span style="color:#069;font-weight:bold">with</span> pytest<span style="color:#555">.</span>raises(expected_exception):
             my_request_mock<span style="color:#555">.</span>request(Mock(), Mock())
-    [<span style="color:#555">.</span><span style="color:#555">.</span><span style="color:#555">.</span>]
-</code></pre></div><p>Notice how easily <code>side_effect</code> allows for the testing of the proper management of the exception.</p>
+    [<span style="color:#555">...</span>]</code></pre></div>
+<p>Notice how easily <code>side_effect</code> allows for the testing of the proper management of the exception.</p>
+
 <h2 id="pytest-parametrize">pytest parametrize:</h2>
+
 <p>One of the most sought after behaviors when testing is actually testing the correctness of a myriad of relevant inputs/outputs. For this purpose, pytest provides a feature that yields such flexibility in a compact way through <code>parametrize</code>. The following questions are scenarios in which <code>parametrize</code> is highly relevant:</p>
+
 <ul>
 <li><a href="http://stackoverflow.com/questions/42676681/pytest-and-yield-based-tests/42753785#42753785">pytest and yield based tests</a></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
- <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">is_equal</span>(a, b):
-    <span style="color:#069;font-weight:bold">assert</span> a <span style="color:#555">==</span> b
-</code></pre></div><p>We can test such a simple scenario with some tests:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">pytest</span>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">is_equal</span>(a, b):
+    <span style="color:#069;font-weight:bold">assert</span> a <span style="color:#555">==</span> b</code></pre></div>
+<p>We can test such a simple scenario with some tests:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">pytest</span>
 
 <span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">TestComplexScenario</span>:
-    <span style="color:#99f">@pytest.mark.parametrize</span>(<span style="color:#c30"></span><span style="color:#c30">&#34;</span><span style="color:#c30">my_integer</span><span style="color:#c30">&#34;</span>, [<span style="color:#f60">0</span>, <span style="color:#f60">1</span>, <span style="color:#f60">2</span>])
+    <span style="color:#99f">@pytest.mark.parametrize</span>(<span style="color:#c30">&#34;my_integer&#34;</span>, [<span style="color:#f60">0</span>, <span style="color:#f60">1</span>, <span style="color:#f60">2</span>])
     <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_complex</span>(self, my_integer):
-        <span style="color:#069;font-weight:bold">assert</span> is_equal(my_integer, my_integer)
-</code></pre></div><p>The sample output looks like this:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</span>0<span style="color:#555">]</span> PASSED
-test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</span>1<span style="color:#555">]</span> PASSED
-test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</span>2<span style="color:#555">]</span> PASSED
-</code></pre></div><p>where it can be checked that all the inputs were tested.</p>
+        <span style="color:#069;font-weight:bold">assert</span> is_equal(my_integer, my_integer)</code></pre></div>
+<p>The sample output looks like this:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</span><span style="color:#f60">0</span><span style="color:#555">]</span> PASSED
+test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</span><span style="color:#f60">1</span><span style="color:#555">]</span> PASSED
+test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</span><span style="color:#f60">2</span><span style="color:#555">]</span> PASSED</code></pre></div>
+<p>where it can be checked that all the inputs were tested.</p>
+
 <p>Other references:</p>
+
 <ul>
 <li><a href="https://medium.com/@bfortuner/python-unit-testing-with-pytest-and-mock-197499c4623c">https://medium.com/@bfortuner/python-unit-testing-with-pytest-and-mock-197499c4623c</a></li>
 <li><a href="http://treyhunner.com/2014/10/the-many-flavors-of-mock-dot-patch/">http://treyhunner.com/2014/10/the-many-flavors-of-mock-dot-patch/</a></li>
