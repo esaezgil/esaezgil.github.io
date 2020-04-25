@@ -96,10 +96,7 @@ I created my Twitter account, follow me :) [@eqirn](https://twitter.com/eqirn)
 
 I created this [Blog](https://esaezgil.github.io) with [Hugo](http://gohugo.io), [GitHub pages](https://pages.github.com/) and automatic deployment through [Wercker](https://www.wercker.com/). This was an iteration of my first attempt to create a [blog](https://thinkreleaseblog.wordpress.com/) using [Wordpress](https://www.wordpress.org). I did not like the Wordpress interface and it looked quite shabby.
 
-I recorded a podcast along my former colleague [Nicolas Vayias](https://twitter.com/NVayias) about our experience as a recent employee of a rapidly growing startup. It was an interesting experience since the interview was not scripted and the host, [Richard Davidson](https://twitter.com/monkeybood), was in another office in a different country. You can listen to it through [Codevoyagers SoundCloud](https://soundcloud.com/code-voyagers/episode-4-a-graduates-journey).
-Also check the post about it in the [Codevoyagers's blog](http://codevoyagers.com/2016/05/05/double-podcast-a-chat-about-theory-of-constraints-with-guest-clarke-ching-and-a-graduates-journey-at-skyscanner/).
-
-{{< soundcloud >}}
+I recorded a podcast along my former colleague [Nicolas Vayias](https://twitter.com/NVayias) about our experience as a recent employee of a rapidly growing startup. It was an interesting experience since the interview was not scripted and the host, [Richard Davidson](https://twitter.com/monkeybood), was in another office in a different country.
 
 Skyscanner acquisition
 ======================
