@@ -35,8 +35,8 @@ Professional experience
 
 [MassM2M research group](http://massm2m.es.aau.dk/) at [Aalborg University](http://www.en.aau.dk/), Denmark
 
-* During my [Master studies](http://www.en.aau.dk/education/master/wireless-communication-systems) in Denmark, I worked in the [MassM2M research group](http://massm2m.es.aau.dk/) and participated in the entire product life-cycle, from the initial research up to the development of a prototype for a robust wireless communication system.<br>
-Check [this video](https://vimeo.com/66733915) for a demo of the system transmitting audio over WiFi even after a jammer is switched on.
+* During my [Master studies](http://www.en.aau.dk/education/master/wireless-communication-systems), I worked in the [MassM2M research group](http://massm2m.es.aau.dk/) and participated in the research, implementation and characterization of robust wireless communication systems.<br> 
+ - [Video](https://vimeo.com/66733915) of the prototype transmitting audio over WiFi wtih a jammer activated<br>
 
 [Reseiwe](http://reseiwe.com/), Denmark
 
