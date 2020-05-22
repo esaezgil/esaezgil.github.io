@@ -8,7 +8,7 @@ date = "2016-10-22T20:17:14+02:00"
 
 <p class="about-text">
 <span class="fa fa-wifi about-icon"></span>
-Telecommunications Engineer passionate about the ICT industry.
+Software Engineer passionate about the ICT industry.
 </p>
 
 <p class="about-text">
