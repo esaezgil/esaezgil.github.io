@@ -24,7 +24,7 @@ Going through the list, there are some common pitfalls that can be identified re
 What does patch do?
 ===================
 
-[Everything in Python is an object](http://www.diveintopython.net/getting_to_know_python/everything_is_an_object.html). As detailed in the [Python docs](https://docs.python.org/3/library/unittest.mock.html#quick-guide) the patch decorator/context manager allows to easily mocking classes/objects. Any class/object can be replaced with either a mock, or in general any other object, during the test and restored afterwards.
+[Everything in Python is an object](http://www.diveintopython.net/getting_to_know_python/everything_is_an_object.html). As detailed in the [Python docs](https://docs.python.org/3/library/unittest.mock.html#quick-guide) the patch decorator/context manager allows to easily mock classes/objects. Any class/object can be replaced with either a mock, or in general any other object, during the test and restored afterwards.
 
 Therefore, patch allows to mock objects/calls in order to return predefined objects/constants/whatnot. This is really useful when testing system that interact with third parties, allowing for the removal of dependencies during tests.
 
