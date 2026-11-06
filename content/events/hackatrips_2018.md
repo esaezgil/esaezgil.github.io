@@ -68,7 +68,7 @@ Here is a video we recorded barely on the deadline (it was a requirement of the 
 
 The other member of the team which was not coding, created a presentation explaining the idea behind the product for the demo at the end of the event. The presentation below might not be the latest version but allows for making an accurate idea of what it was like in the end.
 
-<div class="summer-embed" style="aspect-ratio: 640 / 389"><iframe title="Hackatrips project presentation" src="https://docs.google.com/presentation/d/e/2PACX-1vRFPFK5ysyPk2BysYv6dkLDzZ-ZxwhiRaceN48tVwB5NafVLKVDPk0kA_Yz2H1PmwSYnIphGSBuOxNG/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+<div class="document-embed" style="aspect-ratio: 640 / 389"><iframe title="Hackatrips project presentation" src="https://docs.google.com/presentation/d/e/2PACX-1vRFPFK5ysyPk2BysYv6dkLDzZ-ZxwhiRaceN48tVwB5NafVLKVDPk0kA_Yz2H1PmwSYnIphGSBuOxNG/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
 The outcome
 -----------

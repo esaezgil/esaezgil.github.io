@@ -22,7 +22,7 @@ I attended DTU Summer University during summer of 2013 working along other stude
 
 
 
-<div class="summer-embed" style="aspect-ratio: 480 / 389">
+<div class="document-embed" style="aspect-ratio: 480 / 389">
 <iframe title="Project presentation" src="https://docs.google.com/presentation/d/1MTfpF4BGxq3xDEJMy_CrY2qPOiCZx_YUbaRjLJHNzeg/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 
@@ -32,7 +32,7 @@ I attended DTU Summer University during summer of 2013 working along other stude
 
 This is the report we wrote:
 
-<div class="summer-embed" style="aspect-ratio: 600 / 400">
+<div class="document-embed" style="aspect-ratio: 600 / 400">
 <iframe title="Project report" src="https://drive.google.com/file/d/0B8qoMCJeZpJAVk56elJEd0lRbk0/preview"></iframe>
 </div>
 
@@ -44,7 +44,7 @@ This is the report we wrote:
 
 
 
-<div class="summer-embed" style="aspect-ratio: 480 / 389">
+<div class="document-embed" style="aspect-ratio: 480 / 389">
 <iframe title="Project presentation" src="https://docs.google.com/presentation/d/1HdYxBcn6Hn2Lv7iCn1S_JEfeBzBNwF9W1r2x4m4IKYw/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 
@@ -60,7 +60,7 @@ Check the slides with our conclusions:
 
 
 
-<div class="summer-embed" style="aspect-ratio: 480 / 389">
+<div class="document-embed" style="aspect-ratio: 480 / 389">
 <iframe title="Project presentation" src="https://docs.google.com/presentation/d/1O3KpKHqIBsUVMWEPMFUeUBFaDwlZQ_TN9onGxw9uMdE/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 
