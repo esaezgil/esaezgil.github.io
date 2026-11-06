@@ -37,4 +37,8 @@ I had a great time during this event and would gladly join again in the future.
 
 Check the presentation we did for the final pitch:
 
-https://speakerdeck.com/esaezgil/activiti-dot-es-technobeatles
+<div class="document-embed" style="aspect-ratio: 16 / 9">
+<iframe src="https://speakerdeck.com/player/f96342f403e34a488e49bf296bbc1581" title="Activiti.es — Technobeatles" loading="lazy" allowfullscreen></iframe>
+</div>
+
+[Open slides on Speaker Deck](https://speakerdeck.com/esaezgil/activiti-dot-es-technobeatles)
