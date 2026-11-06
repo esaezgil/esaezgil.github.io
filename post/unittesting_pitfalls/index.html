@@ -1,209 +1,254 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage" data-theme="light">
   <head>
-    
 
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+ 
+
+
+  
   <title>Unit-testing pitfalls &amp; pytest basic features - Enrique Saez</title>
-  <meta property="og:title" content="Unit-testing pitfalls &amp; pytest basic features" />
-  <meta name="twitter:title" content="Unit-testing pitfalls &amp; pytest basic features" />
+
   <meta name="description" content="Python unit-testing pitfalls &amp; pytest basic features">
-  <meta property="og:description" content="Python unit-testing pitfalls &amp; pytest basic features">
-  <meta name="twitter:description" content="Python unit-testing pitfalls &amp; pytest basic features">
-  <meta name="author" content="Enrique Saez Gil"/><script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "Enrique Saez",
-    
-    "url": "https:\/\/esaezgil.com\/"
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "",
-  "url": "https:\/\/esaezgil.com\/"
-  
-  
-  
-  
-}
-</script>
+  <meta name="author" content="Enrique Saez Gil"/>
+
+
+
+
+
+
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@id": "https:\/\/esaezgil.com\/",
-          "name": "home"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://esaezgil.com/#website",
+      "@type": "WebSite",
+      "name": "Enrique Saez",
+      "publisher": {
+        "@id": "https://esaezgil.com/#organization"
+      },
+      "url": "https://esaezgil.com/"
+    },
+    {
+      "@id": "https://esaezgil.com/#organization",
+      "@type": "Organization",
+      "name": "Enrique Saez Gil",
+      "url": "https://esaezgil.com/"
+    },
+    {
+      "@id": "https://esaezgil.com/post/unittesting_pitfalls/#breadcrumb",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "item": "https://esaezgil.com/",
+          "name": "Home",
+          "position": 1
+        },
+        {
+          "@type": "ListItem",
+          "item": "https://esaezgil.com/post/",
+          "name": "Posts",
+          "position": 2
+        },
+        {
+          "@type": "ListItem",
+          "item": "https://esaezgil.com/post/unittesting_pitfalls/",
+          "name": "Unit-testing pitfalls \u0026 pytest basic features",
+          "position": 3
         }
-    },{
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@id": "https:\/\/esaezgil.com\/post\/unittesting_pitfalls\/",
-          "name": "Unit testing pitfalls \x26 pytest basic features"
+      ]
+    },
+    {
+      "@id": "https://esaezgil.com/post/unittesting_pitfalls/#webpage",
+      "@type": "WebPage",
+      "breadcrumb": {
+        "@id": "https://esaezgil.com/post/unittesting_pitfalls/#breadcrumb"
+      },
+      "isPartOf": {
+        "@id": "https://esaezgil.com/#website"
+      },
+      "name": "Unit-testing pitfalls \u0026 pytest basic features",
+      "url": "https://esaezgil.com/post/unittesting_pitfalls/"
+    },
+    {
+      "@id": "https://esaezgil.com/#author-enrique-saez-gil",
+      "@type": "Person",
+      "name": "Enrique Saez Gil",
+      "url": "https://esaezgil.com/"
+    },
+    {
+      "@id": "https://esaezgil.com/post/unittesting_pitfalls/#article",
+      "@type": "Article",
+      "author": [
+        {
+          "@id": "https://esaezgil.com/#author-enrique-saez-gil"
         }
-    }]
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "author": {
-    "name" : "Enrique Saez Gil"
-  },
-  "headline": "Unit-testing pitfalls \x26 pytest basic features",
-  "description" : "Python unit-testing pitfalls \x26 pytest basic features",
-  "inLanguage" : "en",
-  "wordCount":  1120 ,
-  "datePublished" : "2017-03-25T15:16:33",
-  "dateModified" : "2017-03-25T15:16:33",
-  "image" : "https:\/\/esaezgil.com\/img\/icon.jpg",
-  "keywords" : [ "" ],
-  "mainEntityOfPage" : "https:\/\/esaezgil.com\/post\/unittesting_pitfalls\/",
-  "publisher" : {
-    "@type": "Organization",
-    "name" : "https:\/\/esaezgil.com\/",
-    "logo" : {
-        "@type" : "ImageObject",
-        "url" : "https:\/\/esaezgil.com\/img\/icon.jpg",
-        "height" :  60 ,
-        "width" :  60
+      ],
+      "dateCreated": "2017-03-25T15:16:33+01:00",
+      "dateModified": "2017-03-25T15:16:33+01:00",
+      "datePublished": "2017-03-25T15:16:33+01:00",
+      "description": "Python unit-testing pitfalls \u0026 pytest basic features",
+      "headline": "Unit-testing pitfalls \u0026 pytest basic features",
+      "image": "https://esaezgil.com/img/icon.jpg",
+      "inLanguage": "en",
+      "keywords": [],
+      "mainEntityOfPage": {
+        "@id": "https://esaezgil.com/post/unittesting_pitfalls/#webpage"
+      },
+      "publisher": {
+        "@id": "https://esaezgil.com/#organization"
+      },
+      "timeRequired": "PT6M",
+      "wordCount": 1121
     }
-  }
+  ]
 }
 </script>
-
-<meta property="og:title" content="Unit-testing pitfalls &amp; pytest basic features" />
-<meta property="og:description" content="Python unit-testing pitfalls &amp; pytest basic features">
-<meta property="og:image" content="https://esaezgil.com/img/icon.jpg" />
-<meta property="og:url" content="https://esaezgil.com/post/unittesting_pitfalls/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Enrique Saez" />
-
+<meta property="og:url" content="https://esaezgil.com/post/unittesting_pitfalls/">
+	<meta property="og:site_name" content="Enrique Saez">
+	<meta property="og:title" content="Unit-testing pitfalls &amp; pytest basic features">
+	<meta property="og:description" content="Python unit-testing pitfalls &amp; pytest basic features">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2017-03-25T15:16:33+01:00">
+		<meta property="article:modified_time" content="2017-03-25T15:16:33+01:00">
+<link rel="canonical" href="https://esaezgil.com/post/unittesting_pitfalls/" />
   <meta name="twitter:title" content="Unit-testing pitfalls &amp; pytest basic features" />
   <meta name="twitter:description" content="Python unit-testing pitfalls &amp; pytest basic features">
   <meta name="twitter:image" content="https://esaezgil.com/img/icon.jpg" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@eqirn" />
   <meta name="twitter:creator" content="@eqirn" />
-  <meta property="og:image" content="https://esaezgil.com/img/icon.jpg" />
-  <meta name="twitter:image" content="https://esaezgil.com/img/icon.jpg" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@eqirn" />
-  <meta name="twitter:creator" content="@eqirn" />
-  <meta property="og:url" content="https://esaezgil.com/post/unittesting_pitfalls/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Enrique Saez" />
 
-  <meta name="generator" content="Hugo 0.55.5" />
-  <link rel="alternate" href="https://esaezgil.com/index.xml" type="application/rss+xml" title="Enrique Saez"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://esaezgil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://esaezgil.com/css/syntax.css" /><link rel="stylesheet" href="https://esaezgil.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+<meta name="generator" content="Hugo 0.169.0">
 
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-86132389-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css" integrity="sha384-UA8juhPf75SzzAMA/4fo3yOU7sBJ0om7SCD2GHq0fZqZco6tr1UCV7nUbk9J90JM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.2.0/css/all.css" integrity="sha384-EXatlQyrOJgDaM9/a74ArMzy7/2bTMSrZj8ID1IPeVmc3GncfCugefCFWSLj8JL/" crossorigin="anonymous">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8&#43;LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  
+<link rel="stylesheet" href="../../css/beautifulhugo-4ea635c6.min.a364ba4642df5da6348320b9362c903d9db6b8adca57d9c3508c15d59200be93.css" integrity="sha256-o2S6RkLfXaY0gyC5NiyQPZ22uK3KV9nDUIwV1ZIAvpM=" crossorigin="anonymous" />
+  
+<link rel="stylesheet" media="print" href="../../css/print.min.71d8124cb89642daef97634878d5e9689e76153aaa0453dbbe00e81fdbfc590e.css" integrity="sha256-cdgSTLiWQtrvl2NIeNXpaJ52FTqqBFPbvgDoH9v8WQ4=" crossorigin="anonymous" />
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei&#43;Zx/1oA/0l8ysE" crossorigin="anonymous"><link rel="stylesheet" href="../../css/site.min.d3a877141302d229042b905e7e96e1425b22604785d410ce2da51cdb417cc2a4.css" integrity="sha256-06h3FBMC0ikEK5BefpbhQlsiYEeF1BDOLaUc20F8wqQ=">
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav class="navbar navbar-expand-md navbar-light navbar-custom fixed-top">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+    
+    <a class="navbar-brand" href="../../">Enrique Saez</a>
+    <div class="d-flex align-items-center">
+      
+      
+      
+      <button class="theme-toggle" id="search-toggle" aria-label="Search" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Search">
+        <span class="fas fa-magnifying-glass"></span>
       </button>
-      <a class="navbar-brand" href="https://esaezgil.com/">Enrique Saez</a>
+      
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-nav ms-auto">
         
           
-            <li>
-              <a title="About" href="../../about/">About</a>
+          
+            <li class="nav-item" >
+              <a class="nav-link" title="About" href="../../about/">About</a>
             </li>
           
         
           
-            <li>
-              <a title="Blog" href="../../">Blog</a>
+          
+            <li class="nav-item" >
+              <a class="nav-link" title="Blog" href="../../">Blog</a>
             </li>
           
         
           
-            <li class="navlinks-container">
-              <a class="navlinks-parent">Events</a>
-              <div class="navlinks-children">
+          
+            <li class="nav-item dropdown" >
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Events
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
                 
-                  <a href="../../events/">Hackathons</a>
+                  
+                  <li><a class="dropdown-item" href="../../events/">Hackathons</a></li>
                 
-                  <a href="../../talks/">Talks</a>
+                  
+                  <li><a class="dropdown-item" href="../../talks/">Talks</a></li>
                 
-                  <a href="../../meetups/">Meetups &amp; Conferences</a>
+                  
+                  <li><a class="dropdown-item" href="../../meetups/">Meetups &amp; Conferences</a></li>
                 
-              </div>
+              </ul>
             </li>
           
         
           
-            <li class="navlinks-container">
-              <a class="navlinks-parent">More</a>
-              <div class="navlinks-children">
+          
+            <li class="nav-item dropdown" >
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
                 
-                  <a href="../../books/">Books</a>
+                  
+                  <li><a class="dropdown-item" href="../../books/">Books</a></li>
                 
-                  <a href="../../now/">Now</a>
+                  
+                  <li><a class="dropdown-item" href="../../now/">Now</a></li>
                 
-                  <a href="../../reviews/">Reviews</a>
+                  
+                  <li><a class="dropdown-item" href="../../reviews/">Reviews</a></li>
                 
-                  <a href="../../interesting_links/">Links</a>
+                  
+                  <li><a class="dropdown-item" href="../../interesting_links/">Links</a></li>
                 
-                  <a href="../../donate/">Donate</a>
+                  
+                  <li><a class="dropdown-item" href="../../search/">Search</a></li>
                 
-                  <a href="../../search/">Search</a>
-                
-              </div>
+              </ul>
             </li>
           
         
 
-        
+          
 
         
       </ul>
+      
+
     </div>
 
     
-      <div class="avatar-container">
-        <div class="avatar-img-border">
-          <a title="Enrique Saez" href="https://esaezgil.com/">
-            <img class="avatar-img" src="https://esaezgil.com/img/icon.jpg" alt="Enrique Saez" />
-          </a>
+    
+      
+        <div class="avatar-container">
+          <div class="avatar-img-border">
+            <a title="Enrique Saez" href="../../">
+              <img class="avatar-img" src="../../img/icon.jpg" alt="Enrique Saez" />
+             
+            </a>
+          </div>
         </div>
-      </div>
+      
     
 
   </div>
@@ -211,60 +256,37 @@ if (!doNotTrack) {
 
 
 
-
-    
-
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-<div class="pswp__bg"></div>
-
-<div class="pswp__scroll-wrap">
-    
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-    
-    <div class="pswp__ui pswp__ui--hidden">
-    <div class="pswp__top-bar">
-      
-      <div class="pswp__counter"></div>
-      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-      <button class="pswp__button pswp__button--share" title="Share"></button>
-      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
-      <div class="pswp__preloader">
-        <div class="pswp__preloader__icn">
-          <div class="pswp__preloader__cut">
-            <div class="pswp__preloader__donut"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-      <div class="pswp__share-tooltip"></div>
-    </div>
-    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<div id="navbar-search-overlay" class="navbar-search-overlay" aria-hidden="true" role="search">
+  <div class="navbar-search-inner container-fluid">
+    <span class="fas fa-magnifying-glass navbar-search-icon" aria-hidden="true"></span>
+    <input type="search" id="navbar-search-input" class="navbar-search-input"
+           placeholder="Search posts and pages…"
+           aria-label="Search"
+           autocomplete="off">
+    <button id="navbar-search-close" class="theme-toggle" aria-label="Close search">
+      <span class="fas fa-xmark"></span>
     </button>
-    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-    </button>
-    <div class="pswp__caption">
-      <div class="pswp__caption__center"></div>
-    </div>
-    </div>
-    </div>
+  </div>
+  <div id="navbar-search-results" class="navbar-search-results container-fluid" aria-live="polite"></div>
 </div>
+<script>
+  window.searchProviderConfig = {
+    provider: "fuse",
+    searchIndexURL: "/index.json",
+    searchPageURL: "/search"
+  };
+  window.searchConfig = {
+    noResultsText: "No results found for ",
+    untitledText: "Untitled"
+  };
+</script>
 
 
-  
-  
-  
 
 
+
+
+    
 
 
 
@@ -273,26 +295,35 @@ if (!doNotTrack) {
 
   <header class="header-section ">
     
+    
     <div class="intro-header no-img">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="col-md-10 offset-md-1">
             <div class="post-heading">
               
-                <h1>Unit-testing pitfalls &amp; pytest basic features</h1>
+              <h1>Unit-testing pitfalls &amp; pytest basic features</h1>
               
               
               
+
+
               
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;March 25, 2017
+  
+  
+     
   
   
   
+    <i class="fas fa-calendar"></i>&nbsp;March 25, 2017
+    
+    
   
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Enrique Saez Gil
+  
+  
   
   
 </span>
@@ -303,20 +334,26 @@ if (!doNotTrack) {
         </div>
       </div>
     </div>
+  
+    
+
   </header>
 
 
     
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        <p>Lately, I have been answering some questions in <a href="http://stackoverflow.com/users/4378118/enrique?tab=profile">StackOverflow</a> related to Unit Testing in Python with <a href="http://www.voidspace.org.uk/python/mock/">Mock</a> and <a href="http://doc.pytest.org/en/latest/">pytest</a>. These are some of the questions I answered:</p>
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <article role="main" class="blog-post">
+          
 
-<ul>
-<li><a href="http://stackoverflow.com/questions/42676681/pytest-and-yield-based-tests/42753785#42753785">pytest and yield based tests</a>
 
+          
+
+          
+          <p>Lately, I have been answering some questions in <a href="http://stackoverflow.com/users/4378118/enrique?tab=profile">StackOverflow</a> related to Unit Testing in Python with <a href="http://www.voidspace.org.uk/python/mock/">Mock</a> and <a href="http://doc.pytest.org/en/latest/">pytest</a>. These are some of the questions I answered:</p>
 <ul>
+<li><a href="http://stackoverflow.com/questions/42676681/pytest-and-yield-based-tests/42753785#42753785">pytest and yield based tests</a></li>
 <li><a href="http://stackoverflow.com/questions/41314953/pytest-how-to-force-raising-exceptions-during-unit-testing/42753384#42753384">pytest: How to force raising Exceptions during unit-testing?</a></li>
 <li><a href="http://stackoverflow.com/questions/42704292/mocking-file-open-and-throwing-exception/42707396#42707396">Mocking file open and throwing exception</a></li>
 <li><a href="http://stackoverflow.com/questions/42631344/how-to-avoid-a-trip-to-the-database-in-this-test-case">Avoiding a call to the database during tests</a></li>
@@ -324,235 +361,215 @@ if (!doNotTrack) {
 <li><a href="http://stackoverflow.com/questions/42674971/testing-constructor-using-mock/42846459">Testing constructor using mock</a></li>
 <li><a href="http://stackoverflow.com/questions/42824059/preset-input-for-unit-tests-in-python-3/42827843">Preset input for Unit tests in Python 3</a></li>
 <li><a href="http://stackoverflow.com/questions/42819073/mocking-api-calls-in-unit-testing/42820601">Mocking API calls in unit testing</a></li>
-</ul></li>
 </ul>
-
 <p>Going through the list, there are some common pitfalls that can be identified related to the misunderstanding of basic python unit tests concepts and pytest features and inner workings. Inspired by a <a href="http://alexmarandon.com/articles/python_mock_gotchas/">similar post</a> I recently bumped into, I will go through them in detail.</p>
-
 <h1 id="what-does-patch-do">What does patch do?</h1>
-
 <p><a href="http://www.diveintopython.net/getting_to_know_python/everything_is_an_object.html">Everything in Python is an object</a>. As detailed in the <a href="https://docs.python.org/3/library/unittest.mock.html#quick-guide">Python docs</a> the patch decorator/context manager allows to easily mock classes/objects. Any class/object can be replaced with either a mock, or in general any other object, during the test and restored afterwards.</p>
-
 <p>Therefore, patch allows to mock objects/calls in order to return predefined objects/constants/whatnot. This is really useful when testing system that interact with third parties, allowing for the removal of dependencies during tests.</p>
-
 <h2 id="patching-external-dependencies">Patching external dependencies</h2>
-
 <p>The following question, highlights precisely the aforementioned usage:</p>
-
 <ul>
 <li><a href="http://stackoverflow.com/questions/42631344/how-to-avoid-a-trip-to-the-database-in-this-test-case/42794893#42794893">How to avoid a trip to the database in this Test case</a></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">.models</span> <span style="color:#069;font-weight:bold">import</span> ApplicationType
-
-<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">get_application_type</span>(self, value):
- item_name <span style="color:#555">=</span> <span style="color:#c30">&#34;Application Type&#34;</span>
- self<span style="color:#555">.</span>base_details[<span style="color:#c30">&#39;application_type&#39;</span>] <span style="color:#555">=</span> None
- <span style="color:#069;font-weight:bold">try</span>:
-     <span style="color:#069;font-weight:bold">if</span> value:
-         <span style="color:#069;font-weight:bold">try</span>:
-             result <span style="color:#555">=</span> ApplicationType<span style="color:#555">.</span>objects<span style="color:#555">.</span>get(title<span style="color:#555">=</span>value) <span style="color:#09f;font-style:italic"># &lt;= How do I avoid hitting this DB object?</span>
-             self<span style="color:#555">.</span>base_details[<span style="color:#c30">&#39;application_type&#39;</span>] <span style="color:#555">=</span> result<span style="color:#555">.</span><span style="color:#366">id</span>
-             <span style="color:#069;font-weight:bold">return</span> True
-          <span style="color:#069;font-weight:bold">except</span> ApplicationType<span style="color:#555">.</span>DoesNotExist:
-            [<span style="color:#555">...</span>]
-         <span style="color:#069;font-weight:bold">else</span>:
-           self<span style="color:#555">.</span>error_msg <span style="color:#555">=</span> <span style="color:#c30">&#34;Blank Value: {}&#34;</span><span style="color:#555">.</span>format(item_name)
-           <span style="color:#069;font-weight:bold">return</span> False
- <span style="color:#069;font-weight:bold">except</span>:
-     <span style="color:#069;font-weight:bold">raise</span></code></pre></div>
-<p>During unit-testing it is a requirement to avoid the interaction with a third-party service. In order to do so, we can use patch as follows (notice that this is for illustrative purposes and I do not necessarily agree with what and how it is being tested):</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@pytest.mark.parametrize</span>(<span style="color:#c30">&#34;entry&#34;</span>, [<span style="color:#c30">&#39;Type 1&#39;</span>, <span style="color:#c30">&#39;Type 2&#39;</span>])
-<span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;ApplicationType.objects.get&#39;</span>)
-<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_get_application_type_populates_dict_when_value_provided_exists_in_database</span>(self, db_mocked_call, entry):
-    mocked_db_object <span style="color:#555">=</span> {<span style="color:#c30">&#39;id&#39;</span>: <span style="color:#c30">&#39;test_id&#39;</span>}
-    db_mocked_call<span style="color:#555">.</span>return_value <span style="color:#555">=</span> mocked_db_object
-    application_type <span style="color:#555">=</span> ApplicationTypeFactory<span style="color:#555">.</span>build(title<span style="color:#555">=</span>entry)
-    <span style="color:#069;font-weight:bold">assert</span> self<span style="color:#555">.</span>base_info_values<span style="color:#555">.</span>get_application_type(entry) <span style="color:#555">==</span> True
-    <span style="color:#069;font-weight:bold">assert</span> self<span style="color:#555">.</span>base_info_values<span style="color:#555">.</span>base_details[<span style="color:#c30">&#34;application_type&#34;</span>] <span style="color:#000;font-weight:bold">is</span> <span style="color:#000;font-weight:bold">not</span> None</code></pre></div>
-<p>In the test above, it can be seen that the call to the database is being patched. Furthermore, a dictionary, <code>mocked_db_object</code>, will be returned when the call is made.</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">ApplicationType</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_application_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"> <span class="n">item_name</span> <span class="o">=</span> <span class="s2">&#34;Application Type&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="bp">self</span><span class="o">.</span><span class="n">base_details</span><span class="p">[</span><span class="s1">&#39;application_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl"> <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">         <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">             <span class="n">result</span> <span class="o">=</span> <span class="n">ApplicationType</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">value</span><span class="p">)</span> <span class="c1"># &lt;= How do I avoid hitting this DB object?</span>
+</span></span><span class="line"><span class="cl">             <span class="bp">self</span><span class="o">.</span><span class="n">base_details</span><span class="p">[</span><span class="s1">&#39;application_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">id</span>
+</span></span><span class="line"><span class="cl">             <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">          <span class="k">except</span> <span class="n">ApplicationType</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">         <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">           <span class="bp">self</span><span class="o">.</span><span class="n">error_msg</span> <span class="o">=</span> <span class="s2">&#34;Blank Value: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl"> <span class="k">except</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">     <span class="k">raise</span>
+</span></span></code></pre></div><p>During unit-testing it is a requirement to avoid the interaction with a third-party service. In order to do so, we can use patch as follows (notice that this is for illustrative purposes and I do not necessarily agree with what and how it is being tested):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&#34;entry&#34;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Type 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Type 2&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;ApplicationType.objects.get&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_get_application_type_populates_dict_when_value_provided_exists_in_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db_mocked_call</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mocked_db_object</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;test_id&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db_mocked_call</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="n">mocked_db_object</span>
+</span></span><span class="line"><span class="cl">    <span class="n">application_type</span> <span class="o">=</span> <span class="n">ApplicationTypeFactory</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">entry</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_info_values</span><span class="o">.</span><span class="n">get_application_type</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_info_values</span><span class="o">.</span><span class="n">base_details</span><span class="p">[</span><span class="s2">&#34;application_type&#34;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+</span></span></code></pre></div><p>In the test above, it can be seen that the call to the database is being patched. Furthermore, a dictionary, <code>mocked_db_object</code>, will be returned when the call is made.</p>
 <p><strong>This approach yields complete control over the inputs and outputs of our test and allowing to deterministically validate the code</strong>. The usage of <code>parametrize</code> is reviewed in detail further below.</p>
-
-<p>However, this does not imply that the integration with third-party services should not be tested through integration tests as I detailed in <a href="http://esaezgil.com/post/test_driven_API/">my previous post about test driven APIs</a></p>
-
+<p>However, this does not imply that the integration with third-party services should not be tested through integration tests as I detailed in <a href="../../post/test_driven_api/">my previous post about test driven APIs</a></p>
 <p>A similar example is the following one in which the calls to the <a href="https://redis.io/">Redis database</a> required patching:</p>
-
 <ul>
 <li><a href="http://stackoverflow.com/questions/42819073/mocking-api-calls-in-unit-testing/42820601">Mocking API calls in unit testing</a></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">redispool <span style="color:#555">=</span> None
-
-<span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">myRedis</span>(<span style="color:#366">object</span>):
-
-  <span style="color:#069;font-weight:bold">def</span> __init__(self, redisHost, redisPort, redisDBNum):
-      [<span style="color:#555">...</span>]
-
-      <span style="color:#069;font-weight:bold">global</span> redispool
-      redispool <span style="color:#555">=</span> redis<span style="color:#555">.</span>ConnectionPool(host<span style="color:#555">=</span>self<span style="color:#555">.</span>_redishost,
-                                            port<span style="color:#555">=</span>self<span style="color:#555">.</span>_redisport,
-                                            db<span style="color:#555">=</span>self<span style="color:#555">.</span>_redisdb)
-
-  <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">write_redis</span>(self, key, value):
-       retval <span style="color:#555">=</span> self<span style="color:#555">.</span>_redis_instance<span style="color:#555">.</span><span style="color:#366">set</span>(key, value)
-       LOGGER<span style="color:#555">.</span>info(<span style="color:#c30">&#39;Writing data to redis (</span><span style="color:#a00">%s</span><span style="color:#c30">, </span><span style="color:#a00">%s</span><span style="color:#c30">). Retval=</span><span style="color:#a00">%s</span><span style="color:#c30">&#39;</span>, key, value, retval)
-       <span style="color:#069;font-weight:bold">return</span> retval</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@mock.patch</span>(<span style="color:#c30">&#39;redis.StrictRedis.set&#39;</span>)
-<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_myRedis_write</span>(mock_strict_redis_set):
-    mock_strict_redis_set<span style="color:#555">.</span>return_value <span style="color:#555">=</span> {}
-    myRedisObj <span style="color:#555">=</span> myRedis(<span style="color:#c30">&#39;localhost&#39;</span>, <span style="color:#c30">&#39;8888&#39;</span>, <span style="color:#c30">&#39;11&#39;</span>)
-    redis_connect <span style="color:#555">=</span> myRedisObj<span style="color:#555">.</span>redis_connect()
-    connect <span style="color:#555">=</span> myRedisObj<span style="color:#555">.</span>write_redis(<span style="color:#c30">&#39;1&#39;</span>, <span style="color:#c30">&#39;2&#39;</span>)
-    <span style="color:#069;font-weight:bold">assert</span> connect <span style="color:#555">==</span> {}</code></pre></div>
-<p>As the previous examples show, one of the most important concepts is knowing <a href="https://docs.python.org/3/library/unittest.mock.html#where-to-patch">where to patch</a>, which the linked docs explain quite clearly.</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">redispool</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">myRedis</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redisHost</span><span class="p">,</span> <span class="n">redisPort</span><span class="p">,</span> <span class="n">redisDBNum</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">global</span> <span class="n">redispool</span>
+</span></span><span class="line"><span class="cl">      <span class="n">redispool</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">ConnectionPool</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_redishost</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                            <span class="n">port</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_redisport</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                            <span class="n">db</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_redisdb</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">write_redis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">       <span class="n">retval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_redis_instance</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">       <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Writing data to redis (</span><span class="si">%s</span><span class="s1">, </span><span class="si">%s</span><span class="s1">). Retval=</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">retval</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">       <span class="k">return</span> <span class="n">retval</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@mock.patch</span><span class="p">(</span><span class="s1">&#39;redis.StrictRedis.set&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_myRedis_write</span><span class="p">(</span><span class="n">mock_strict_redis_set</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mock_strict_redis_set</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">myRedisObj</span> <span class="o">=</span> <span class="n">myRedis</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;8888&#39;</span><span class="p">,</span> <span class="s1">&#39;11&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">redis_connect</span> <span class="o">=</span> <span class="n">myRedisObj</span><span class="o">.</span><span class="n">redis_connect</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">connect</span> <span class="o">=</span> <span class="n">myRedisObj</span><span class="o">.</span><span class="n">write_redis</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="n">connect</span> <span class="o">==</span> <span class="p">{}</span>
+</span></span></code></pre></div><p>As the previous examples show, one of the most important concepts is knowing <a href="https://docs.python.org/3/library/unittest.mock.html#where-to-patch">where to patch</a>, which the linked docs explain quite clearly.</p>
 <p>Finally, check the following question showing that checking the output of the calls being tested is not always required. Instead, what should be checked is that the calls took place with functions like <code>called_with</code> or <code>call_count</code>:
 <a href="http://stackoverflow.com/questions/42824059/preset-input-for-unit-tests-in-python-3/42827843">Preset input for Unit tests in Python 3</a></p>
-
 <h2 id="testing-exceptions">Testing exceptions:</h2>
-
 <p>One of the key behaviors to test are exception handling. The way to test that exceptions are raised is by patching the call that can raise the exception. This can be achieved through the <code>side_effect</code> function.</p>
-
 <p>The next example shows how to force raising an exception to test that it is properly managed.</p>
-
 <ul>
 <li><a href="http://stackoverflow.com/questions/42704292/mocking-file-open-and-throwing-exception/42707396#42707396">Mocking file open and throwing exception</a></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">validate_json_specifications</span>(path_to_data_folder, json_file_path, json_data) <span style="color:#555">-&gt;</span> None:
-
-     schema_file_path <span style="color:#555">=</span> os<span style="color:#555">.</span>path<span style="color:#555">.</span>join(path_to_data_folder, <span style="color:#c30">&#34;schema&#34;</span>, os<span style="color:#555">.</span>path<span style="color:#555">.</span>basename(json_file_path))
-     resolver <span style="color:#555">=</span> RefResolver(<span style="color:#c30">&#39;file://&#39;</span> <span style="color:#555">+</span> schema_file_path, None)
-     <span style="color:#069;font-weight:bold">with</span> <span style="color:#366">open</span>(schema_file_path) <span style="color:#069;font-weight:bold">as</span> schema_data:
-         <span style="color:#069;font-weight:bold">try</span>:
-             Draft4Validator(json<span style="color:#555">.</span>load(schema_data), resolver<span style="color:#555">=</span>resolver)<span style="color:#555">.</span>validate(json_data)
-         <span style="color:#069;font-weight:bold">except</span> ValidationError <span style="color:#069;font-weight:bold">as</span> e:
-             <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;...&#39;</span>)
-             <span style="color:#366">exit</span>()</code></pre></div>
-<p>The non-working tests for this code were as follows:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;builtins.open&#39;</span>, mock_open(read_data<span style="color:#555">=</span>{}))
-<span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;myproject.common.helper.jsonschema&#39;</span>, Draft4Validator())
-<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_validate_json_specifications</span>(mock_file_open, draft_4_validator_mock):
-    validate_json_specifications(<span style="color:#c30">&#39;foo_path_to_data&#39;</span>, <span style="color:#c30">&#39;foo_json_file_path&#39;</span>, {})
-    mock_file_open<span style="color:#555">.</span>assert_called_with(<span style="color:#c30">&#39;foo_path_to_data/schema/foo_json_file_path&#39;</span>)
-    draft_4_validator_mock<span style="color:#555">.</span>assert_called()</code></pre></div>
-<p>The person asking was trying to use the patch wrong and not taking advantage of <code>side_effect</code>. As it can be seen, every time the <code>jsonschema</code> function of the module being tested was called, a <code>Draft4Validator</code> object would have been created (had the class been correctly instantiated).</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">validate_json_specifications</span><span class="p">(</span><span class="n">path_to_data_folder</span><span class="p">,</span> <span class="n">json_file_path</span><span class="p">,</span> <span class="n">json_data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">schema_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path_to_data_folder</span><span class="p">,</span> <span class="s2">&#34;schema&#34;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">json_file_path</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">resolver</span> <span class="o">=</span> <span class="n">RefResolver</span><span class="p">(</span><span class="s1">&#39;file://&#39;</span> <span class="o">+</span> <span class="n">schema_file_path</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">schema_file_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">schema_data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Draft4Validator</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">schema_data</span><span class="p">),</span> <span class="n">resolver</span><span class="o">=</span><span class="n">resolver</span><span class="p">)</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">exit</span><span class="p">()</span>
+</span></span></code></pre></div><p>The non-working tests for this code were as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.open&#39;</span><span class="p">,</span> <span class="n">mock_open</span><span class="p">(</span><span class="n">read_data</span><span class="o">=</span><span class="p">{}))</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;myproject.common.helper.jsonschema&#39;</span><span class="p">,</span> <span class="n">Draft4Validator</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_validate_json_specifications</span><span class="p">(</span><span class="n">mock_file_open</span><span class="p">,</span> <span class="n">draft_4_validator_mock</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">validate_json_specifications</span><span class="p">(</span><span class="s1">&#39;foo_path_to_data&#39;</span><span class="p">,</span> <span class="s1">&#39;foo_json_file_path&#39;</span><span class="p">,</span> <span class="p">{})</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mock_file_open</span><span class="o">.</span><span class="n">assert_called_with</span><span class="p">(</span><span class="s1">&#39;foo_path_to_data/schema/foo_json_file_path&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">draft_4_validator_mock</span><span class="o">.</span><span class="n">assert_called</span><span class="p">()</span>
+</span></span></code></pre></div><p>The person asking was trying to use the patch wrong and not taking advantage of <code>side_effect</code>. As it can be seen, every time the <code>jsonschema</code> function of the module being tested was called, a <code>Draft4Validator</code> object would have been created (had the class been correctly instantiated).</p>
 <p>Instead, the Draft4Validator object is the one to be mocked and the relevant calls to any of its methods the ones to be patched.
 An example of such way to proceed can be found in the answer I posted:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;sys.exit&#39;</span>)
-<span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;myproject.common.helper.jsonschema.Draft4Validator&#39;</span>)
-<span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;builtins.open&#39;</span>)
-<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_validate_json_specifications</span>(mock_file_open, draft_4_validator_mock, exit_mock):
-    <span style="color:#069;font-weight:bold">with</span> pytest<span style="color:#555">.</span>raises(ValidationError):
-        mock_file_open<span style="color:#555">.</span>return_value <span style="color:#555">=</span> {}
-        draft_4_validator_mock <span style="color:#555">=</span> Mock()
-        draft_4_validator_mock<span style="color:#555">.</span>side_effect <span style="color:#555">=</span> ValidationError
-
-        validate_json_specifications(<span style="color:#c30">&#39;foo_path_to_data&#39;</span>, <span style="color:#c30">&#39;foo_json_file_path&#39;</span>, {})
-
-        <span style="color:#069;font-weight:bold">assert</span> draft_4_validator_mock<span style="color:#555">.</span>call_count <span style="color:#555">==</span> <span style="color:#f60">1</span>
-        <span style="color:#069;font-weight:bold">assert</span> draft_4_validator_mock<span style="color:#555">.</span>validate<span style="color:#555">.</span>assert_called_with({})        
-        <span style="color:#069;font-weight:bold">assert</span> exit_mock<span style="color:#555">.</span>call_count <span style="color:#555">==</span> <span style="color:#f60">1</span></code></pre></div>
-<p>In the previous test we can check again how easy it is to test the expected path for the exception through the creation of a mock object and associating a <code>side_effect</code> to it.</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;sys.exit&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;myproject.common.helper.jsonschema.Draft4Validator&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.open&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_validate_json_specifications</span><span class="p">(</span><span class="n">mock_file_open</span><span class="p">,</span> <span class="n">draft_4_validator_mock</span><span class="p">,</span> <span class="n">exit_mock</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="n">ValidationError</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mock_file_open</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">draft_4_validator_mock</span> <span class="o">=</span> <span class="n">Mock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">draft_4_validator_mock</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="n">ValidationError</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">validate_json_specifications</span><span class="p">(</span><span class="s1">&#39;foo_path_to_data&#39;</span><span class="p">,</span> <span class="s1">&#39;foo_json_file_path&#39;</span><span class="p">,</span> <span class="p">{})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">assert</span> <span class="n">draft_4_validator_mock</span><span class="o">.</span><span class="n">call_count</span> <span class="o">==</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">assert</span> <span class="n">draft_4_validator_mock</span><span class="o">.</span><span class="n">validate</span><span class="o">.</span><span class="n">assert_called_with</span><span class="p">({})</span>        
+</span></span><span class="line"><span class="cl">        <span class="k">assert</span> <span class="n">exit_mock</span><span class="o">.</span><span class="n">call_count</span> <span class="o">==</span> <span class="mi">1</span>
+</span></span></code></pre></div><p>In the previous test we can check again how easy it is to test the expected path for the exception through the creation of a mock object and associating a <code>side_effect</code> to it.</p>
 <h1 id="pytest-basic-features">pytest basic features:</h1>
-
 <p><a href="pytest.org">Pytest</a> is a very powerful testing framework and knowing about the feaures that it provides helps creating a robust and concise testing architecture for your project.</p>
-
 <p>Some of the most common used features are the following:</p>
-
 <h2 id="testing-that-exceptions-are-raised">Testing that exceptions are raised</h2>
-
 <p>Fortunately, pytest provides powerful features to <a href="http://doc.pytest.org/en/latest/assert.html#assertions-about-expected-exceptions">test that exceptions are handled properly</a>.</p>
-
 <p>The next example shows how to force raising an exception and test that it actually raised:</p>
-
 <ul>
 <li><a href="http://stackoverflow.com/questions/41314953/pytest-how-to-force-raising-exceptions-during-unit-testing/42753384#42753384">pytest: How to force raising Exceptions during unit-testing?</a></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">MyRequest</span>(metaclass<span style="color:#555">=</span>Singleton):
-
-     <span style="color:#069;font-weight:bold">def</span> __init__(self, retry_tries<span style="color:#555">=</span><span style="color:#f60">3</span>, retry_backoff<span style="color:#555">=</span><span style="color:#f60">0.1</span>, retry_codes<span style="color:#555">=</span>None):
-         [<span style="color:#555">...</span>]
-
-     <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">request</span>(self, request_method, request_url, <span style="color:#555">**</span>kwargs):
-         <span style="color:#069;font-weight:bold">try</span>:
-             <span style="color:#069;font-weight:bold">return</span> self<span style="color:#555">.</span>session<span style="color:#555">.</span>request(method<span style="color:#555">=</span>request_method, url<span style="color:#555">=</span>request_url, <span style="color:#555">**</span>kwargs)
-         <span style="color:#069;font-weight:bold">except</span> <span style="color:#c00;font-weight:bold">Exception</span> <span style="color:#069;font-weight:bold">as</span> ex:
-             log<span style="color:#555">.</span>warning([<span style="color:#555">...</span>]])
-             <span style="color:#069;font-weight:bold">raise</span></code></pre></div>
-<p>The test could look something similar to the following:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">requests.exceptions</span> <span style="color:#069;font-weight:bold">import</span> ConnectTimeout, ReadTimeout, Timeout
-<span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">unittest.mock</span> <span style="color:#069;font-weight:bold">import</span> patch
-<span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">pytest</span>
-
-<span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">TestRequestService</span>:
-    <span style="color:#99f">@pytest.mark.parametrize</span>(<span style="color:#c30">&#34;expected_exception&#34;</span>, [ConnectTimeout, ReadTimeout, Timeout])
-    <span style="color:#99f">@patch</span>(<span style="color:#c30">&#39;path_to_module.MyRequest&#39;</span>)
-    <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_custom_request</span>(self, my_request_mock, expected_exception):
-        my_request_mock<span style="color:#555">.</span>request<span style="color:#555">.</span>side_effect <span style="color:#555">=</span> expected_exception
-        <span style="color:#069;font-weight:bold">with</span> pytest<span style="color:#555">.</span>raises(expected_exception):
-            my_request_mock<span style="color:#555">.</span>request(Mock(), Mock())
-    [<span style="color:#555">...</span>]</code></pre></div>
-<p>Notice how easily <code>side_effect</code> allows for the testing of the proper management of the exception.</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyRequest</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">Singleton</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">retry_tries</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">retry_backoff</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">retry_codes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request_method</span><span class="p">,</span> <span class="n">request_url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">request_method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">request_url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">([</span><span class="o">...</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">raise</span>
+</span></span></code></pre></div><p>The test could look something similar to the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">requests.exceptions</span> <span class="kn">import</span> <span class="n">ConnectTimeout</span><span class="p">,</span> <span class="n">ReadTimeout</span><span class="p">,</span> <span class="n">Timeout</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">patch</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytest</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TestRequestService</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&#34;expected_exception&#34;</span><span class="p">,</span> <span class="p">[</span><span class="n">ConnectTimeout</span><span class="p">,</span> <span class="n">ReadTimeout</span><span class="p">,</span> <span class="n">Timeout</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;path_to_module.MyRequest&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">test_custom_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_request_mock</span><span class="p">,</span> <span class="n">expected_exception</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">my_request_mock</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="n">expected_exception</span>
+</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="n">expected_exception</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">my_request_mock</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">Mock</span><span class="p">(),</span> <span class="n">Mock</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</span></span></code></pre></div><p>Notice how easily <code>side_effect</code> allows for the testing of the proper management of the exception.</p>
 <h2 id="pytest-parametrize">pytest parametrize:</h2>
-
 <p>One of the most sought after behaviors when testing is actually testing the correctness of a myriad of relevant inputs/outputs. For this purpose, pytest provides a feature that yields such flexibility in a compact way through <code>parametrize</code>. The following questions are scenarios in which <code>parametrize</code> is highly relevant:</p>
-
 <ul>
 <li><a href="http://stackoverflow.com/questions/42676681/pytest-and-yield-based-tests/42753785#42753785">pytest and yield based tests</a></li>
 </ul>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">is_equal</span>(a, b):
-    <span style="color:#069;font-weight:bold">assert</span> a <span style="color:#555">==</span> b</code></pre></div>
-<p>We can test such a simple scenario with some tests:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">pytest</span>
-
-<span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">TestComplexScenario</span>:
-    <span style="color:#99f">@pytest.mark.parametrize</span>(<span style="color:#c30">&#34;my_integer&#34;</span>, [<span style="color:#f60">0</span>, <span style="color:#f60">1</span>, <span style="color:#f60">2</span>])
-    <span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">test_complex</span>(self, my_integer):
-        <span style="color:#069;font-weight:bold">assert</span> is_equal(my_integer, my_integer)</code></pre></div>
-<p>The sample output looks like this:</p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</span><span style="color:#f60">0</span><span style="color:#555">]</span> PASSED
-test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</span><span style="color:#f60">1</span><span style="color:#555">]</span> PASSED
-test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</span><span style="color:#f60">2</span><span style="color:#555">]</span> PASSED</code></pre></div>
-<p>where it can be checked that all the inputs were tested.</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="k">def</span> <span class="nf">is_equal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+</span></span></code></pre></div><p>We can test such a simple scenario with some tests:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytest</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TestComplexScenario</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&#34;my_integer&#34;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">test_complex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_integer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">assert</span> <span class="n">is_equal</span><span class="p">(</span><span class="n">my_integer</span><span class="p">,</span> <span class="n">my_integer</span><span class="p">)</span>
+</span></span></code></pre></div><p>The sample output looks like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">test_complex.py::TestComplexScenario::test_complex<span class="o">[</span>0<span class="o">]</span> PASSED
+</span></span><span class="line"><span class="cl">test_complex.py::TestComplexScenario::test_complex<span class="o">[</span>1<span class="o">]</span> PASSED
+</span></span><span class="line"><span class="cl">test_complex.py::TestComplexScenario::test_complex<span class="o">[</span>2<span class="o">]</span> PASSED
+</span></span></code></pre></div><p>where it can be checked that all the inputs were tested.</p>
 <p>Other references:</p>
-
 <ul>
 <li><a href="https://medium.com/@bfortuner/python-unit-testing-with-pytest-and-mock-197499c4623c">https://medium.com/@bfortuner/python-unit-testing-with-pytest-and-mock-197499c4623c</a></li>
 <li><a href="http://treyhunner.com/2014/10/the-many-flavors-of-mock-dot-patch/">http://treyhunner.com/2014/10/the-many-flavors-of-mock-dot-patch/</a></li>
 <li><a href="https://engineeringblog.yelp.com/2015/02/assert_called_once-threat-or-menace.html">https://engineeringblog.yelp.com/2015/02/assert_called_once-threat-or-menace.html</a></li>
 <li><a href="https://www.relaxdiego.com/2014/04/mocking-objects-in-python.html">https://www.relaxdiego.com/2014/04/mocking-objects-in-python.html</a></li>
 </ul>
+          
+          
 
+
+        
         
 
         
 
         
       </article>
+
       
-        <ul class="pager blog-pager">
-          
-            <li class="previous">
-              <a href="https://esaezgil.com/post/python_list_pop_slice/" data-toggle="tooltip" data-placement="top" title="Python lists: pop vs slice performance">&larr; Previous Post</a>
-            </li>
-          
-          
-            <li class="next">
-              <a href="https://esaezgil.com/post/contributing_android_madbike/" data-toggle="tooltip" data-placement="top" title="Contributing to MadBike Android app">Next Post &rarr;</a>
-            </li>
-          
-        </ul>
+
+
+      
       
 
       
-        
+
+      
+      
+      
           
           <div class="disqus-comments">
-            <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+            
+  
+    <div class="comments">
+      <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -568,64 +585,111 @@ test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</sp
         (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	
+    </div>
+  
+
+
           </div>
           
         
         
       
-
     </div>
   </div>
 </div>
 
-    <footer>
+    
+    
+    
+      
+<footer>
   <div class="container">
+    
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="col-md-10 offset-md-1">
         <ul class="list-inline text-center footer-links">
           
-              <li>
-                <a href="https://github.com/esaezgil" title="GitHub">
+          
+          
+              <li class="list-inline-item" ><a rel="noopener noreferrer" href="https://github.com/esaezgil" title="GitHub" aria-label="GitHub">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse" aria-hidden="true"></i>
                   </span>
                 </a>
               </li>
-              <li>
-                <a href="https://twitter.com/eqirn" title="Twitter">
+          
+          
+          
+          
+              <li class="list-inline-item" ><a rel="noopener noreferrer" href="https://twitter.com/eqirn" title="Twitter" aria-label="Twitter">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-x-twitter fa-stack-1x fa-inverse" aria-hidden="true"></i>
                   </span>
                 </a>
               </li>
-              <li>
-                <a href="https://linkedin.com/in/enriquesaezgil/en" title="LinkedIn">
+          
+          
+          
+              <li class="list-inline-item" ><a rel="noopener noreferrer" href="https://linkedin.com/in/enriquesaezgil/en" title="LinkedIn" aria-label="LinkedIn">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse" aria-hidden="true"></i>
                   </span>
                 </a>
               </li>
-              <li>
-                <a href="https://stackoverflow.com//users/4378118/enrique-saez/" title="StackOverflow">
+          
+          
+              <li class="list-inline-item" ><a rel="noopener noreferrer" href="https://stackoverflow.com//users/4378118/enrique-saez/" title="StackOverflow" aria-label="StackOverflow">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse" aria-hidden="true"></i>
                   </span>
                 </a>
               </li>
-              <li>
-                <a href="https://keybase.io/esaezgil" title="Keybase">
+          
+          
+          
+          
+          
+          
+          
+          
+              <li class="list-inline-item" ><a rel="noopener noreferrer" href="https://keybase.io/esaezgil" title="Keybase" aria-label="Keybase">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-key fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-keybase fa-stack-1x fa-inverse" aria-hidden="true"></i>
                   </span>
                 </a>
               </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
         <p class="credits copyright text-muted">
@@ -633,33 +697,49 @@ test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</sp
             
               Enrique Saez Gil
             
+            &nbsp;&bull;&nbsp;
           
-
-          &nbsp;&bull;&nbsp;&copy;
+          &copy;
           
             2018
           
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://esaezgil.com/">Enrique Saez</a>
+          
+          
+            <a href="../../">Enrique Saez</a>
           
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="https://gohugo.io">Hugo v0.169.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
     </div>
   </div>
-</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</footer>
 
-<script src="https://esaezgil.com/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://esaezgil.com/js/load-photoswipe.js"></script>
+      
+
+      
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js" integrity="sha384-Tt7wBxLKwSzFVRET4O4U9H6v8MNaQ/CjN2FMP4xFm0ErrFu6aNqoonRVW5W40iGI" crossorigin="anonymous"></script>
+
+<script defer onload="renderMathInElement(document.body);" src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM&#43;D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/umd/photoswipe.umd.min.js" integrity="sha384-k8EKyYcONphQ7zH4cQ0888JapXwrLTXQl/Ue1/jYgjVYahln1NWpnt2S4IC56LNh" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/umd/photoswipe-lightbox.umd.min.js" integrity="sha384-IiBVbUz6&#43;U&#43;Tbm/ijO2P0XRwcVzNfrMzloNLkrqHkbi6w5H0v6ie4fI9BIO4SwdK" crossorigin="anonymous"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" integrity="sha384-PCSoOZTpbkikBEtd/&#43;uV3WNdc676i9KUf01KOA8CnJotvlx8rRrETbDuwdjqTYvt" crossorigin="anonymous"></script>
+
+
+<script src="../../js/beautifulhugo-da646748.min.bf82e69ae27197ee590e6c95405c1efa7ebf4ea3a13e78dbb2ed9c093265967a.js" integrity="sha256-v4LmmuJxl&#43;5ZDmyVQFwe&#43;n6/TqOhPnjbsu2cCTJllno=" crossorigin="anonymous"></script>
 
 
 
@@ -669,6 +749,8 @@ test_complex.py::TestComplexScenario::test_complex<span style="color:#555">[</sp
 
 
 
+
+
+    
   </body>
 </html>
-

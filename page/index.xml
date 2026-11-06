@@ -1,36 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Pages on Enrique Saez</title>
-    <link>https://esaezgil.com/page/</link>
-    <description>Recent content in Pages on Enrique Saez</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://esaezgil.com/page/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Finished books</title>
-      <link>https://esaezgil.com/page/books_finished/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://esaezgil.com/page/books_finished/</guid>
-      <description>This is a brief list of the books I have read recently or I am reading at the moment:
-   Clean Code by Robert C. Martin    
-The Clean Code book has once again put front and center for me that writing software is a practice in which its output should be centered around:
- the reproducibility of the results an incremental refinement of the work based on the tests written for reproducibility the easiness for other people to read, understand, maintain and extend the code     Writing Idiomatic Python by Jeff Knupp</description>
-    </item>
-    
-    <item>
-      <title>Next books</title>
-      <link>https://esaezgil.com/page/next_books/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://esaezgil.com/page/next_books/</guid>
-      <description>This is a list of books I want to read next, feel free to recommend me some other books in the comments below:
-   Head First Design Patterns by Eric Freeman        Fluent Python by Luciano Ramalho        Grokking Algorithms by Aditya Bhargava        Designing Data-Intensive Applications by Martin Kleppmann        Python Testing with pytest by Brian Okken</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Pages on Enrique Saez</title>
+		<link>https://esaezgil.com/page/</link>
+		<description>Recent content in Pages on Enrique Saez</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<atom:link href="https://esaezgil.com/page/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Finished books</title>
+				<link>https://esaezgil.com/page/books_finished/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://esaezgil.com/page/books_finished/</guid>
+				<description>&lt;p&gt;This is a brief list of the books I have read recently or I am reading at the moment:&lt;/p&gt;&#xA;&lt;center&gt;&#xA;  &#xA;&lt;div class=&#34;box fancy-figure caption-position-bottom&#34; style=&#34;max-width:220&#34;&gt;&#xA;  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;https://schema.org/ImageObject&#34;&gt;&#xA;    &lt;div class=&#34;img&#34;&gt;&#xA;      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://images-na.ssl-images-amazon.com/images/I/41TINACY3hL._SX384_BO1,204,203,200_.jpg&#34; alt=&#34;https://images-na.ssl-images-amazon.com/images/I/41TINACY3hL._SX384_BO1,204,203,200_.jpg&#34;/&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;a href=&#34;https://images-na.ssl-images-amazon.com/images/I/41TINACY3hL._SX384_BO1,204,203,200_.jpg&#34; itemprop=&#34;contentUrl&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&#xA;      &lt;figcaption&gt;&lt;h4&gt;Clean Code by Robert C. Martin&lt;/h4&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;/center&gt;&#xA;&lt;p&gt;The Clean Code book has once again put front and center for me that writing software is a practice in which its output should be centered around:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the reproducibility of the results&lt;/li&gt;&#xA;&lt;li&gt;an incremental refinement of the work based on the tests written for reproducibility&lt;/li&gt;&#xA;&lt;li&gt;the easiness for other people to read, understand, maintain and extend the code&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;center&gt;&#xA;  &#xA;&lt;div class=&#34;box fancy-figure caption-position-bottom&#34; style=&#34;max-width:220&#34;&gt;&#xA;  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;https://schema.org/ImageObject&#34;&gt;&#xA;    &lt;div class=&#34;img&#34;&gt;&#xA;      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://images-na.ssl-images-amazon.com/images/I/41brHoUIAiL._SX384_BO1,204,203,200_.jpg&#34; alt=&#34;https://images-na.ssl-images-amazon.com/images/I/41brHoUIAiL._SX384_BO1,204,203,200_.jpg&#34;/&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;a href=&#34;https://images-na.ssl-images-amazon.com/images/I/41brHoUIAiL._SX384_BO1,204,203,200_.jpg&#34; itemprop=&#34;contentUrl&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&#xA;      &lt;figcaption&gt;&lt;h4&gt;Writing Idiomatic Python by Jeff Knupp&lt;/h4&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;/center&gt;&#xA;&lt;p&gt;I really enjoyed going through &lt;a href=&#34;https://jeffknupp.com/blog/archives/&#34;&gt;Jeff’s posts&lt;/a&gt;. His book although concise it is straight to the point, laying out important fundamentals in a clear way.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Next books</title>
+				<link>https://esaezgil.com/page/next_books/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://esaezgil.com/page/next_books/</guid>
+				<description>&lt;p&gt;This is a list of books I want to read next, &lt;strong&gt;feel free to recommend me some other books in the comments below&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;center&gt;&#xA;  &#xA;&lt;div class=&#34;box fancy-figure caption-position-bottom&#34; style=&#34;max-width:220&#34;&gt;&#xA;  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;https://schema.org/ImageObject&#34;&gt;&#xA;    &lt;div class=&#34;img&#34;&gt;&#xA;      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://images-na.ssl-images-amazon.com/images/I/61APhXCksuL._SX430_BO1,204,203,200_.jpg&#34; alt=&#34;https://images-na.ssl-images-amazon.com/images/I/61APhXCksuL._SX430_BO1,204,203,200_.jpg&#34;/&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;a href=&#34;https://images-na.ssl-images-amazon.com/images/I/61APhXCksuL._SX430_BO1,204,203,200_.jpg&#34; itemprop=&#34;contentUrl&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&#xA;      &lt;figcaption&gt;&lt;h4&gt;Head First Design Patterns by Eric Freeman&lt;/h4&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;/center&gt;&#xA;&lt;center&gt;&#xA;  &#xA;&lt;div class=&#34;box fancy-figure caption-position-bottom&#34; style=&#34;max-width:220&#34;&gt;&#xA;  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;https://schema.org/ImageObject&#34;&gt;&#xA;    &lt;div class=&#34;img&#34;&gt;&#xA;      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://images-na.ssl-images-amazon.com/images/I/51cRqX8DTgL._SX379_BO1,204,203,200_.jpg&#34; alt=&#34;https://images-na.ssl-images-amazon.com/images/I/51cRqX8DTgL._SX379_BO1,204,203,200_.jpg&#34;/&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;a href=&#34;https://images-na.ssl-images-amazon.com/images/I/51cRqX8DTgL._SX379_BO1,204,203,200_.jpg&#34; itemprop=&#34;contentUrl&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&#xA;      &lt;figcaption&gt;&lt;h4&gt;Fluent Python by Luciano Ramalho&lt;/h4&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;/center&gt;&#xA;&lt;center&gt;&#xA;  &#xA;&lt;div class=&#34;box fancy-figure caption-position-bottom&#34; style=&#34;max-width:220&#34;&gt;&#xA;  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;https://schema.org/ImageObject&#34;&gt;&#xA;    &lt;div class=&#34;img&#34;&gt;&#xA;      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg&#34; alt=&#34;https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg&#34;/&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;a href=&#34;https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg&#34; itemprop=&#34;contentUrl&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&#xA;      &lt;figcaption&gt;&lt;h4&gt;Grokking Algorithms by Aditya Bhargava&lt;/h4&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;/center&gt;&#xA;&lt;center&gt;&#xA;  &#xA;&lt;div class=&#34;box fancy-figure caption-position-bottom&#34; style=&#34;max-width:220&#34;&gt;&#xA;  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;https://schema.org/ImageObject&#34;&gt;&#xA;    &lt;div class=&#34;img&#34;&gt;&#xA;      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://images-na.ssl-images-amazon.com/images/I/514xvNk9rTL._SX379_BO1,204,203,200_.jpg&#34; alt=&#34;https://images-na.ssl-images-amazon.com/images/I/514xvNk9rTL._SX379_BO1,204,203,200_.jpg&#34;/&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;a href=&#34;https://images-na.ssl-images-amazon.com/images/I/514xvNk9rTL._SX379_BO1,204,203,200_.jpg&#34; itemprop=&#34;contentUrl&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&#xA;      &lt;figcaption&gt;&lt;h4&gt;Designing Data-Intensive Applications by Martin Kleppmann&lt;/h4&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;/center&gt;&#xA;&lt;center&gt;&#xA;  &#xA;&lt;div class=&#34;box fancy-figure caption-position-bottom&#34; style=&#34;max-width:220&#34;&gt;&#xA;  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;https://schema.org/ImageObject&#34;&gt;&#xA;    &lt;div class=&#34;img&#34;&gt;&#xA;      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://pragprog.com/titles/bopytest/python-testing-with-pytest/bopytest.jpg&#34; alt=&#34;https://pragprog.com/titles/bopytest/python-testing-with-pytest/bopytest.jpg&#34;/&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;a href=&#34;https://pragprog.com/titles/bopytest/python-testing-with-pytest/bopytest.jpg&#34; itemprop=&#34;contentUrl&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&#xA;      &lt;figcaption&gt;&lt;h4&gt;Python Testing with pytest by Brian Okken&lt;/h4&gt;&#xA;      &lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;/center&gt;</description>
+			</item>
+	</channel>
 </rss>
