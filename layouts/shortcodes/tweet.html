@@ -1,3 +1,7 @@
-{{/* Keep historical tweets accessible without a build-time Twitter API request.
-     Posts already wrap this shortcode in a twitter-tweet blockquote. */}}
+{{/* Posts wrap this shortcode in a twitter-tweet blockquote. Twitter's
+     browser-side widget enhances the link without a build-time API request. */}}
 <a href="https://twitter.com/i/web/status/{{ .Get 0 }}">View tweet {{ .Get 0 }} on Twitter</a>
+{{ if not (.Page.Scratch.Get "twitterWidgetsLoaded") }}
+  {{ .Page.Scratch.Set "twitterWidgetsLoaded" true }}
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{{ end }}
