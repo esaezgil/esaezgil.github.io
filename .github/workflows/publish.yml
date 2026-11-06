@@ -15,10 +15,10 @@ concurrency:
 jobs:
   publish:
     if: github.ref == 'refs/heads/source'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Check out source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Download custom theme
         run: git clone https://github.com/esaezgil/beautifulhugo ./themes/beautifulhugo_custom
