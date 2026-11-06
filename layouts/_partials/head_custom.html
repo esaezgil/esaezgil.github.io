@@ -1,0 +1,22 @@
+{{- $css := resources.Get "css/site.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- /* Shortcodes set their flags while content renders, after the head starts. */ -}}
+{{- $key := printf "archived-%s" .RelPermalink -}}
+{{- if in (slice "home" "section" "taxonomy" "term") .Kind -}}
+  {{- $key = printf "%s-%d" $key (partial "func/paginate.html" .).PageNumber -}}
+{{- end -}}
+{{- $args := dict "key" $key "data" (dict "page" .) -}}
+{{- with (templates.Defer $args) -}}
+  {{- with .page -}}
+  {{- $hasCards := .Store.Get "hasArchivedTweets" -}}
+  {{- if in (slice "home" "section" "taxonomy" "term") .Kind -}}
+    {{- range (partial "func/paginate.html" .).Pages -}}
+      {{- if strings.Contains (string .Summary) `class="archived-tweet"` -}}{{- $hasCards = true -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $hasCards -}}
+    {{- $css := resources.Get "css/archived-tweets.css" | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{- end -}}
+{{- end -}}
+{{- end -}}

@@ -24,7 +24,7 @@ At Skyscanner hotels we faced similar issues in the past as we make an intensive
 
 Another familiar example was the use of Lambdas for replicating data across regions for DynamoDB and ElasticSearch aiming to decouple the replication logic from the application logic. This solution did not work for us due to the large size of our tables and the long time it took to replicate the data between regions.
 
-Finally it was mentioned the challenges that cloud-first services pose such as proper monitoring, high availability, replication, cold start time and blue-green deployment (that we manage through [Slingshot](https://github.com/Skyscanner/slingshot)).
+Finally it was mentioned the challenges that cloud-first services pose such as proper monitoring, high availability, replication, cold start time and blue-green deployment (that we manage through [Slingshot](https://medium.com/@SkyscannerEng/our-essential-developer-enablement-tools-for-software-engineers-1e61d3751e46#:~:text=Orchestration%20System)).
 
 Overall it was really interesting listening to their experience as I can closely relate to many of the problems that surfaced to them while developing our own cloud-native services.
 

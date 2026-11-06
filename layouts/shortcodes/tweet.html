@@ -1,7 +1,22 @@
+{{ $id := printf "%v" (.Get 0) }}
+{{ with index hugo.Data.archived_tweets $id }}
+{{ $.Page.Store.Set "hasArchivedTweets" true }}
+<article class="archived-tweet" aria-label="Archived tweet by {{ .author }}">
+  <div class="archived-tweet-heading">
+    {{ with .avatar }}<img class="archived-tweet-avatar" src="{{ . | relURL }}" alt="" width="44" height="44">{{ else }}<span class="archived-tweet-placeholder" aria-hidden="true">{{ substr .author 0 1 }}</span>{{ end }}
+    <div class="archived-tweet-author"><strong>{{ .author }}</strong><span>@{{ .handle }}</span></div>
+    <span class="archived-tweet-mark" aria-hidden="true">𝕏</span>
+  </div>
+  <p class="archived-tweet-text">{{ replaceRE `\s*pic\.twitter\.com/\S+` "" .text }}</p>
+  <div class="archived-tweet-meta"><span>{{ .date }}</span><span class="archived-tweet-badge">Archived copy</span></div>
+</article>
+{{ else }}
 {{/* Posts wrap this shortcode in a twitter-tweet blockquote. Twitter's
      browser-side widget enhances the link without a build-time API request. */}}
 <a href="https://twitter.com/i/status/{{ .Get 0 }}">View tweet {{ .Get 0 }} on Twitter</a>
 {{ if not (.Page.Scratch.Get "twitterWidgetsLoaded") }}
   {{ .Page.Scratch.Set "twitterWidgetsLoaded" true }}
   <script data-cfasync="false" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{{ end }}
+
 {{ end }}

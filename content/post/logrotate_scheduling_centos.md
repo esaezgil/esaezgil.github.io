@@ -15,7 +15,7 @@ Some of the infrastructure at [Skyscanner Hotels](https://www.skyscanner.net/hot
 
 <center>{{< figure src="/img/alerting_monitoring_infrastructure_subset.png" title="Subset of the monitoring and alerting architecture" width="720" height="405" >}}</center>
 
-[Logrotate](http://www.linuxcommand.org/man_pages/logrotate8.html) is a small utility that allows to *rotate* the logs: archiving the current log, start a fresh one and delete old logs.
+[Logrotate](https://manpages.debian.org/trixie/logrotate/logrotate.8.en.html) is a small utility that allows to *rotate* the logs: archiving the current log, start a fresh one and delete old logs.
 
 Due to different reasons we were having problems with some of our logs and the fix turned out to be to schedule the log rotation at a specific time.
 
@@ -66,6 +66,6 @@ I shall thank my colleague Kampde for his detailed walkthrough about the intrica
 
 References:
 
-[Logrotate](https://support.rackspace.com/how-to/understanding-logrotate-utility/)
+[Logrotate](https://docs.rackspace.com/docs/understanding-logrotate-utility)
 
 [CentOS and logrotate at serverfault](http://serverfault.com/questions/454118/why-does-my-centos-logrotate-run-at-random-times)

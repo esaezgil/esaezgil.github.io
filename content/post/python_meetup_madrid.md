@@ -55,4 +55,4 @@ Finally, this kind of events are used by companies to recruit people and this ti
 
 [Carto's](https://carto.com/) office in the very city Center of Madrid were really cool by the way.
 
-<blockquote class="twitter-tweet tw-align-center">{{<tweet 804043732165206016>}}</blockquote>
+{{<tweet 804043732165206016>}}

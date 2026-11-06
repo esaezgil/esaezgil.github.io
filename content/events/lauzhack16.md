@@ -10,11 +10,11 @@ description = "Review of the Lauzhack hackathon, Lausanne November'16"
 Throughout the weekend of 18th - 20th November I attended [Lauzhack](http://lauzhack.com), a student-organized and student-oriented Hackathon in Lausanne, Switzerland, as a [Skyscanner](http://skyscanner.net) representative.
 <!--more-->
 
-<blockquote class="twitter-tweet tw-align-center">{{< tweet 799973200994140160 >}}</blockquote>
+{{< tweet 799973200994140160 >}}
 
 The goal of the Hackathon was to encourage students from all over the world to work in a project over the weekend with the aim of networking, learning as much as possible and having fun in the mean time.
 
-<blockquote class="twitter-tweet tw-align-center">{{< tweet 799984109414191104 >}}</blockquote>
+{{< tweet 799984109414191104 >}}
 
 I attended with my colleague [Manuel Miranda](https://twitter.com/blckdt) in order to help hackers make use of the Skyscanner API in their projects. We also looked forward to spread the word about [Skyscanner graduate program]((http://skyscanner.net/jobs/graduates/)), [Skyscanner internships](http://skyscanner.net/jobs/graduates/) and company culture.
 
@@ -28,7 +28,7 @@ During the rest of the weekend we tended to questions that hackers came up with 
 
 The event itself was really well organized and the premises of [EPFL](http://www.epfl.ch/index.en.html) are top notch.
 
-<blockquote class="twitter-tweet tw-align-center">{{< tweet 799917130468556800 >}}</blockquote>
+{{< tweet 799917130468556800 >}}
 
 The projects I liked the most using [Skyscanner API](http://business.skyscanner.net/) were:
 

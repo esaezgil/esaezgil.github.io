@@ -23,10 +23,11 @@ These events are quite refreshing as it allows to somehow blur the self-imposed 
 It was a great and nice surprise to win 3 prizes from 3 different sponsors:
 
 - Second prize from [HotelBeds](http://hotelbeds.com) for best use of their API
-- Second prize from [Musement] (http://musement.com) for best use of their API
-- First prize from [Booking.com] (http://booking.com) for best API feedback
+- Second prize from [Musement](http://musement.com) for best use of their API
+- First prize from [Booking.com](http://booking.com) for best API feedback
 
 <blockquote class="twitter-tweet tw-align-center">{{< tweet 728899724145725440 >}}</blockquote>
+
 <blockquote class="twitter-tweet tw-align-center">{{< tweet 728876062680190976 >}}</blockquote>
 
 

@@ -35,10 +35,10 @@ Professional experience
 
 [MassM2M research group](http://massm2m.es.aau.dk/) at [Aalborg University](http://www.en.aau.dk/), Denmark
 
-* During my [Master studies](http://www.en.aau.dk/education/master/wireless-communication-systems), I worked in the [MassM2M research group](http://massm2m.es.aau.dk/) and participated in the research, implementation and characterization of robust wireless communication systems.<br> 
+* During my [Master studies](https://www.students.aau.dk/practical/changes-in-study-programmes-at-aau/study-programmes-without-admission/wireless-communication-systems-msc-in-engineering), I worked in the [MassM2M research group](http://massm2m.es.aau.dk/) and participated in the research, implementation and characterization of robust wireless communication systems.<br>
  - [Video](https://vimeo.com/66733915) of the prototype transmitting audio over WiFi wtih a jammer activated<br>
 
 [Reseiwe](http://reseiwe.com/), Denmark
 
-* During the [Master](http://www.en.aau.dk/education/master/wireless-communication-systems), I worked part-time at [Reseiwe](http://reseiwe.com/), a commercial spin-off from the [MassM2M research group](http://massm2m.es.aau.dk/) while completing my [Master Thesis](http://projekter.aau.dk/projekter/files/198541091/main_report_4_june.pdf).
+* During the [Master](https://www.students.aau.dk/practical/changes-in-study-programmes-at-aau/study-programmes-without-admission/wireless-communication-systems-msc-in-engineering), I worked part-time at [Reseiwe](http://reseiwe.com/), a commercial spin-off from the [MassM2M research group](http://massm2m.es.aau.dk/) while completing my [Master Thesis](http://projekter.aau.dk/projekter/files/198541091/main_report_4_june.pdf).
 

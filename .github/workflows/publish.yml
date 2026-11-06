@@ -20,18 +20,22 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v6
 
-      - name: Download custom theme
-        run: git clone https://github.com/esaezgil/beautifulhugo ./themes/beautifulhugo_custom
+      - name: Download theme
+        env:
+          THEME_COMMIT: "a6bc1e09a12ff2b3f087b4bed0bc7825b1b6e87a"
+        run: |
+          git clone https://github.com/halogenica/beautifulhugo ./themes/beautifulhugo
+          git -C ./themes/beautifulhugo checkout --detach "$THEME_COMMIT"
 
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.55.5'
+          hugo-version: '0.169.0'
 
       - name: Build site
         run: |
           rm -rf public
-          hugo --theme beautifulhugo_custom --buildDrafts=false
+          hugo --theme beautifulhugo --buildDrafts=false
 
       - name: Publish to master
         uses: peaceiris/actions-gh-pages@v4

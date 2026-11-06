@@ -48,7 +48,7 @@ I have attended and help organizing most of the monthly [Barcelona Python Meetup
 
 I continue to enjoy this Meetup and keep meeting new interesting people. It's an event I would like to keep going over the upcoming year as well.
 
-Furthermore, I attended in November the [Madrid Python Meetup](https://www.meetup.com/Madrid-Python-Meetup/), [check the post I wrote about it] (https://esaezgil.github.io/post/python_meetup_madrid/).
+Furthermore, I attended in November the [Madrid Python Meetup](https://www.meetup.com/Madrid-Python-Meetup/), [check the post I wrote about it](https://esaezgil.github.io/post/python_meetup_madrid/).
 
 ### Docker Meetup
 
@@ -83,8 +83,8 @@ It was definitely a rewarding, sometimes challenging but overall good learning e
 
 I wrote about my contributions here:
 
-  - [Contributing to Pretix](https://esaezgil.github.io/post/contributing-to-pretix/)
-  - [Contributing to aiohttp](https://esaezgil.github.io/post/using-namedtuples-in-aiohttp/)
+  - [Contributing to Pretix](/post/2016-09-04-contributing-to-pretix/)
+  - [Contributing to aiohttp](/post/2016-09-03-using-namedtuples-in-aiohttp/)
 
 
 <blockquote class="twitter-tweet tw-align-center">{{<tweet 770313299225374720>}}</blockquote>
@@ -94,7 +94,7 @@ Internet famous
 
 I created my Twitter account, follow me :) [@eqirn](https://twitter.com/eqirn)
 
-I created this [Blog](https://esaezgil.github.io) with [Hugo](http://gohugo.io), [GitHub pages](https://pages.github.com/) and automatic deployment through [Wercker](https://www.wercker.com/). This was an iteration of my first attempt to create a [blog](https://thinkreleaseblog.wordpress.com/) using [Wordpress](https://www.wordpress.org). I did not like the Wordpress interface and it looked quite shabby.
+I created this [Blog](https://esaezgil.github.io) with [Hugo](http://gohugo.io), [GitHub pages](https://pages.github.com/) and automatic deployment through [Wercker](https://github.com/wercker). This was an iteration of my first attempt to create a blog using [Wordpress](https://www.wordpress.org). I did not like the Wordpress interface and it looked quite shabby.
 
 I recorded a podcast along my former colleague [Nicolas Vayias](https://twitter.com/NVayias) about our experience as a recent employee of a rapidly growing startup. It was an interesting experience since the interview was not scripted and the host, [Richard Davidson](https://twitter.com/monkeybood), was in another office in a different country.
 

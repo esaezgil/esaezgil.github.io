@@ -6,7 +6,7 @@ bigimg = ""
 
 +++
 
-During my studies in Denmark I attended two Summer Universities: [Aalborg University Summer School](http://www.summerschool.aau.dk/) and [DTU International Summer University](http://www.dtu.dk/english/Education/Guest-students/Summer-University).
+During my studies in Denmark I attended two Summer Universities: [Aalborg University Summer School](http://www.summerschool.aau.dk/) and [DTU International Summer University](https://dtu.dk/english/education/incoming-students/summer-university).
   <!--more-->
 
 During both summers I met new people from all over the world, made new friends and worked in projects that were not a core part of my regular curriculum but were super interesting.
@@ -20,13 +20,37 @@ I attended DTU Summer University during summer of 2013 working along other stude
 
      I really liked the idea of making an end to end project that started with lab measurements which were later used to simulate a bigger scenario in [VPItransmissionMaker Optical Systems](http://www.vpiphotonics.com/Tools/OpticalSystems/). <br>Check the presentation we did with our results below:
 
-<center><p><iframe src="https://docs.google.com/presentation/d/1MTfpF4BGxq3xDEJMy_CrY2qPOiCZx_YUbaRjLJHNzeg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></p></center>
 
-This is the report we wrote: <center><p><iframe src="https://drive.google.com/file/d/0B8qoMCJeZpJAVk56elJEd0lRbk0/preview" width="600" height="400"></iframe></p></center>
+
+<div class="summer-embed" style="aspect-ratio: 480 / 389">
+<iframe title="Project presentation" src="https://docs.google.com/presentation/d/1MTfpF4BGxq3xDEJMy_CrY2qPOiCZx_YUbaRjLJHNzeg/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<p><a href="https://docs.google.com/presentation/d/1MTfpF4BGxq3xDEJMy_CrY2qPOiCZx_YUbaRjLJHNzeg/embed?start=false&amp;loop=false&amp;delayms=3000" target="_blank" rel="noopener">Open project presentation separately</a></p>
+
+
+
+This is the report we wrote:
+
+<div class="summer-embed" style="aspect-ratio: 600 / 400">
+<iframe title="Project report" src="https://drive.google.com/file/d/0B8qoMCJeZpJAVk56elJEd0lRbk0/preview"></iframe>
+</div>
+
+<p><a href="https://drive.google.com/file/d/0B8qoMCJeZpJAVk56elJEd0lRbk0/preview" target="_blank" rel="noopener">Open project report separately</a></p>
+
+
 
   -  The other project I worked in was about making use of [OPNET](www.opnet.com/) to simulate a P2P network under different scenarios. Check the presentation with our results below:
 
-<center><p><iframe src="https://docs.google.com/presentation/d/1HdYxBcn6Hn2Lv7iCn1S_JEfeBzBNwF9W1r2x4m4IKYw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></p></center>
+
+
+<div class="summer-embed" style="aspect-ratio: 480 / 389">
+<iframe title="Project presentation" src="https://docs.google.com/presentation/d/1HdYxBcn6Hn2Lv7iCn1S_JEfeBzBNwF9W1r2x4m4IKYw/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<p><a href="https://docs.google.com/presentation/d/1HdYxBcn6Hn2Lv7iCn1S_JEfeBzBNwF9W1r2x4m4IKYw/embed?start=false&amp;loop=false&amp;delayms=3000" target="_blank" rel="noopener">Open project presentation separately</a></p>
+
+
 
 Aalborg University Summer School
 --------------------------------
@@ -34,7 +58,15 @@ Aalborg University Summer School
 I attended this Summer University during summer of 2012. I had the opportunity to work in a large seven people group (members coming from Denmark, France, Greece and Spain). We were all attending the [Network Coding class](http://kom.aau.dk/~del/SummerSchool2015.html) and we did a practical project trying to asses the advantages of Network Coding in a simple scenario. <br>
 Check the slides with our conclusions:
 
-<center><p><iframe src="https://docs.google.com/presentation/d/1O3KpKHqIBsUVMWEPMFUeUBFaDwlZQ_TN9onGxw9uMdE/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></p></center>
+
+
+<div class="summer-embed" style="aspect-ratio: 480 / 389">
+<iframe title="Project presentation" src="https://docs.google.com/presentation/d/1O3KpKHqIBsUVMWEPMFUeUBFaDwlZQ_TN9onGxw9uMdE/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<p><a href="https://docs.google.com/presentation/d/1O3KpKHqIBsUVMWEPMFUeUBFaDwlZQ_TN9onGxw9uMdE/embed?start=false&amp;loop=false&amp;delayms=3000" target="_blank" rel="noopener">Open project presentation separately</a></p>
+
+
 
 During this Summer School, it was my first contact with [Project Based Learning](http://www.en.aau.dk/about-aau/aalborg-model-problem-based-learning) that I would be working with over the next two years.
 
@@ -48,7 +80,7 @@ Some Summer University links:
 
 - [Aarhus Summer University](http://www.au.dk/en/summeruniversity/ausummeruniversity/)
 - [Aalborg University Summer School](http://www.summerschool.aau.dk/)
-- [DTU Summer University](http://www.dtu.dk/english/Education/Guest-students/Summer-University)
+- [DTU Summer University](https://dtu.dk/english/education/incoming-students/summer-university)
 - [Study in Denmark](http://studyindenmark.dk/)
-- [Study in Finland](http://www.studyinfinland.fi/what_to_study/other_possitilities/summer_schools)
+- [Study in Finland](https://www.studyinfinland.fi/)
 - [Summer Schools in Europe](http://www.summerschoolsineurope.eu/)

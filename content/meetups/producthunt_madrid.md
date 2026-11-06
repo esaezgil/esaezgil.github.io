@@ -19,7 +19,7 @@ There were in total 4 presentations about the following projects:
 
 Having spent two years living abroad I had heard about [Transferwise](https://transferwise.com) before and I was very interested in the product and the company itself.
 
-<blockquote class="twitter-tweet tw-align-center">{{< tweet 910922754752438273 >}}</blockquote>
+{{< tweet 910922754752438273 >}}
 
 [Nilan](https://twitter.com/nilanp) VP of Growth at Transferwise lead the talk along [Cata](https://twitter.com/cataflu) a software developer in the team. The content itself was very interesting, specially due to the parallelism I could establish between their company and mine, [Skyscanner](https://skyscanner.net):
 

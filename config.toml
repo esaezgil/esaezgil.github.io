@@ -1,25 +1,23 @@
 baseurl = "https://esaezgil.com/"
 title = "Enrique Saez"
-languageCode = "en-us"
-theme =  "beautifulhugo"
-
-PygmentsCodeFences = true
-pygmentsuseclasses = false
-pygmentsStyle = "manni"
+locale = "en-US"
+defaultContentLanguage = "en"
+theme = "beautifulhugo"
 
 CanonifyUrls = true
 relativeURLs = true
 
-disqusShortname = "esaezgil"
-googleAnalytics = "UA-86132389-1"
 enableRobotsTXT = true
 
-
 [Params]
+  hideAuthor = true
+  toc = false
+  showPostNav = false
   description = "Enrique Saez Gil personal blog - python, software, books, open source, events"
   subtitle = "Software & Telecom engineer - ICT enthusiast"
   logo = "img/icon.jpg"
   comments = true
+  colorScheme = "light"
 
 [[menu.main]]
     name = "Blog"
@@ -85,16 +83,11 @@ enableRobotsTXT = true
 
 [[menu.main]]
     parent = "more"
-    name = "Donate"
-    url = "/donate/"
-    weight = 4
-[[menu.main]]
-    parent = "more"
     name = "Search"
     url = "/search/"
     weight = 4
 
-[Author]
+[Params.author]
   name = "Enrique Saez Gil"
   github = "esaezgil"
   twitter = "eqirn"
@@ -132,3 +125,13 @@ pattern = "2006"
 
 [outputs]
   home = ["HTML", "JSON"]
+
+[services.disqus]
+  shortname = "esaezgil"
+[markup.goldmark.renderer]
+  unsafe = true
+[markup.highlight]
+  style = "manni"
+  noClasses = false
+[Params.search]
+  provider = "fuse"

@@ -1,0 +1,11 @@
+.archived-tweet { box-sizing: border-box; width: 100%; max-width: 550px; margin: 24px auto; padding: 16px; border: 1px solid #cfd9de; border-radius: 16px; background: #fff; color: #0f1419; font: normal 16px/1.45 system-ui, sans-serif; text-align: left; }
+.archived-tweet-heading { display: flex; align-items: center; gap: 10px; }
+.archived-tweet .archived-tweet-avatar, .archived-tweet-placeholder { display: block; flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; margin: 0; }
+.archived-tweet-placeholder { display: grid; place-items: center; background: #eff3f4; color: #536471; font-weight: 700; }
+.archived-tweet-author { flex: 1; min-width: 0; }
+.archived-tweet-author strong { display: block; font-size: 16px; line-height: 1.3; }
+.archived-tweet-author span { display: block; color: #536471; font-size: 14px; }
+.archived-tweet-mark { align-self: flex-start; font-size: 25px; line-height: 1; }
+.archived-tweet .archived-tweet-text { margin: 16px 0; font: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
+.archived-tweet-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-top: 12px; border-top: 1px solid #eff3f4; color: #536471; font-size: 13px; }
+.archived-tweet-badge { border: 1px solid #cfd9de; border-radius: 20px; padding: 2px 8px; font-size: 11px; }

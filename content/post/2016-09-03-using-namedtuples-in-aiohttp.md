@@ -15,12 +15,12 @@ The pull request can be found here:
 
 Key learnings:
 
-  1. Living on the edge:
+1. Living on the edge:
 
     Working in the _master_ branch of a project means that sometimes it may be unhealthy.
     It is always good advice to check whether _master_ is healthy or not when you submit your MR to the CI system ([Travis CI](https://travis-ci.org/KeepSafe/aiohttp) in this case) before pulling your hair searching for a non existing bug in your code.
 
-  2. Namedtuples can be used to define a class through inheritance and by implementing the __bool__ method,
+2. Namedtuples can be used to define a class through inheritance and by implementing the __bool__ method,
 
     ``` python
     class WebSocketReady(namedtuple('WebSocketReady', 'ok protocol')):
@@ -35,9 +35,9 @@ Key learnings:
     ...
     ```
 
-  3. Write Unit Tests:
-This might be obvious, but the point is not just to write them but to write them for every piece of code created.
-In this case I had written tests that checked the actual functionality on a high level like:
+3. Write Unit Tests:
+    This might be obvious, but the point is not just to write them but to write them for every piece of code created.
+    In this case I had written tests that checked the actual functionality on a high level like:
 
     ``` python
     def test_websocket_not_ready():

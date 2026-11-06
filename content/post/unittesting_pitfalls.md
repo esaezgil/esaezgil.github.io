@@ -73,7 +73,7 @@ In the test above, it can be seen that the call to the database is being patched
 
 **This approach yields complete control over the inputs and outputs of our test and allowing to deterministically validate the code**. The usage of `parametrize` is reviewed in detail further below.
 
-However, this does not imply that the integration with third-party services should not be tested through integration tests as I detailed in [my previous post about test driven APIs](http://esaezgil.com/post/test_driven_API/)
+However, this does not imply that the integration with third-party services should not be tested through integration tests as I detailed in [my previous post about test driven APIs](/post/test_driven_api/)
 
 A similar example is the following one in which the calls to the [Redis database](https://redis.io/) required patching:
 
